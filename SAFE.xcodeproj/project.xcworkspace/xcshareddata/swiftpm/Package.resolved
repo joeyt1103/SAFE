@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Socket",
+        "repositoryURL": "https://github.com/Kitura/BlueSocket.git",
+        "state": {
+          "branch": null,
+          "revision": "7b23a867008e0027bfd6f4d398d44720707bc8ca",
+          "version": "2.0.4"
+        }
+      },
+      {
+        "package": "SSLService",
+        "repositoryURL": "https://github.com/Kitura/BlueSSLService",
+        "state": {
+          "branch": null,
+          "revision": "b27a94d063962dfa1bba9f79814c4ef202cf33a4",
+          "version": "2.0.2"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

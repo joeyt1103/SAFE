@@ -1,0 +1,1016 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6BD847392D6396C10026D784 /* Adding a new requirement group and checkign to ensure no dups in the target.sql in Resources */ = {isa = PBXBuildFile; fileRef = 6BD847112D6396C10026D784 /* Adding a new requirement group and checkign to ensure no dups in the target.sql */; };
+		6BD8473A2D6396C10026D784 /* Check Target for specific requirement level.sql in Resources */ = {isa = PBXBuildFile; fileRef = 6BD847122D6396C10026D784 /* Check Target for specific requirement level.sql */; };
+		6BD8473B2D6396C10026D784 /* Updating the target full field update.sql in Resources */ = {isa = PBXBuildFile; fileRef = 6BD847152D6396C10026D784 /* Updating the target full field update.sql */; };
+		6BD8473C2D6396C10026D784 /* Removing a particular item in the target array.sql in Resources */ = {isa = PBXBuildFile; fileRef = 6BD847132D6396C10026D784 /* Removing a particular item in the target array.sql */; };
+		6BD8473D2D6396C10026D784 /* SAFE Table Schematic Entity-User in Resources */ = {isa = PBXBuildFile; fileRef = 6BD847142D6396C10026D784 /* SAFE Table Schematic Entity-User */; };
+		6BD8473E2D6396C10026D784 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BD8471A2D6396C10026D784 /* Assets.xcassets */; };
+		6BD8473F2D6396C10026D784 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BD847172D6396C10026D784 /* Preview Assets.xcassets */; };
+		6BD847402D6396C10026D784 /* requirements_managers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8472F2D6396C10026D784 /* requirements_managers.swift */; };
+		6BD847412D6396C10026D784 /* Dio_Directory_Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847202D6396C10026D784 /* Dio_Directory_Data.swift */; };
+		6BD847422D6396C10026D784 /* keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847242D6396C10026D784 /* keychain.swift */; };
+		6BD847432D6396C10026D784 /* testpage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847352D6396C10026D784 /* testpage.swift */; };
+		6BD847442D6396C10026D784 /* profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847292D6396C10026D784 /* profile.swift */; };
+		6BD847452D6396C10026D784 /* Prayers_data_sql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847272D6396C10026D784 /* Prayers_data_sql.swift */; };
+		6BD847462D6396C10026D784 /* checklistSQL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8471C2D6396C10026D784 /* checklistSQL.swift */; };
+		6BD847472D6396C10026D784 /* login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847262D6396C10026D784 /* login.swift */; };
+		6BD847482D6396C10026D784 /* flowchart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8470B2D6396C10026D784 /* flowchart.swift */; };
+		6BD847492D6396C10026D784 /* template.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847342D6396C10026D784 /* template.swift */; };
+		6BD8474A2D6396C10026D784 /* SideHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847332D6396C10026D784 /* SideHome.swift */; };
+		6BD8474B2D6396C10026D784 /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8472C2D6396C10026D784 /* Report.swift */; };
+		6BD8474C2D6396C10026D784 /* checklist_data_sql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8471B2D6396C10026D784 /* checklist_data_sql.swift */; };
+		6BD8474D2D6396C10026D784 /* Updates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847372D6396C10026D784 /* Updates.swift */; };
+		6BD8474E2D6396C10026D784 /* report_elder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8472D2D6396C10026D784 /* report_elder.swift */; };
+		6BD8474F2D6396C10026D784 /* Requirements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8472E2D6396C10026D784 /* Requirements.swift */; };
+		6BD847502D6396C10026D784 /* Library old.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8470C2D6396C10026D784 /* Library old.swift */; };
+		6BD847512D6396C10026D784 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8471D2D6396C10026D784 /* ContentView.swift */; };
+		6BD847522D6396C10026D784 /* librarySQL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847252D6396C10026D784 /* librarySQL.swift */; };
+		6BD847532D6396C10026D784 /* SAFEApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847322D6396C10026D784 /* SAFEApp.swift */; };
+		6BD847542D6396C10026D784 /* Requirments_data_sql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847302D6396C10026D784 /* Requirments_data_sql.swift */; };
+		6BD847552D6396C10026D784 /* flowchart_data_sql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847222D6396C10026D784 /* flowchart_data_sql.swift */; };
+		6BD847562D6396C10026D784 /* admin_settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847192D6396C10026D784 /* admin_settings.swift */; };
+		6BD847572D6396C10026D784 /* variables_for_checklist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8470E2D6396C10026D784 /* variables_for_checklist.swift */; };
+		6BD847582D6396C10026D784 /* registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8472A2D6396C10026D784 /* registration.swift */; };
+		6BD847592D6396C10026D784 /* defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8471F2D6396C10026D784 /* defaults.swift */; };
+		6BD8475A2D6396C10026D784 /* flowchartSQL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847232D6396C10026D784 /* flowchartSQL.swift */; };
+		6BD8475B2D6396C10026D784 /* checklist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8470A2D6396C10026D784 /* checklist.swift */; };
+		6BD8475C2D6396C10026D784 /* Dio_DirectorySQL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847212D6396C10026D784 /* Dio_DirectorySQL.swift */; };
+		6BD8475D2D6396C10026D784 /* dbConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8471E2D6396C10026D784 /* dbConnect.swift */; };
+		6BD8475E2D6396C10026D784 /* variables_for_flowchart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8470F2D6396C10026D784 /* variables_for_flowchart.swift */; };
+		6BD8475F2D6396C10026D784 /* prayersSQL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847282D6396C10026D784 /* prayersSQL.swift */; };
+		6BD847602D6396C10026D784 /* registration_data_sql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8472B2D6396C10026D784 /* registration_data_sql.swift */; };
+		6BD847612D6396C10026D784 /* libraryQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8470D2D6396C10026D784 /* libraryQuery.swift */; };
+		6BD847622D6396C10026D784 /* Update_data_sql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847362D6396C10026D784 /* Update_data_sql.swift */; };
+		6BD847632D6396C10026D784 /* Adding a new requirement group and checkign to ensure no dups in the target.sql in Resources */ = {isa = PBXBuildFile; fileRef = 6BD847112D6396C10026D784 /* Adding a new requirement group and checkign to ensure no dups in the target.sql */; };
+		6BD847642D6396C10026D784 /* Check Target for specific requirement level.sql in Resources */ = {isa = PBXBuildFile; fileRef = 6BD847122D6396C10026D784 /* Check Target for specific requirement level.sql */; };
+		6BD847652D6396C10026D784 /* Updating the target full field update.sql in Resources */ = {isa = PBXBuildFile; fileRef = 6BD847152D6396C10026D784 /* Updating the target full field update.sql */; };
+		6BD847662D6396C10026D784 /* Removing a particular item in the target array.sql in Resources */ = {isa = PBXBuildFile; fileRef = 6BD847132D6396C10026D784 /* Removing a particular item in the target array.sql */; };
+		6BD847672D6396C10026D784 /* SAFE Table Schematic Entity-User in Resources */ = {isa = PBXBuildFile; fileRef = 6BD847142D6396C10026D784 /* SAFE Table Schematic Entity-User */; };
+		6BD847682D6396C10026D784 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BD8471A2D6396C10026D784 /* Assets.xcassets */; };
+		6BD847692D6396C10026D784 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BD847172D6396C10026D784 /* Preview Assets.xcassets */; };
+		6BD8476A2D6396C10026D784 /* requirements_managers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8472F2D6396C10026D784 /* requirements_managers.swift */; };
+		6BD8476B2D6396C10026D784 /* Dio_Directory_Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847202D6396C10026D784 /* Dio_Directory_Data.swift */; };
+		6BD8476C2D6396C10026D784 /* keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847242D6396C10026D784 /* keychain.swift */; };
+		6BD8476D2D6396C10026D784 /* testpage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847352D6396C10026D784 /* testpage.swift */; };
+		6BD8476E2D6396C10026D784 /* profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847292D6396C10026D784 /* profile.swift */; };
+		6BD8476F2D6396C10026D784 /* Prayers_data_sql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847272D6396C10026D784 /* Prayers_data_sql.swift */; };
+		6BD847702D6396C10026D784 /* checklistSQL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8471C2D6396C10026D784 /* checklistSQL.swift */; };
+		6BD847712D6396C10026D784 /* login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847262D6396C10026D784 /* login.swift */; };
+		6BD847722D6396C10026D784 /* flowchart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8470B2D6396C10026D784 /* flowchart.swift */; };
+		6BD847732D6396C10026D784 /* template.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847342D6396C10026D784 /* template.swift */; };
+		6BD847742D6396C10026D784 /* SideHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847332D6396C10026D784 /* SideHome.swift */; };
+		6BD847752D6396C10026D784 /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8472C2D6396C10026D784 /* Report.swift */; };
+		6BD847762D6396C10026D784 /* checklist_data_sql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8471B2D6396C10026D784 /* checklist_data_sql.swift */; };
+		6BD847772D6396C10026D784 /* Updates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847372D6396C10026D784 /* Updates.swift */; };
+		6BD847782D6396C10026D784 /* report_elder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8472D2D6396C10026D784 /* report_elder.swift */; };
+		6BD847792D6396C10026D784 /* Requirements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8472E2D6396C10026D784 /* Requirements.swift */; };
+		6BD8477A2D6396C10026D784 /* Library old.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8470C2D6396C10026D784 /* Library old.swift */; };
+		6BD8477B2D6396C10026D784 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8471D2D6396C10026D784 /* ContentView.swift */; };
+		6BD8477C2D6396C10026D784 /* librarySQL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847252D6396C10026D784 /* librarySQL.swift */; };
+		6BD8477D2D6396C10026D784 /* SAFEApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847322D6396C10026D784 /* SAFEApp.swift */; };
+		6BD8477E2D6396C10026D784 /* Requirments_data_sql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847302D6396C10026D784 /* Requirments_data_sql.swift */; };
+		6BD8477F2D6396C10026D784 /* flowchart_data_sql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847222D6396C10026D784 /* flowchart_data_sql.swift */; };
+		6BD847802D6396C10026D784 /* admin_settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847192D6396C10026D784 /* admin_settings.swift */; };
+		6BD847812D6396C10026D784 /* variables_for_checklist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8470E2D6396C10026D784 /* variables_for_checklist.swift */; };
+		6BD847822D6396C10026D784 /* registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8472A2D6396C10026D784 /* registration.swift */; };
+		6BD847832D6396C10026D784 /* defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8471F2D6396C10026D784 /* defaults.swift */; };
+		6BD847842D6396C10026D784 /* flowchartSQL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847232D6396C10026D784 /* flowchartSQL.swift */; };
+		6BD847852D6396C10026D784 /* checklist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8470A2D6396C10026D784 /* checklist.swift */; };
+		6BD847862D6396C10026D784 /* Dio_DirectorySQL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847212D6396C10026D784 /* Dio_DirectorySQL.swift */; };
+		6BD847872D6396C10026D784 /* dbConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8471E2D6396C10026D784 /* dbConnect.swift */; };
+		6BD847882D6396C10026D784 /* variables_for_flowchart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8470F2D6396C10026D784 /* variables_for_flowchart.swift */; };
+		6BD847892D6396C10026D784 /* prayersSQL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847282D6396C10026D784 /* prayersSQL.swift */; };
+		6BD8478A2D6396C10026D784 /* registration_data_sql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8472B2D6396C10026D784 /* registration_data_sql.swift */; };
+		6BD8478B2D6396C10026D784 /* libraryQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8470D2D6396C10026D784 /* libraryQuery.swift */; };
+		6BD8478C2D6396C10026D784 /* Update_data_sql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847362D6396C10026D784 /* Update_data_sql.swift */; };
+		6BD8478D2D6396C10026D784 /* Adding a new requirement group and checkign to ensure no dups in the target.sql in Resources */ = {isa = PBXBuildFile; fileRef = 6BD847112D6396C10026D784 /* Adding a new requirement group and checkign to ensure no dups in the target.sql */; };
+		6BD8478E2D6396C10026D784 /* Check Target for specific requirement level.sql in Resources */ = {isa = PBXBuildFile; fileRef = 6BD847122D6396C10026D784 /* Check Target for specific requirement level.sql */; };
+		6BD8478F2D6396C10026D784 /* Updating the target full field update.sql in Resources */ = {isa = PBXBuildFile; fileRef = 6BD847152D6396C10026D784 /* Updating the target full field update.sql */; };
+		6BD847902D6396C10026D784 /* Removing a particular item in the target array.sql in Resources */ = {isa = PBXBuildFile; fileRef = 6BD847132D6396C10026D784 /* Removing a particular item in the target array.sql */; };
+		6BD847912D6396C10026D784 /* SAFE Table Schematic Entity-User in Resources */ = {isa = PBXBuildFile; fileRef = 6BD847142D6396C10026D784 /* SAFE Table Schematic Entity-User */; };
+		6BD847922D6396C10026D784 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BD8471A2D6396C10026D784 /* Assets.xcassets */; };
+		6BD847932D6396C10026D784 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BD847172D6396C10026D784 /* Preview Assets.xcassets */; };
+		6BD847942D6396C10026D784 /* requirements_managers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8472F2D6396C10026D784 /* requirements_managers.swift */; };
+		6BD847952D6396C10026D784 /* Dio_Directory_Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847202D6396C10026D784 /* Dio_Directory_Data.swift */; };
+		6BD847962D6396C10026D784 /* keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847242D6396C10026D784 /* keychain.swift */; };
+		6BD847972D6396C10026D784 /* testpage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847352D6396C10026D784 /* testpage.swift */; };
+		6BD847982D6396C10026D784 /* profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847292D6396C10026D784 /* profile.swift */; };
+		6BD847992D6396C10026D784 /* Prayers_data_sql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847272D6396C10026D784 /* Prayers_data_sql.swift */; };
+		6BD8479A2D6396C10026D784 /* checklistSQL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8471C2D6396C10026D784 /* checklistSQL.swift */; };
+		6BD8479B2D6396C10026D784 /* login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847262D6396C10026D784 /* login.swift */; };
+		6BD8479C2D6396C10026D784 /* flowchart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8470B2D6396C10026D784 /* flowchart.swift */; };
+		6BD8479D2D6396C10026D784 /* template.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847342D6396C10026D784 /* template.swift */; };
+		6BD8479E2D6396C10026D784 /* SideHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847332D6396C10026D784 /* SideHome.swift */; };
+		6BD8479F2D6396C10026D784 /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8472C2D6396C10026D784 /* Report.swift */; };
+		6BD847A02D6396C10026D784 /* checklist_data_sql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8471B2D6396C10026D784 /* checklist_data_sql.swift */; };
+		6BD847A12D6396C10026D784 /* Updates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847372D6396C10026D784 /* Updates.swift */; };
+		6BD847A22D6396C10026D784 /* report_elder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8472D2D6396C10026D784 /* report_elder.swift */; };
+		6BD847A32D6396C10026D784 /* Requirements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8472E2D6396C10026D784 /* Requirements.swift */; };
+		6BD847A42D6396C10026D784 /* Library old.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8470C2D6396C10026D784 /* Library old.swift */; };
+		6BD847A52D6396C10026D784 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8471D2D6396C10026D784 /* ContentView.swift */; };
+		6BD847A62D6396C10026D784 /* librarySQL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847252D6396C10026D784 /* librarySQL.swift */; };
+		6BD847A72D6396C10026D784 /* SAFEApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847322D6396C10026D784 /* SAFEApp.swift */; };
+		6BD847A82D6396C10026D784 /* Requirments_data_sql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847302D6396C10026D784 /* Requirments_data_sql.swift */; };
+		6BD847A92D6396C10026D784 /* flowchart_data_sql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847222D6396C10026D784 /* flowchart_data_sql.swift */; };
+		6BD847AA2D6396C10026D784 /* admin_settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847192D6396C10026D784 /* admin_settings.swift */; };
+		6BD847AB2D6396C10026D784 /* variables_for_checklist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8470E2D6396C10026D784 /* variables_for_checklist.swift */; };
+		6BD847AC2D6396C10026D784 /* registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8472A2D6396C10026D784 /* registration.swift */; };
+		6BD847AD2D6396C10026D784 /* defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8471F2D6396C10026D784 /* defaults.swift */; };
+		6BD847AE2D6396C10026D784 /* flowchartSQL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847232D6396C10026D784 /* flowchartSQL.swift */; };
+		6BD847AF2D6396C10026D784 /* checklist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8470A2D6396C10026D784 /* checklist.swift */; };
+		6BD847B02D6396C10026D784 /* Dio_DirectorySQL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847212D6396C10026D784 /* Dio_DirectorySQL.swift */; };
+		6BD847B12D6396C10026D784 /* dbConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8471E2D6396C10026D784 /* dbConnect.swift */; };
+		6BD847B22D6396C10026D784 /* variables_for_flowchart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8470F2D6396C10026D784 /* variables_for_flowchart.swift */; };
+		6BD847B32D6396C10026D784 /* prayersSQL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847282D6396C10026D784 /* prayersSQL.swift */; };
+		6BD847B42D6396C10026D784 /* registration_data_sql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8472B2D6396C10026D784 /* registration_data_sql.swift */; };
+		6BD847B52D6396C10026D784 /* libraryQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8470D2D6396C10026D784 /* libraryQuery.swift */; };
+		6BD847B62D6396C10026D784 /* Update_data_sql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847362D6396C10026D784 /* Update_data_sql.swift */; };
+		6BD847BD2D6399780026D784 /* PostgresClientKit in Frameworks */ = {isa = PBXBuildFile; productRef = 6BD847BC2D6399780026D784 /* PostgresClientKit */; };
+		6BD847C32D639ACC0026D784 /* PostgresClientKit in Frameworks */ = {isa = PBXBuildFile; productRef = 6BD847C22D639ACC0026D784 /* PostgresClientKit */; };
+		6BD847C82D639D480026D784 /* BlueSocketTestCommonLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 6BD847C72D639D480026D784 /* BlueSocketTestCommonLibrary */; };
+		6BD847CA2D639D480026D784 /* Socket in Frameworks */ = {isa = PBXBuildFile; productRef = 6BD847C92D639D480026D784 /* Socket */; };
+		6BD847CD2D639D620026D784 /* SSLService in Frameworks */ = {isa = PBXBuildFile; productRef = 6BD847CC2D639D620026D784 /* SSLService */; };
+		6BD847CF2D639D830026D784 /* PostgresClientKit in Frameworks */ = {isa = PBXBuildFile; productRef = 6BD847CE2D639D830026D784 /* PostgresClientKit */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6B03AD8F2D63965700CD28BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6B03AD762D63965600CD28BB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6B03AD7D2D63965600CD28BB;
+			remoteInfo = SAFE;
+		};
+		6B03AD992D63965700CD28BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6B03AD762D63965600CD28BB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6B03AD7D2D63965600CD28BB;
+			remoteInfo = SAFE;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6B03AD7E2D63965600CD28BB /* SAFE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SAFE.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B03AD8E2D63965700CD28BB /* SAFETests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SAFETests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B03AD982D63965700CD28BB /* SAFEUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SAFEUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BD8470A2D6396C10026D784 /* checklist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = checklist.swift; sourceTree = "<group>"; };
+		6BD8470B2D6396C10026D784 /* flowchart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flowchart.swift; sourceTree = "<group>"; };
+		6BD8470C2D6396C10026D784 /* Library old.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Library old.swift"; sourceTree = "<group>"; };
+		6BD8470D2D6396C10026D784 /* libraryQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = libraryQuery.swift; sourceTree = "<group>"; };
+		6BD8470E2D6396C10026D784 /* variables_for_checklist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = variables_for_checklist.swift; sourceTree = "<group>"; };
+		6BD8470F2D6396C10026D784 /* variables_for_flowchart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = variables_for_flowchart.swift; sourceTree = "<group>"; };
+		6BD847112D6396C10026D784 /* Adding a new requirement group and checkign to ensure no dups in the target.sql */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Adding a new requirement group and checkign to ensure no dups in the target.sql"; sourceTree = "<group>"; };
+		6BD847122D6396C10026D784 /* Check Target for specific requirement level.sql */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Check Target for specific requirement level.sql"; sourceTree = "<group>"; };
+		6BD847132D6396C10026D784 /* Removing a particular item in the target array.sql */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Removing a particular item in the target array.sql"; sourceTree = "<group>"; };
+		6BD847142D6396C10026D784 /* SAFE Table Schematic Entity-User */ = {isa = PBXFileReference; lastKnownFileType = text; path = "SAFE Table Schematic Entity-User"; sourceTree = "<group>"; };
+		6BD847152D6396C10026D784 /* Updating the target full field update.sql */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Updating the target full field update.sql"; sourceTree = "<group>"; };
+		6BD847172D6396C10026D784 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		6BD847192D6396C10026D784 /* admin_settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = admin_settings.swift; sourceTree = "<group>"; };
+		6BD8471A2D6396C10026D784 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6BD8471B2D6396C10026D784 /* checklist_data_sql.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = checklist_data_sql.swift; sourceTree = "<group>"; };
+		6BD8471C2D6396C10026D784 /* checklistSQL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = checklistSQL.swift; sourceTree = "<group>"; };
+		6BD8471D2D6396C10026D784 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		6BD8471E2D6396C10026D784 /* dbConnect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dbConnect.swift; sourceTree = "<group>"; };
+		6BD8471F2D6396C10026D784 /* defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = defaults.swift; sourceTree = "<group>"; };
+		6BD847202D6396C10026D784 /* Dio_Directory_Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dio_Directory_Data.swift; sourceTree = "<group>"; };
+		6BD847212D6396C10026D784 /* Dio_DirectorySQL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dio_DirectorySQL.swift; sourceTree = "<group>"; };
+		6BD847222D6396C10026D784 /* flowchart_data_sql.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flowchart_data_sql.swift; sourceTree = "<group>"; };
+		6BD847232D6396C10026D784 /* flowchartSQL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flowchartSQL.swift; sourceTree = "<group>"; };
+		6BD847242D6396C10026D784 /* keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = keychain.swift; sourceTree = "<group>"; };
+		6BD847252D6396C10026D784 /* librarySQL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = librarySQL.swift; sourceTree = "<group>"; };
+		6BD847262D6396C10026D784 /* login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = login.swift; sourceTree = "<group>"; };
+		6BD847272D6396C10026D784 /* Prayers_data_sql.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prayers_data_sql.swift; sourceTree = "<group>"; };
+		6BD847282D6396C10026D784 /* prayersSQL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = prayersSQL.swift; sourceTree = "<group>"; };
+		6BD847292D6396C10026D784 /* profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profile.swift; sourceTree = "<group>"; };
+		6BD8472A2D6396C10026D784 /* registration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registration.swift; sourceTree = "<group>"; };
+		6BD8472B2D6396C10026D784 /* registration_data_sql.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registration_data_sql.swift; sourceTree = "<group>"; };
+		6BD8472C2D6396C10026D784 /* Report.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Report.swift; sourceTree = "<group>"; };
+		6BD8472D2D6396C10026D784 /* report_elder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = report_elder.swift; sourceTree = "<group>"; };
+		6BD8472E2D6396C10026D784 /* Requirements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requirements.swift; sourceTree = "<group>"; };
+		6BD8472F2D6396C10026D784 /* requirements_managers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = requirements_managers.swift; sourceTree = "<group>"; };
+		6BD847302D6396C10026D784 /* Requirments_data_sql.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requirments_data_sql.swift; sourceTree = "<group>"; };
+		6BD847312D6396C10026D784 /* SAFE.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SAFE.entitlements; sourceTree = "<group>"; };
+		6BD847322D6396C10026D784 /* SAFEApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAFEApp.swift; sourceTree = "<group>"; };
+		6BD847332D6396C10026D784 /* SideHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideHome.swift; sourceTree = "<group>"; };
+		6BD847342D6396C10026D784 /* template.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = template.swift; sourceTree = "<group>"; };
+		6BD847352D6396C10026D784 /* testpage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testpage.swift; sourceTree = "<group>"; };
+		6BD847362D6396C10026D784 /* Update_data_sql.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Update_data_sql.swift; sourceTree = "<group>"; };
+		6BD847372D6396C10026D784 /* Updates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Updates.swift; sourceTree = "<group>"; };
+		6BD847BF2D6399AA0026D784 /* PostgresClientKit-1.5.0 */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "PostgresClientKit-1.5.0"; path = "../../../../../../../Downloads/PostgresClientKit-1.5.0"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		6B03AD912D63965700CD28BB /* SAFETests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = SAFETests;
+			sourceTree = "<group>";
+		};
+		6B03AD9B2D63965700CD28BB /* SAFEUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = SAFEUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6B03AD7B2D63965600CD28BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BD847C82D639D480026D784 /* BlueSocketTestCommonLibrary in Frameworks */,
+				6BD847CA2D639D480026D784 /* Socket in Frameworks */,
+				6BD847CD2D639D620026D784 /* SSLService in Frameworks */,
+				6BD847CF2D639D830026D784 /* PostgresClientKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B03AD8B2D63965700CD28BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BD847BD2D6399780026D784 /* PostgresClientKit in Frameworks */,
+				6BD847C32D639ACC0026D784 /* PostgresClientKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B03AD952D63965700CD28BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6B03AD752D63965600CD28BB = {
+			isa = PBXGroup;
+			children = (
+				6B03AD912D63965700CD28BB /* SAFETests */,
+				6B03AD9B2D63965700CD28BB /* SAFEUITests */,
+				6B03AD7F2D63965600CD28BB /* Products */,
+				6BD847382D6396C10026D784 /* SAFE */,
+				6BD847BE2D6399AA0026D784 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		6B03AD7F2D63965600CD28BB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6B03AD7E2D63965600CD28BB /* SAFE.app */,
+				6B03AD8E2D63965700CD28BB /* SAFETests.xctest */,
+				6B03AD982D63965700CD28BB /* SAFEUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6BD847102D6396C10026D784 /* Archives */ = {
+			isa = PBXGroup;
+			children = (
+				6BD8470A2D6396C10026D784 /* checklist.swift */,
+				6BD8470B2D6396C10026D784 /* flowchart.swift */,
+				6BD8470C2D6396C10026D784 /* Library old.swift */,
+				6BD8470D2D6396C10026D784 /* libraryQuery.swift */,
+				6BD8470E2D6396C10026D784 /* variables_for_checklist.swift */,
+				6BD8470F2D6396C10026D784 /* variables_for_flowchart.swift */,
+			);
+			path = Archives;
+			sourceTree = "<group>";
+		};
+		6BD847162D6396C10026D784 /* PostgreSQL Saved Native Queries */ = {
+			isa = PBXGroup;
+			children = (
+				6BD847112D6396C10026D784 /* Adding a new requirement group and checkign to ensure no dups in the target.sql */,
+				6BD847122D6396C10026D784 /* Check Target for specific requirement level.sql */,
+				6BD847132D6396C10026D784 /* Removing a particular item in the target array.sql */,
+				6BD847142D6396C10026D784 /* SAFE Table Schematic Entity-User */,
+				6BD847152D6396C10026D784 /* Updating the target full field update.sql */,
+			);
+			path = "PostgreSQL Saved Native Queries";
+			sourceTree = "<group>";
+		};
+		6BD847182D6396C10026D784 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				6BD847172D6396C10026D784 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		6BD847382D6396C10026D784 /* SAFE */ = {
+			isa = PBXGroup;
+			children = (
+				6BD847102D6396C10026D784 /* Archives */,
+				6BD847162D6396C10026D784 /* PostgreSQL Saved Native Queries */,
+				6BD847182D6396C10026D784 /* Preview Content */,
+				6BD847192D6396C10026D784 /* admin_settings.swift */,
+				6BD8471A2D6396C10026D784 /* Assets.xcassets */,
+				6BD8471B2D6396C10026D784 /* checklist_data_sql.swift */,
+				6BD8471C2D6396C10026D784 /* checklistSQL.swift */,
+				6BD8471D2D6396C10026D784 /* ContentView.swift */,
+				6BD8471E2D6396C10026D784 /* dbConnect.swift */,
+				6BD8471F2D6396C10026D784 /* defaults.swift */,
+				6BD847202D6396C10026D784 /* Dio_Directory_Data.swift */,
+				6BD847212D6396C10026D784 /* Dio_DirectorySQL.swift */,
+				6BD847222D6396C10026D784 /* flowchart_data_sql.swift */,
+				6BD847232D6396C10026D784 /* flowchartSQL.swift */,
+				6BD847242D6396C10026D784 /* keychain.swift */,
+				6BD847252D6396C10026D784 /* librarySQL.swift */,
+				6BD847262D6396C10026D784 /* login.swift */,
+				6BD847272D6396C10026D784 /* Prayers_data_sql.swift */,
+				6BD847282D6396C10026D784 /* prayersSQL.swift */,
+				6BD847292D6396C10026D784 /* profile.swift */,
+				6BD8472A2D6396C10026D784 /* registration.swift */,
+				6BD8472B2D6396C10026D784 /* registration_data_sql.swift */,
+				6BD8472C2D6396C10026D784 /* Report.swift */,
+				6BD8472D2D6396C10026D784 /* report_elder.swift */,
+				6BD8472E2D6396C10026D784 /* Requirements.swift */,
+				6BD8472F2D6396C10026D784 /* requirements_managers.swift */,
+				6BD847302D6396C10026D784 /* Requirments_data_sql.swift */,
+				6BD847312D6396C10026D784 /* SAFE.entitlements */,
+				6BD847322D6396C10026D784 /* SAFEApp.swift */,
+				6BD847332D6396C10026D784 /* SideHome.swift */,
+				6BD847342D6396C10026D784 /* template.swift */,
+				6BD847352D6396C10026D784 /* testpage.swift */,
+				6BD847362D6396C10026D784 /* Update_data_sql.swift */,
+				6BD847372D6396C10026D784 /* Updates.swift */,
+			);
+			path = SAFE;
+			sourceTree = "<group>";
+		};
+		6BD847BE2D6399AA0026D784 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6BD847BF2D6399AA0026D784 /* PostgresClientKit-1.5.0 */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6B03AD7D2D63965600CD28BB /* SAFE */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6B03ADA22D63965700CD28BB /* Build configuration list for PBXNativeTarget "SAFE" */;
+			buildPhases = (
+				6B03AD7A2D63965600CD28BB /* Sources */,
+				6B03AD7B2D63965600CD28BB /* Frameworks */,
+				6B03AD7C2D63965600CD28BB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SAFE;
+			packageProductDependencies = (
+				6BD847C72D639D480026D784 /* BlueSocketTestCommonLibrary */,
+				6BD847C92D639D480026D784 /* Socket */,
+				6BD847CC2D639D620026D784 /* SSLService */,
+				6BD847CE2D639D830026D784 /* PostgresClientKit */,
+			);
+			productName = SAFE;
+			productReference = 6B03AD7E2D63965600CD28BB /* SAFE.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6B03AD8D2D63965700CD28BB /* SAFETests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6B03ADA52D63965700CD28BB /* Build configuration list for PBXNativeTarget "SAFETests" */;
+			buildPhases = (
+				6B03AD8A2D63965700CD28BB /* Sources */,
+				6B03AD8B2D63965700CD28BB /* Frameworks */,
+				6B03AD8C2D63965700CD28BB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6B03AD902D63965700CD28BB /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				6B03AD912D63965700CD28BB /* SAFETests */,
+			);
+			name = SAFETests;
+			packageProductDependencies = (
+				6BD847BC2D6399780026D784 /* PostgresClientKit */,
+				6BD847C22D639ACC0026D784 /* PostgresClientKit */,
+			);
+			productName = SAFETests;
+			productReference = 6B03AD8E2D63965700CD28BB /* SAFETests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6B03AD972D63965700CD28BB /* SAFEUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6B03ADA82D63965700CD28BB /* Build configuration list for PBXNativeTarget "SAFEUITests" */;
+			buildPhases = (
+				6B03AD942D63965700CD28BB /* Sources */,
+				6B03AD952D63965700CD28BB /* Frameworks */,
+				6B03AD962D63965700CD28BB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6B03AD9A2D63965700CD28BB /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				6B03AD9B2D63965700CD28BB /* SAFEUITests */,
+			);
+			name = SAFEUITests;
+			packageProductDependencies = (
+			);
+			productName = SAFEUITests;
+			productReference = 6B03AD982D63965700CD28BB /* SAFEUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6B03AD762D63965600CD28BB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1620;
+				LastUpgradeCheck = 1620;
+				TargetAttributes = {
+					6B03AD7D2D63965600CD28BB = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					6B03AD8D2D63965700CD28BB = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 6B03AD7D2D63965600CD28BB;
+					};
+					6B03AD972D63965700CD28BB = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 6B03AD7D2D63965600CD28BB;
+					};
+				};
+			};
+			buildConfigurationList = 6B03AD792D63965600CD28BB /* Build configuration list for PBXProject "SAFE" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6B03AD752D63965600CD28BB;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				6BD847B92D63990F0026D784 /* XCLocalSwiftPackageReference "../../../../../../../Downloads/PostgresClientKit-1.5.0" */,
+				6BD847C62D639D480026D784 /* XCRemoteSwiftPackageReference "BlueSocket" */,
+				6BD847CB2D639D620026D784 /* XCRemoteSwiftPackageReference "BlueSSLService" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 6B03AD7F2D63965600CD28BB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6B03AD7D2D63965600CD28BB /* SAFE */,
+				6B03AD8D2D63965700CD28BB /* SAFETests */,
+				6B03AD972D63965700CD28BB /* SAFEUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6B03AD7C2D63965600CD28BB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BD847392D6396C10026D784 /* Adding a new requirement group and checkign to ensure no dups in the target.sql in Resources */,
+				6BD8473A2D6396C10026D784 /* Check Target for specific requirement level.sql in Resources */,
+				6BD8473B2D6396C10026D784 /* Updating the target full field update.sql in Resources */,
+				6BD8473C2D6396C10026D784 /* Removing a particular item in the target array.sql in Resources */,
+				6BD8473D2D6396C10026D784 /* SAFE Table Schematic Entity-User in Resources */,
+				6BD8473E2D6396C10026D784 /* Assets.xcassets in Resources */,
+				6BD8473F2D6396C10026D784 /* Preview Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B03AD8C2D63965700CD28BB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BD8478D2D6396C10026D784 /* Adding a new requirement group and checkign to ensure no dups in the target.sql in Resources */,
+				6BD8478E2D6396C10026D784 /* Check Target for specific requirement level.sql in Resources */,
+				6BD8478F2D6396C10026D784 /* Updating the target full field update.sql in Resources */,
+				6BD847902D6396C10026D784 /* Removing a particular item in the target array.sql in Resources */,
+				6BD847912D6396C10026D784 /* SAFE Table Schematic Entity-User in Resources */,
+				6BD847922D6396C10026D784 /* Assets.xcassets in Resources */,
+				6BD847932D6396C10026D784 /* Preview Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B03AD962D63965700CD28BB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BD847632D6396C10026D784 /* Adding a new requirement group and checkign to ensure no dups in the target.sql in Resources */,
+				6BD847642D6396C10026D784 /* Check Target for specific requirement level.sql in Resources */,
+				6BD847652D6396C10026D784 /* Updating the target full field update.sql in Resources */,
+				6BD847662D6396C10026D784 /* Removing a particular item in the target array.sql in Resources */,
+				6BD847672D6396C10026D784 /* SAFE Table Schematic Entity-User in Resources */,
+				6BD847682D6396C10026D784 /* Assets.xcassets in Resources */,
+				6BD847692D6396C10026D784 /* Preview Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6B03AD7A2D63965600CD28BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BD847402D6396C10026D784 /* requirements_managers.swift in Sources */,
+				6BD847412D6396C10026D784 /* Dio_Directory_Data.swift in Sources */,
+				6BD847422D6396C10026D784 /* keychain.swift in Sources */,
+				6BD847432D6396C10026D784 /* testpage.swift in Sources */,
+				6BD847442D6396C10026D784 /* profile.swift in Sources */,
+				6BD847452D6396C10026D784 /* Prayers_data_sql.swift in Sources */,
+				6BD847462D6396C10026D784 /* checklistSQL.swift in Sources */,
+				6BD847472D6396C10026D784 /* login.swift in Sources */,
+				6BD847482D6396C10026D784 /* flowchart.swift in Sources */,
+				6BD847492D6396C10026D784 /* template.swift in Sources */,
+				6BD8474A2D6396C10026D784 /* SideHome.swift in Sources */,
+				6BD8474B2D6396C10026D784 /* Report.swift in Sources */,
+				6BD8474C2D6396C10026D784 /* checklist_data_sql.swift in Sources */,
+				6BD8474D2D6396C10026D784 /* Updates.swift in Sources */,
+				6BD8474E2D6396C10026D784 /* report_elder.swift in Sources */,
+				6BD8474F2D6396C10026D784 /* Requirements.swift in Sources */,
+				6BD847502D6396C10026D784 /* Library old.swift in Sources */,
+				6BD847512D6396C10026D784 /* ContentView.swift in Sources */,
+				6BD847522D6396C10026D784 /* librarySQL.swift in Sources */,
+				6BD847532D6396C10026D784 /* SAFEApp.swift in Sources */,
+				6BD847542D6396C10026D784 /* Requirments_data_sql.swift in Sources */,
+				6BD847552D6396C10026D784 /* flowchart_data_sql.swift in Sources */,
+				6BD847562D6396C10026D784 /* admin_settings.swift in Sources */,
+				6BD847572D6396C10026D784 /* variables_for_checklist.swift in Sources */,
+				6BD847582D6396C10026D784 /* registration.swift in Sources */,
+				6BD847592D6396C10026D784 /* defaults.swift in Sources */,
+				6BD8475A2D6396C10026D784 /* flowchartSQL.swift in Sources */,
+				6BD8475B2D6396C10026D784 /* checklist.swift in Sources */,
+				6BD8475C2D6396C10026D784 /* Dio_DirectorySQL.swift in Sources */,
+				6BD8475D2D6396C10026D784 /* dbConnect.swift in Sources */,
+				6BD8475E2D6396C10026D784 /* variables_for_flowchart.swift in Sources */,
+				6BD8475F2D6396C10026D784 /* prayersSQL.swift in Sources */,
+				6BD847602D6396C10026D784 /* registration_data_sql.swift in Sources */,
+				6BD847612D6396C10026D784 /* libraryQuery.swift in Sources */,
+				6BD847622D6396C10026D784 /* Update_data_sql.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B03AD8A2D63965700CD28BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BD847942D6396C10026D784 /* requirements_managers.swift in Sources */,
+				6BD847952D6396C10026D784 /* Dio_Directory_Data.swift in Sources */,
+				6BD847962D6396C10026D784 /* keychain.swift in Sources */,
+				6BD847972D6396C10026D784 /* testpage.swift in Sources */,
+				6BD847982D6396C10026D784 /* profile.swift in Sources */,
+				6BD847992D6396C10026D784 /* Prayers_data_sql.swift in Sources */,
+				6BD8479A2D6396C10026D784 /* checklistSQL.swift in Sources */,
+				6BD8479B2D6396C10026D784 /* login.swift in Sources */,
+				6BD8479C2D6396C10026D784 /* flowchart.swift in Sources */,
+				6BD8479D2D6396C10026D784 /* template.swift in Sources */,
+				6BD8479E2D6396C10026D784 /* SideHome.swift in Sources */,
+				6BD8479F2D6396C10026D784 /* Report.swift in Sources */,
+				6BD847A02D6396C10026D784 /* checklist_data_sql.swift in Sources */,
+				6BD847A12D6396C10026D784 /* Updates.swift in Sources */,
+				6BD847A22D6396C10026D784 /* report_elder.swift in Sources */,
+				6BD847A32D6396C10026D784 /* Requirements.swift in Sources */,
+				6BD847A42D6396C10026D784 /* Library old.swift in Sources */,
+				6BD847A52D6396C10026D784 /* ContentView.swift in Sources */,
+				6BD847A62D6396C10026D784 /* librarySQL.swift in Sources */,
+				6BD847A72D6396C10026D784 /* SAFEApp.swift in Sources */,
+				6BD847A82D6396C10026D784 /* Requirments_data_sql.swift in Sources */,
+				6BD847A92D6396C10026D784 /* flowchart_data_sql.swift in Sources */,
+				6BD847AA2D6396C10026D784 /* admin_settings.swift in Sources */,
+				6BD847AB2D6396C10026D784 /* variables_for_checklist.swift in Sources */,
+				6BD847AC2D6396C10026D784 /* registration.swift in Sources */,
+				6BD847AD2D6396C10026D784 /* defaults.swift in Sources */,
+				6BD847AE2D6396C10026D784 /* flowchartSQL.swift in Sources */,
+				6BD847AF2D6396C10026D784 /* checklist.swift in Sources */,
+				6BD847B02D6396C10026D784 /* Dio_DirectorySQL.swift in Sources */,
+				6BD847B12D6396C10026D784 /* dbConnect.swift in Sources */,
+				6BD847B22D6396C10026D784 /* variables_for_flowchart.swift in Sources */,
+				6BD847B32D6396C10026D784 /* prayersSQL.swift in Sources */,
+				6BD847B42D6396C10026D784 /* registration_data_sql.swift in Sources */,
+				6BD847B52D6396C10026D784 /* libraryQuery.swift in Sources */,
+				6BD847B62D6396C10026D784 /* Update_data_sql.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B03AD942D63965700CD28BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BD8476A2D6396C10026D784 /* requirements_managers.swift in Sources */,
+				6BD8476B2D6396C10026D784 /* Dio_Directory_Data.swift in Sources */,
+				6BD8476C2D6396C10026D784 /* keychain.swift in Sources */,
+				6BD8476D2D6396C10026D784 /* testpage.swift in Sources */,
+				6BD8476E2D6396C10026D784 /* profile.swift in Sources */,
+				6BD8476F2D6396C10026D784 /* Prayers_data_sql.swift in Sources */,
+				6BD847702D6396C10026D784 /* checklistSQL.swift in Sources */,
+				6BD847712D6396C10026D784 /* login.swift in Sources */,
+				6BD847722D6396C10026D784 /* flowchart.swift in Sources */,
+				6BD847732D6396C10026D784 /* template.swift in Sources */,
+				6BD847742D6396C10026D784 /* SideHome.swift in Sources */,
+				6BD847752D6396C10026D784 /* Report.swift in Sources */,
+				6BD847762D6396C10026D784 /* checklist_data_sql.swift in Sources */,
+				6BD847772D6396C10026D784 /* Updates.swift in Sources */,
+				6BD847782D6396C10026D784 /* report_elder.swift in Sources */,
+				6BD847792D6396C10026D784 /* Requirements.swift in Sources */,
+				6BD8477A2D6396C10026D784 /* Library old.swift in Sources */,
+				6BD8477B2D6396C10026D784 /* ContentView.swift in Sources */,
+				6BD8477C2D6396C10026D784 /* librarySQL.swift in Sources */,
+				6BD8477D2D6396C10026D784 /* SAFEApp.swift in Sources */,
+				6BD8477E2D6396C10026D784 /* Requirments_data_sql.swift in Sources */,
+				6BD8477F2D6396C10026D784 /* flowchart_data_sql.swift in Sources */,
+				6BD847802D6396C10026D784 /* admin_settings.swift in Sources */,
+				6BD847812D6396C10026D784 /* variables_for_checklist.swift in Sources */,
+				6BD847822D6396C10026D784 /* registration.swift in Sources */,
+				6BD847832D6396C10026D784 /* defaults.swift in Sources */,
+				6BD847842D6396C10026D784 /* flowchartSQL.swift in Sources */,
+				6BD847852D6396C10026D784 /* checklist.swift in Sources */,
+				6BD847862D6396C10026D784 /* Dio_DirectorySQL.swift in Sources */,
+				6BD847872D6396C10026D784 /* dbConnect.swift in Sources */,
+				6BD847882D6396C10026D784 /* variables_for_flowchart.swift in Sources */,
+				6BD847892D6396C10026D784 /* prayersSQL.swift in Sources */,
+				6BD8478A2D6396C10026D784 /* registration_data_sql.swift in Sources */,
+				6BD8478B2D6396C10026D784 /* libraryQuery.swift in Sources */,
+				6BD8478C2D6396C10026D784 /* Update_data_sql.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6B03AD902D63965700CD28BB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6B03AD7D2D63965600CD28BB /* SAFE */;
+			targetProxy = 6B03AD8F2D63965700CD28BB /* PBXContainerItemProxy */;
+		};
+		6B03AD9A2D63965700CD28BB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6B03AD7D2D63965600CD28BB /* SAFE */;
+			targetProxy = 6B03AD992D63965700CD28BB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		6B03ADA02D63965700CD28BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6B03ADA12D63965700CD28BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6B03ADA32D63965700CD28BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SAFE/Preview Content\"";
+				DEVELOPMENT_TEAM = HTUMFUKS5X;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Joe-Trave.SAFE";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6B03ADA42D63965700CD28BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SAFE/Preview Content\"";
+				DEVELOPMENT_TEAM = HTUMFUKS5X;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Joe-Trave.SAFE";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		6B03ADA62D63965700CD28BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HTUMFUKS5X;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Joe-Trave.SAFETests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SAFE.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SAFE";
+			};
+			name = Debug;
+		};
+		6B03ADA72D63965700CD28BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HTUMFUKS5X;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Joe-Trave.SAFETests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SAFE.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SAFE";
+			};
+			name = Release;
+		};
+		6B03ADA92D63965700CD28BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HTUMFUKS5X;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Joe-Trave.SAFEUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SAFE;
+			};
+			name = Debug;
+		};
+		6B03ADAA2D63965700CD28BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HTUMFUKS5X;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Joe-Trave.SAFEUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SAFE;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6B03AD792D63965600CD28BB /* Build configuration list for PBXProject "SAFE" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B03ADA02D63965700CD28BB /* Debug */,
+				6B03ADA12D63965700CD28BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6B03ADA22D63965700CD28BB /* Build configuration list for PBXNativeTarget "SAFE" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B03ADA32D63965700CD28BB /* Debug */,
+				6B03ADA42D63965700CD28BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6B03ADA52D63965700CD28BB /* Build configuration list for PBXNativeTarget "SAFETests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B03ADA62D63965700CD28BB /* Debug */,
+				6B03ADA72D63965700CD28BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6B03ADA82D63965700CD28BB /* Build configuration list for PBXNativeTarget "SAFEUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B03ADA92D63965700CD28BB /* Debug */,
+				6B03ADAA2D63965700CD28BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		6BD847B92D63990F0026D784 /* XCLocalSwiftPackageReference "../../../../../../../Downloads/PostgresClientKit-1.5.0" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = "../../../../../../../Downloads/PostgresClientKit-1.5.0";
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6BD847C62D639D480026D784 /* XCRemoteSwiftPackageReference "BlueSocket" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Kitura/BlueSocket.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.4;
+			};
+		};
+		6BD847CB2D639D620026D784 /* XCRemoteSwiftPackageReference "BlueSSLService" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Kitura/BlueSSLService";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6BD847BC2D6399780026D784 /* PostgresClientKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PostgresClientKit;
+		};
+		6BD847C22D639ACC0026D784 /* PostgresClientKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PostgresClientKit;
+		};
+		6BD847C72D639D480026D784 /* BlueSocketTestCommonLibrary */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6BD847C62D639D480026D784 /* XCRemoteSwiftPackageReference "BlueSocket" */;
+			productName = BlueSocketTestCommonLibrary;
+		};
+		6BD847C92D639D480026D784 /* Socket */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6BD847C62D639D480026D784 /* XCRemoteSwiftPackageReference "BlueSocket" */;
+			productName = Socket;
+		};
+		6BD847CC2D639D620026D784 /* SSLService */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6BD847CB2D639D620026D784 /* XCRemoteSwiftPackageReference "BlueSSLService" */;
+			productName = SSLService;
+		};
+		6BD847CE2D639D830026D784 /* PostgresClientKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PostgresClientKit;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 6B03AD762D63965600CD28BB /* Project object */;
+}
