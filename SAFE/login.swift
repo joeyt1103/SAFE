@@ -84,16 +84,12 @@ struct Login: View {
                     Text("Sign In")
                         .font(.title2)
                         .bold()
-                        .foregroundColor(.white)
+                        .foregroundColor(.black)
                         .frame(height: 50)
                         .frame(maxWidth: .infinity)
                 }
-                .background(
-                    isSignInButtonDisabled
-                    ? LinearGradient(colors: [.blue, .green], startPoint: .topLeading, endPoint: .bottomTrailing)
-                    : LinearGradient(colors: [.blue, .green], startPoint: .topLeading, endPoint: .bottomTrailing)
-                )
-                .cornerRadius(20)
+                .background(Color.white)
+                
                 .padding()
                 .disabled(isSignInButtonDisabled)
                 .alert(isPresented: $showAlert) {
@@ -106,15 +102,14 @@ struct Login: View {
                     Text("Register for Access")
                         .font(.title2)
                         .bold()
-                        .foregroundColor(.white)
+                        .foregroundColor(.gray)
                         .frame(height: 50)
                         .frame(maxWidth: .infinity)
                 }
                 .background(
                     LinearGradient(colors: [.green, .blue], startPoint: .topLeading, endPoint: .bottomTrailing)
                 )
-                .cornerRadius(20)
-                .padding(.top, -20)
+                .padding(.top, 5)
                 .padding(.horizontal, 15)
                 .alert(isPresented: $showAlert) {
                     Alert(title: Text("Login Status"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
@@ -123,6 +118,11 @@ struct Login: View {
                 Spacer()
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(
+                LinearGradient(
+                    gradient: Gradient(colors: [Color.orange, Color("#ffb600")]),
+                    startPoint: .top,
+                    endPoint: .bottom))
         }
     }
     
