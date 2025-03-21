@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B54D3E72D8DBD5900151017 /* PostgresClientKit in Frameworks */ = {isa = PBXBuildFile; productRef = 6B54D3E62D8DBD5900151017 /* PostgresClientKit */; };
+		6B54D3E92D8DBE1200151017 /* BlueSocketTestCommonLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 6B54D3E82D8DBE1200151017 /* BlueSocketTestCommonLibrary */; };
+		6B54D3EB2D8DBE1F00151017 /* PostgresClientKit in Frameworks */ = {isa = PBXBuildFile; productRef = 6B54D3EA2D8DBE1F00151017 /* PostgresClientKit */; };
 		6BD847392D6396C10026D784 /* Adding a new requirement group and checkign to ensure no dups in the target.sql in Resources */ = {isa = PBXBuildFile; fileRef = 6BD847112D6396C10026D784 /* Adding a new requirement group and checkign to ensure no dups in the target.sql */; };
 		6BD8473A2D6396C10026D784 /* Check Target for specific requirement level.sql in Resources */ = {isa = PBXBuildFile; fileRef = 6BD847122D6396C10026D784 /* Check Target for specific requirement level.sql */; };
 		6BD8473B2D6396C10026D784 /* Updating the target full field update.sql in Resources */ = {isa = PBXBuildFile; fileRef = 6BD847152D6396C10026D784 /* Updating the target full field update.sql */; };
@@ -135,10 +138,8 @@
 		6BD847B62D6396C10026D784 /* Update_data_sql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847362D6396C10026D784 /* Update_data_sql.swift */; };
 		6BD847BD2D6399780026D784 /* PostgresClientKit in Frameworks */ = {isa = PBXBuildFile; productRef = 6BD847BC2D6399780026D784 /* PostgresClientKit */; };
 		6BD847C32D639ACC0026D784 /* PostgresClientKit in Frameworks */ = {isa = PBXBuildFile; productRef = 6BD847C22D639ACC0026D784 /* PostgresClientKit */; };
-		6BD847C82D639D480026D784 /* BlueSocketTestCommonLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 6BD847C72D639D480026D784 /* BlueSocketTestCommonLibrary */; };
 		6BD847CA2D639D480026D784 /* Socket in Frameworks */ = {isa = PBXBuildFile; productRef = 6BD847C92D639D480026D784 /* Socket */; };
 		6BD847CD2D639D620026D784 /* SSLService in Frameworks */ = {isa = PBXBuildFile; productRef = 6BD847CC2D639D620026D784 /* SSLService */; };
-		6BD847CF2D639D830026D784 /* PostgresClientKit in Frameworks */ = {isa = PBXBuildFile; productRef = 6BD847CE2D639D830026D784 /* PostgresClientKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -162,6 +163,7 @@
 		6B03AD7E2D63965600CD28BB /* SAFE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SAFE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B03AD8E2D63965700CD28BB /* SAFETests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SAFETests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B03AD982D63965700CD28BB /* SAFEUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SAFEUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B54D3D82D8DB90600151017 /* PostgresClientKit-1.5.0 */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "PostgresClientKit-1.5.0"; path = "../PostgresClientKit-1.5.0"; sourceTree = "<group>"; };
 		6BD8470A2D6396C10026D784 /* checklist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = checklist.swift; sourceTree = "<group>"; };
 		6BD8470B2D6396C10026D784 /* flowchart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flowchart.swift; sourceTree = "<group>"; };
 		6BD8470C2D6396C10026D784 /* Library old.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Library old.swift"; sourceTree = "<group>"; };
@@ -226,10 +228,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6BD847C82D639D480026D784 /* BlueSocketTestCommonLibrary in Frameworks */,
 				6BD847CA2D639D480026D784 /* Socket in Frameworks */,
 				6BD847CD2D639D620026D784 /* SSLService in Frameworks */,
-				6BD847CF2D639D830026D784 /* PostgresClientKit in Frameworks */,
+				6B54D3E92D8DBE1200151017 /* BlueSocketTestCommonLibrary in Frameworks */,
+				6B54D3EB2D8DBE1F00151017 /* PostgresClientKit in Frameworks */,
+				6B54D3E72D8DBD5900151017 /* PostgresClientKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,6 +353,7 @@
 		6BD847BE2D6399AA0026D784 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6B54D3D82D8DB90600151017 /* PostgresClientKit-1.5.0 */,
 				6BD847BF2D6399AA0026D784 /* PostgresClientKit-1.5.0 */,
 			);
 			name = Frameworks;
@@ -372,10 +376,11 @@
 			);
 			name = SAFE;
 			packageProductDependencies = (
-				6BD847C72D639D480026D784 /* BlueSocketTestCommonLibrary */,
 				6BD847C92D639D480026D784 /* Socket */,
 				6BD847CC2D639D620026D784 /* SSLService */,
-				6BD847CE2D639D830026D784 /* PostgresClientKit */,
+				6B54D3E62D8DBD5900151017 /* PostgresClientKit */,
+				6B54D3E82D8DBE1200151017 /* BlueSocketTestCommonLibrary */,
+				6B54D3EA2D8DBE1F00151017 /* PostgresClientKit */,
 			);
 			productName = SAFE;
 			productReference = 6B03AD7E2D63965600CD28BB /* SAFE.app */;
@@ -983,6 +988,19 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		6B54D3E62D8DBD5900151017 /* PostgresClientKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PostgresClientKit;
+		};
+		6B54D3E82D8DBE1200151017 /* BlueSocketTestCommonLibrary */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6BD847C62D639D480026D784 /* XCRemoteSwiftPackageReference "BlueSocket" */;
+			productName = BlueSocketTestCommonLibrary;
+		};
+		6B54D3EA2D8DBE1F00151017 /* PostgresClientKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PostgresClientKit;
+		};
 		6BD847BC2D6399780026D784 /* PostgresClientKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = PostgresClientKit;
@@ -990,11 +1008,6 @@
 		6BD847C22D639ACC0026D784 /* PostgresClientKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = PostgresClientKit;
-		};
-		6BD847C72D639D480026D784 /* BlueSocketTestCommonLibrary */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 6BD847C62D639D480026D784 /* XCRemoteSwiftPackageReference "BlueSocket" */;
-			productName = BlueSocketTestCommonLibrary;
 		};
 		6BD847C92D639D480026D784 /* Socket */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -1005,10 +1018,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 6BD847CB2D639D620026D784 /* XCRemoteSwiftPackageReference "BlueSSLService" */;
 			productName = SSLService;
-		};
-		6BD847CE2D639D830026D784 /* PostgresClientKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = PostgresClientKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

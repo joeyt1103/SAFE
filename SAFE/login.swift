@@ -20,33 +20,19 @@ struct Login: View {
     
     var body: some View {
         NavigationStack {
-            VStack(alignment: .leading, spacing: 15) {
+            VStack() {
                 
-                Image("dlogo")
+                Image("loginLogo")
                     .resizable()
                     .scaledToFit()
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .frame(height: 100)
-                    .padding(.bottom, -15)
-                    .padding(.leading, 20)
-                    .padding(.top, 20)
+                    .padding()
+        
                 
-                Text("Safe Environment Resource App")
-                    .font(.subheadline)
-                    .padding(.leading, 20)
-                    .padding(.bottom, 50)
-                
-                Text("Please Login....")
-                    .font(.largeTitle)
-                    .padding(.leading, 20)
-                Text("Please note that username and password ARE case sensitive.")
-                    .padding(.leading, 20)
-                    .font(.body)
-                    .foregroundColor(.blue)
-                    .bold()
-                    .lineLimit(nil)
-                    .multilineTextAlignment(.leading)
-                
+                Text("To Access Please Login")
+                    .font(.largeTitle.bold())
+                    .foregroundStyle(Color.red)
+                    
+              
                 TextField("User Name",
                           text: $name,
                           prompt: Text("User Name").foregroundColor(.gray))
@@ -60,7 +46,7 @@ struct Login: View {
                 .padding(.horizontal, 20)
                 .disableAutocorrection(true)
                 .textInputAutocapitalization(.never)
-                
+    
                 HStack {
                     Group {
                         if showPassword {
@@ -136,6 +122,7 @@ struct Login: View {
                 .fullScreenCover(isPresented: $showRegisterView, content: { RegisterView() })
                 Spacer()
             }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
     }
     
