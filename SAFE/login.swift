@@ -25,25 +25,28 @@ struct Login: View {
                 Image("loginLogo")
                     .resizable()
                     .scaledToFit()
+                    .padding(.top, 70)
                     .padding()
         
                 
                 Text("To Access Please Login")
-                    .font(.largeTitle.bold())
+                    .font(.title.bold())
                     .foregroundStyle(Color.red)
+                    .padding(.top, 20 )
                     
               
                 TextField("User Name",
                           text: $name,
                           prompt: Text("User Name").foregroundColor(.gray))
-                .padding(10)
-                .background(Color.gray.opacity(0.1))
+                .padding(12)
+                .background(Color.white.opacity(0.5))
                 .foregroundColor(Color.gray.opacity(0.9))
                 .overlay {
                     RoundedRectangle(cornerRadius: 10)
                         .stroke(Color.gray, lineWidth: 3)
                 }
-                .padding(.horizontal, 20)
+                .padding(.horizontal, 30)
+                .padding(.bottom, 10)
                 .disableAutocorrection(true)
                 .textInputAutocapitalization(.never)
     
@@ -59,10 +62,10 @@ struct Login: View {
                                         prompt: Text("Password").foregroundColor(.gray))
                         }
                     }
-                    .padding(10)
+                    .padding(12)
                     .disableAutocorrection(true)
                     .textInputAutocapitalization(.never)
-                    .background(Color.gray.opacity(0.1))
+                    .background(Color.white.opacity(0.5))
                     .foregroundColor(.gray.opacity(0.9))
                     .overlay {
                         RoundedRectangle(cornerRadius: 10)
@@ -76,7 +79,8 @@ struct Login: View {
                             .foregroundColor(.red)
                     }
                 }
-                .padding(.horizontal, 20)
+                .padding(.horizontal, 29)
+                
                 
                 Button(action: {
                     authenticateUser(username: name, password: password)
@@ -84,11 +88,13 @@ struct Login: View {
                     Text("Sign In")
                         .font(.title2)
                         .bold()
-                        .foregroundColor(.black)
-                        .frame(height: 50)
-                        .frame(maxWidth: .infinity)
+                        .foregroundColor(.white)
+                        .frame(height: 60)
+                        .frame(maxWidth: 300)
+                        
                 }
-                .background(Color.white)
+                .background(Color.blue)
+                .cornerRadius(20)
                 
                 .padding()
                 .disabled(isSignInButtonDisabled)
@@ -102,15 +108,13 @@ struct Login: View {
                     Text("Register for Access")
                         .font(.title2)
                         .bold()
-                        .foregroundColor(.gray)
-                        .frame(height: 50)
-                        .frame(maxWidth: .infinity)
+                        .foregroundColor(.white)
+                        .frame(height: 60)
+                        .frame(maxWidth: 300)
                 }
-                .background(
-                    LinearGradient(colors: [.green, .blue], startPoint: .topLeading, endPoint: .bottomTrailing)
-                )
-                .padding(.top, 5)
-                .padding(.horizontal, 15)
+                .background(Color.blue)
+                .cornerRadius(20)
+                .padding(.top, -15)
                 .alert(isPresented: $showAlert) {
                     Alert(title: Text("Login Status"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
                 }

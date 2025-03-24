@@ -67,7 +67,8 @@ struct ContentView: View {
                     }
                     Spacer()
                 }
-                .navigationTitle(isMenuOpen ? "" : "SERA: \(userState.firstName)")  // Updated to use userState directly
+                //.navigationTitle(isMenuOpen ? "" : "SERA: \(userState.firstName)")  // Updated to use userState directly
+                .navigationBarTitleDisplayMode(.inline)
                 .toolbar {
                     ToolbarItem(placement: .navigationBarLeading) {
                         Button(action: {
