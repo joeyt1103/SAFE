@@ -62,6 +62,7 @@ struct UpdatesView: View {
                 gradient: Gradient(colors: [Color.orange, Color("#ffb600")]),
                 startPoint: .top,
                 endPoint: .bottom))
+        
     }
     
     func sectionView(title: String, items: [String], date: Date, fontSize: CGFloat) -> some View {
