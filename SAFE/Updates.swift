@@ -28,11 +28,18 @@ struct UpdatesView: View {
             
             ScrollView {
                 VStack(alignment: .leading, spacing: 10) {
+                    Image("loginLogo")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 200, height: 100, alignment: .topLeading) // Shrink image
+                        .frame(maxWidth: .infinity, alignment: .leading) // Push to top left
+                    
+                    
                     Text("Updates and News")
                         .font(.system(size: titleFontSize))
                         .fontWeight(.bold)
                         .padding(.bottom, 15)
-                        .padding(.top, 20)
+                        .foregroundStyle(.gray)
                     
                     ForEach(viewModel.updates) { update in
                         sectionView(
@@ -50,6 +57,11 @@ struct UpdatesView: View {
                 viewModel.loadUpdates()
             }
         }
+        .background(
+            LinearGradient(
+                gradient: Gradient(colors: [Color.orange, Color("#ffb600")]),
+                startPoint: .top,
+                endPoint: .bottom))
     }
     
     func sectionView(title: String, items: [String], date: Date, fontSize: CGFloat) -> some View {
@@ -57,6 +69,7 @@ struct UpdatesView: View {
                 Text(title)
                     .font(.system(size: fontSize + 4))
                     .bold()
+                    .foregroundStyle(.red)
 
             Text("Posted On: \(date.formatted(.dateTime.month().day().year()))")
                         .font(.system(size: fontSize - 4))
@@ -72,13 +85,14 @@ struct UpdatesView: View {
                 ForEach(items, id: \.self) { item in
                     Text(item)
                         .font(.system(size: fontSize))
+                        .foregroundColor(.black)
                         .bold()
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.vertical, 2)
                 }
             }
             .padding(8)
-            .background(RoundedRectangle(cornerRadius: 8).fill(Color.gray.opacity(0.2)))
+            .background(RoundedRectangle(cornerRadius: 8).fill(Color.white.opacity(0.5)))
             .padding(.bottom, 30)
         }
     }

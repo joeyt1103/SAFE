@@ -107,9 +107,11 @@ struct SideMenuView: View {
         .padding(.top, 100)  // Apply top padding to push down from top
         .padding(.leading, 10)  // Left padding for aesthetics
         .frame(maxWidth: .infinity, alignment: .leading)
-        .background(Color.white)
-        .edgesIgnoringSafeArea(.all)
+        .background(Color(red: 0.58, green: 0.18, blue: 0.20).opacity(0.9))       .edgesIgnoringSafeArea(.all)
     }
+}
+#Preview {
+    SideMenuView(isAuthenticated: .constant(true))
 }
 
 
