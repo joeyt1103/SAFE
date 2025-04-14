@@ -1,17 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "main screen.png",
+      "filename" : "180520-domingo-pentecostes-2.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "main screen 1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "main screen 2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
