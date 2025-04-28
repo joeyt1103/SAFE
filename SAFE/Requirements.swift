@@ -1,149 +1,165 @@
+// RequirementsView.swift
+
 import SwiftUI
 
+// View that displays user's requirement statuses: clearances, trainings, and policies
 struct RequirementsView: View {
-    @EnvironmentObject var userState: UserState // Assuming UserState is a shared singleton
+    @EnvironmentObject var userState: UserState
     @StateObject private var dataManager = RequirementsDataManager()
+
     @State private var clearances: [UserRequirementStatus] = []
     @State private var trainings: [UserRequirementStatus] = []
     @State private var policies: [UserRequirementStatus] = []
-    
+    @State private var showMenu = false
+
     var body: some View {
-        GeometryReader { geometry in
-            let screenWidth = geometry.size.width
-            let screenHeight = geometry.size.height
-            let isLandscape = screenWidth > screenHeight
-            
-            let titleFontSize: CGFloat = isLandscape ? 40 : 28
-            let subTitleFontSize: CGFloat = isLandscape ? 30 : 22
-            let bodyFontSize: CGFloat = isLandscape ? 24 : 16
-            
-            ScrollView {
-                VStack(alignment: .leading, spacing: 10) {
-                    // Title Section
-                    Text("Requirements for:")
-                        .font(.system(size: titleFontSize))
-                        .fontWeight(.bold)
-                        .padding(.bottom, 15)
-                        .padding(.top, 10)
-                    
-                    // Subtitle Section
-                    Text(userState.user_full_name)
-                        .font(.system(size: subTitleFontSize))
-                        .fontWeight(.bold)
-                        .padding(.bottom, 5)
-                    
-                    // User State Information
-                    Text("\(userState.dioceseName), \(userState.stateId)")
-                        .font(.system(size: bodyFontSize))
-                        .padding(.bottom, -10)
-                    Text(userState.primeMinsitry)
-                    
-                    
-                    Spacer()
-                    
-                    // Section Views
-                    sectionView(title: "Clearances", certifications: clearances, fontSize: bodyFontSize)
-                    sectionView(title: "Trainings", certifications: trainings, fontSize: bodyFontSize)
-                    sectionView(title: "Policies", certifications: policies, fontSize: bodyFontSize)
-                }
-                .padding()
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-            }
-        }
-        .onAppear {
-            let userId = userState.userId
-            dataManager.fetchData(userID: userId) { result in
-                    switch result {
-                    case .success:
-                        let categorized = dataManager.categorizedRequirements(
-                            requirements: dataManager.requirements,
-                            histories: dataManager.statuses
-                        )
-                        clearances = categorized.clearances
-                        trainings = categorized.trainings
-                        policies = categorized.policies
-                        
-                    case .failure(let error):
-                        print("Error fetching requirements: \(error)")
+        NavigationView {
+            ZStack {
+                // Main scrollable content
+                ScrollView {
+                    VStack(alignment: .leading, spacing: 20) {
+                        // Top bar with menu button and logo
+                        HStack {
+        
+                            Image("SERA_Text_w__Shield")
+                                .resizable()
+                                .frame(width: 140, height: 140)
+                        }
+
+                        // User information
+                        Text("Requirements for:")
+                            .font(.custom("Helvetica", size: 32))
+                            .foregroundColor(Color(red: 0.3176, green: 0.3176, blue: 0.3176))
+                            .fontWeight(.bold)
+
+                        Text(userState.user_full_name)
+                            .font(.custom("Helvetica", size: 24))
+                            .foregroundColor(Color(red: 0.3176, green: 0.3176, blue: 0.3176))
+
+                        Text("\(userState.dioceseName), \(userState.stateId)")
+                            .font(.custom("Helvetica", size: 18))
+                            .foregroundColor(Color(red: 0.3176, green: 0.3176, blue: 0.3176))
+
+                        Text(userState.primeMinsitry)
+                            .font(.custom("Helvetica", size: 18))
+                            .foregroundColor(Color(red: 0.3176, green: 0.3176, blue: 0.3176))
+
+                        // Sections for each type of requirement
+                        sectionView(title: "Clearances", certifications: clearances)
+                        sectionView(title: "Trainings", certifications: trainings)
+                        sectionView(title: "Policies", certifications: policies)
                     }
-                
-            
-                //print("Clearances: \(clearances)")
-                //print("Trainings: \(trainings)")
-                //print("Policies: \(policies)")
+                    .padding()
+                }
+                .background(
+                    LinearGradient(
+                        gradient: Gradient(colors: [
+                            Color(red: 0.945, green: 0.651, blue: 0.168),
+                            Color(red: 0.949, green: 0.949, blue: 0.949)
+                        ]),
+                        startPoint: .top,
+                        endPoint: .bottom
+                    )
+                    .ignoresSafeArea()
+                )
+                .onAppear {
+                    // Fetch user-specific requirement data
+                    let userId = userState.userId
+                    dataManager.fetchData(userID: userId) { result in
+                        switch result {
+                        case .success:
+                            let categorized = dataManager.categorizedRequirements(
+                                requirements: dataManager.requirements,
+                                histories: dataManager.statuses
+                            )
+                            clearances = categorized.clearances
+                            trainings = categorized.trainings
+                            policies = categorized.policies
+                        case .failure(let error):
+                            print("Error fetching requirements: \(error)")
+                        }
+                    }
+                }
+
+                // Side menu overlay
+                if showMenu {
+                    ZStack {
+                        SideMenuView(isAuthenticated: .constant(true))
+                            .transition(.move(edge: .leading))
+                            .zIndex(1)
+
+                        VStack {
+                            Spacer().frame(height: 180)
+                            Rectangle()
+                                .fill(Color.clear)
+                                .frame(height: 40)
+                                .contentShape(Rectangle())
+                                .onTapGesture { }
+                            Spacer()
+                        }
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .background(Color.clear)
+                        .zIndex(2)
+                    }
+                    .background(
+                        Color.black.opacity(0.3)
+                            .ignoresSafeArea()
+                            .onTapGesture {
+                                withAnimation { showMenu = false }
+                            }
+                    )
+                }
             }
         }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
-    
-    // Section View Function
-    private func sectionView(title: String, certifications: [UserRequirementStatus], fontSize: CGFloat) -> some View {
-        VStack(alignment: .leading, spacing: 5) {
+
+    // Helper view to render each requirements section
+    private func sectionView(title: String, certifications: [UserRequirementStatus]) -> some View {
+        VStack(alignment: .leading, spacing: 8) {
             Text(title)
-                .font(.system(size: fontSize + 6))
+                .font(.custom("Helvetica", size: 22))
+                .foregroundColor(Color(red: 0.3176, green: 0.3176, blue: 0.3176))
                 .bold()
-                .padding(.bottom, 2)
-            
+
             Divider()
-                .background(Color.gray)
-                .padding(.bottom, 2)
-            
-            // Table Headers
-            HStack {
-                Text("Requirement")
-                    .font(.system(size: fontSize + 3))
-                    .bold()
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                
-                Text("Status")
-                    .font(.system(size: fontSize + 3))
-                    .bold()
-                    .frame(maxWidth: .infinity, alignment: .leading)
-            }
-            .padding(.bottom, 5)
-            
-            // Certifications
-            VStack(alignment: .leading, spacing: 5) {
-                ForEach(certifications) { certification in
-                    HStack(alignment: .top) {
-                        Text(certification.reqID)
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                            .multilineTextAlignment(.leading)
-                            .font(.system(size: fontSize + 2))
-                        
-                        Text(certification.status)
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                            .multilineTextAlignment(.leading)
-                            .font(.system(size: fontSize + 2))
-                            
-                            .foregroundColor(colorForStatus(certification.status)) // Add dynamic color
-                            .padding(.bottom, 6)
+
+            VStack(spacing: 12) {
+                ForEach(certifications) { cert in
+                    VStack(alignment: .leading, spacing: 4) {
+                        HStack {
+                            Text(cert.reqID)
+                                .font(.custom("Helvetica", size: 16))
+                                .foregroundColor(Color(red: 0.3176, green: 0.3176, blue: 0.3176))
+                            Spacer()
+                            Text(cert.status)
+                                .font(.custom("Helvetica", size: 16))
+                                .foregroundColor(colorForStatus(cert.status))
+                        }
                     }
+                    .padding()
+                    .background(Color.white)
+                    .cornerRadius(8)
+                    .shadow(color: .black.opacity(0.05), radius: 2, x: 0, y: 2)
                 }
             }
-            .padding(8)
-            .background(RoundedRectangle(cornerRadius: 8).fill(Color.gray.opacity(0.4)))
-            .padding(.bottom, 10)
         }
-        .padding(.horizontal)
+        .padding()
+        .background(Color.white.opacity(0.8))
+        .cornerRadius(12)
+        .shadow(radius: 4)
     }
-    
+
+    // Determines the color to use based on the requirement status
     private func colorForStatus(_ status: String) -> Color {
         if status.starts(with: "Expired On:") {
             return .red
         } else if status.starts(with: "Expiring Within") {
             return .orange
         } else if status.starts(with: "Generated") {
-            return.indigo
+            return .indigo
         } else {
-            return .black // Default text color
+            return .black
         }
-    }
-}
-
-// MARK: - Preview
-struct RequirementsView_Previews: PreviewProvider {
-    static var previews: some View {
-        RequirementsView()
-            .environmentObject(UserState.shared)
     }
 }

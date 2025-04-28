@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B31DF612DAD66240019737C /* IDcard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B31DF602DAD661E0019737C /* IDcard.swift */; };
+		6B31DF622DAD66240019737C /* IDcard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B31DF602DAD661E0019737C /* IDcard.swift */; };
+		6B31DF632DAD66240019737C /* IDcard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B31DF602DAD661E0019737C /* IDcard.swift */; };
 		6B54D3E72D8DBD5900151017 /* PostgresClientKit in Frameworks */ = {isa = PBXBuildFile; productRef = 6B54D3E62D8DBD5900151017 /* PostgresClientKit */; };
 		6B54D3E92D8DBE1200151017 /* BlueSocketTestCommonLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 6B54D3E82D8DBE1200151017 /* BlueSocketTestCommonLibrary */; };
 		6B54D3EB2D8DBE1F00151017 /* PostgresClientKit in Frameworks */ = {isa = PBXBuildFile; productRef = 6B54D3EA2D8DBE1F00151017 /* PostgresClientKit */; };
@@ -163,6 +166,7 @@
 		6B03AD7E2D63965600CD28BB /* SAFE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SAFE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B03AD8E2D63965700CD28BB /* SAFETests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SAFETests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B03AD982D63965700CD28BB /* SAFEUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SAFEUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B31DF602DAD661E0019737C /* IDcard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDcard.swift; sourceTree = "<group>"; };
 		6B54D3D82D8DB90600151017 /* PostgresClientKit-1.5.0 */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "PostgresClientKit-1.5.0"; path = "../PostgresClientKit-1.5.0"; sourceTree = "<group>"; };
 		6BD8470A2D6396C10026D784 /* checklist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = checklist.swift; sourceTree = "<group>"; };
 		6BD8470B2D6396C10026D784 /* flowchart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flowchart.swift; sourceTree = "<group>"; };
@@ -304,6 +308,7 @@
 		6BD847182D6396C10026D784 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				6B31DF602DAD661E0019737C /* IDcard.swift */,
 				6BD847172D6396C10026D784 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -567,6 +572,7 @@
 				6BD8475F2D6396C10026D784 /* prayersSQL.swift in Sources */,
 				6BD847602D6396C10026D784 /* registration_data_sql.swift in Sources */,
 				6BD847612D6396C10026D784 /* libraryQuery.swift in Sources */,
+				6B31DF632DAD66240019737C /* IDcard.swift in Sources */,
 				6BD847622D6396C10026D784 /* Update_data_sql.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -580,6 +586,7 @@
 				6BD847962D6396C10026D784 /* keychain.swift in Sources */,
 				6BD847972D6396C10026D784 /* testpage.swift in Sources */,
 				6BD847982D6396C10026D784 /* profile.swift in Sources */,
+				6B31DF622DAD66240019737C /* IDcard.swift in Sources */,
 				6BD847992D6396C10026D784 /* Prayers_data_sql.swift in Sources */,
 				6BD8479A2D6396C10026D784 /* checklistSQL.swift in Sources */,
 				6BD8479B2D6396C10026D784 /* login.swift in Sources */,
@@ -637,6 +644,7 @@
 				6BD8477B2D6396C10026D784 /* ContentView.swift in Sources */,
 				6BD8477C2D6396C10026D784 /* librarySQL.swift in Sources */,
 				6BD8477D2D6396C10026D784 /* SAFEApp.swift in Sources */,
+				6B31DF612DAD66240019737C /* IDcard.swift in Sources */,
 				6BD8477E2D6396C10026D784 /* Requirments_data_sql.swift in Sources */,
 				6BD8477F2D6396C10026D784 /* flowchart_data_sql.swift in Sources */,
 				6BD847802D6396C10026D784 /* admin_settings.swift in Sources */,

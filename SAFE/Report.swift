@@ -30,7 +30,7 @@ struct ReportView: View {
                         Text("Reporting Alleged Abuse of a Minor")
                             .font(.system(size: titleFontSize)) // Adjusted font size for title
                             .fontWeight(.bold)
-                            .padding(.top, 20)
+                            .foregroundColor(Color(red: 0.58, green: 0.18, blue: 0.20).opacity(0.9))
                         
                         // Buttons in an HStack
                         HStack {
@@ -45,8 +45,8 @@ struct ReportView: View {
                                         .frame(maxWidth: .infinity, minHeight: 50)
                                 }
                                 .padding()
-                                .background(Color.gray)
-                                .foregroundColor(.white)
+                                .background(Color(red: 0.60, green: 0.18, blue: 0.20).opacity(0.9))
+                                .foregroundColor(Color.white)
                                 .cornerRadius(8)
                                 .sheet(isPresented: $showLeftForm) {
                                     ReferenceTopicForm(topic: "When to Make a Report", references: leftReferences, header: "Reasons to Make a Report", isPresented: $showLeftForm)
@@ -65,8 +65,8 @@ struct ReportView: View {
                                         .frame(maxWidth: .infinity, minHeight: 50)
                                 }
                                 .padding()
-                                .background(Color.gray)
-                                .foregroundColor(.white)
+                                .background(Color(red: 0.60, green: 0.18, blue: 0.20).opacity(0.9))
+                                .foregroundColor(Color.white)
                                 .cornerRadius(8)
                                 .sheet(isPresented: $showRightForm) {
                                     ReferenceTopicForm(topic: "When not to Make a Report", references: rightReferences, header: "Reasons Not to Make a Report", isPresented: $showRightForm)
@@ -89,8 +89,8 @@ struct ReportView: View {
                                     .frame(maxWidth: .infinity, minHeight: 50)
                             }
                             .padding()
-                            .background(Color.gray)
-                            .foregroundColor(.white)
+                            .background(Color(red: 0.60, green: 0.18, blue: 0.20).opacity(0.9))
+                            .foregroundColor(Color.white)
                             .cornerRadius(8)
                             .alert(isPresented: $showMessageBox) {
                                 Alert(
@@ -143,9 +143,17 @@ struct ReportView: View {
             }
             .padding()
             .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(
+                LinearGradient(
+                    gradient: Gradient(colors: [Color.orange, Color("#ffb600")]),
+                    startPoint: .top,
+                    endPoint: .bottom))
         }
+        
     }
+    
 }
+
     
     // Updated ReferenceTopicForm to accept a custom header string and modify navigation title size
     struct ReferenceTopicForm: View {

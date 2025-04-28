@@ -18,95 +18,140 @@ struct PrayersView: View {
     @State private var categories: [String] = ["All"]
     @State private var selectedCategory: String = "All"
     @State private var filteredPrayers: [PrayerData] = []
+    @State private var showMenu: Bool = false
     
     var body: some View {
-        GeometryReader { geometry in
-            let screenWidth = geometry.size.width
-            let screenHeight = geometry.size.height
-            let isLandscape = screenWidth > screenHeight
-            
-            let titleFontSize: CGFloat = isLandscape ? 40 : 28
-            let _: CGFloat = isLandscape ? 24 : 16
-            
-            VStack(alignment: .center, spacing: 20) {
-                Text("Common Catholic Prayers")
-                    .font(.system(size: titleFontSize))
-                    .fontWeight(.bold)
-                    .padding(.top, 20)
+        ZStack {
+            // Background gradient
+            LinearGradient(gradient: Gradient(colors: [
+                Color(red: 242/255, green: 166/255, blue: 41/255),
+                Color(red: 244/255, green: 234/255, blue: 217/255)
+            ]), startPoint: .topLeading, endPoint: .bottomTrailing)
+            .ignoresSafeArea()
+
+            // Main content
+            GeometryReader { geometry in
+                let screenWidth = geometry.size.width
+                let screenHeight = geometry.size.height
+                let isLandscape = screenWidth > screenHeight
+                let titleFontSize: CGFloat = isLandscape ? 40 : 28
                 
-                Text("Select a category to see only those prayers in that category, or select All to see all prayers")
-                    .frame(width: screenWidth * 0.8, alignment: .center)
-                    .multilineTextAlignment(.leading)
-                
-                // Picker for selecting category
-                Picker("Category", selection: $selectedCategory) {
-                    ForEach(categories, id: \.self) { category in
-                        Text(category).tag(category)
-                    }
-                }
-                .pickerStyle(MenuPickerStyle())
-                .onReceive(Just(selectedCategory)) { newValue in
-                    filterPrayers(for: newValue)
-                }
-                
-                // List of prayers
-                if filteredPrayers.isEmpty {
-                    Text("No prayers found.")
-                        .font(.subheadline)
-                        .foregroundColor(.gray)
+                VStack(alignment: .center, spacing: 20) {
+                    Text("Common Catholic Prayers")
+                        .font(.system(size: titleFontSize))
+                        .fontWeight(.bold)
+                        .foregroundColor(Color(red: 38/255, green: 86/255, blue: 134/255))
                         .padding(.top, 20)
-                } else {
-                    List(filteredPrayers) { prayer in
-                        VStack(alignment: .leading) {
-                            Text(prayer.prayerName)
-                                .font(.headline)
-                            Text("Used By: \(prayer.prayerApp)")
-                                .font(.footnote)
-                            Text("Source:   \(prayer.prayerSource)")
-                                .font(.footnote)
-                                .padding(.bottom, 5)
-                            Divider()
-                                .background(Color.black)
-                                .frame(height: 7)
-                            Text(prayer.prayerText)
-                                .font(.subheadline)
-                                .background(RoundedRectangle(cornerRadius: 8).fill(Color.gray.opacity(0.2)))
-                            Divider()
-                                .background(Color.black)
-                                .frame(height: 7)
+
+                    Text("Select a category to show prayers or choose All to list all.")
+                        .multilineTextAlignment(.center)
+                        .frame(width: screenWidth * 0.8)
+                        .foregroundColor(Color(red: 38/255, green: 86/255, blue: 134/255))
+
+                    Picker("Category", selection: $selectedCategory) {
+                        ForEach(categories, id: \.self) { category in
+                            Text(category).tag(category)
                         }
-                        .padding(.vertical, 5)
-                        
                     }
-                    .listStyle(PlainListStyle()) // Simple style for the list
+                    .pickerStyle(MenuPickerStyle())
+                    .padding(8)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 8)
+                            .stroke(Color(red: 160/255, green: 57/255, blue: 61/255), lineWidth: 2)
+                    )
+                    .onChange(of: selectedCategory) { newValue in
+                        filterPrayers(for: newValue)
+                    }
+
+                    if filteredPrayers.isEmpty {
+                        Text("No prayers found.")
+                            .font(.subheadline)
+                            .foregroundColor(.gray)
+                            .padding(.top, 20)
+                    } else {
+                        List(filteredPrayers) { prayer in
+                            ZStack {
+                                RoundedRectangle(cornerRadius: 25)
+                                    .fill(Color(red: 244/255, green: 239/255, blue: 231/255))
+                                    .shadow(radius: 3)
+
+                                VStack(spacing: 10) {
+                                    Text(prayer.prayerName)
+                                        .font(.headline)
+                                        .foregroundColor(Color(red: 160/255, green: 57/255, blue: 61/255))
+
+                                    Text("Used by: \(prayer.prayerApp) | Category: \(prayer.prayerCategory)")
+                                        .font(.subheadline)
+                                        .foregroundColor(.gray)
+
+                                    Text(prayer.prayerText)
+                                        .font(.body)
+                                        .foregroundColor(Color(red: 38/255, green: 86/255, blue: 134/255))
+                                        .padding()
+                                        .background(
+                                            RoundedRectangle(cornerRadius: 15)
+                                                .foregroundColor(.white)
+                                        )
+                                }
+                                .padding()
+                            }
+                            .listRowSeparator(.hidden)
+                            .listRowBackground(Color.clear)
+                        }
+                        .listStyle(PlainListStyle())
+                    }
+                }
+                .padding()
+                .onAppear {
+                    loadCategories()
+                    viewModel.loadPrayers()
                 }
             }
-            .padding()
-            .onAppear {
-                loadCategories()
-                viewModel.loadPrayers()
+            .zIndex(0)
+
+            // Side menu overlay
+            if showMenu {
+                ZStack {
+                    SideMenuView(isAuthenticated: .constant(true))
+                        .transition(.move(edge: .leading))
+                        .zIndex(1)
+
+                    VStack {
+                        Spacer().frame(height: 180)
+                        Rectangle().fill(Color.clear)
+                            .frame(height: 40)
+                            .contentShape(Rectangle())
+                            .onTapGesture {}
+                        Spacer()
+                    }
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .zIndex(2)
+                }
+                .background(
+                    Color.black.opacity(0.3)
+                        .ignoresSafeArea()
+                        .onTapGesture { withAnimation { showMenu = false } }
+                )
             }
-            .onReceive(Just(selectedCategory)) { newValue in
-                filterPrayers(for: newValue)
-            }
+
         }
     }
+
     private func loadCategories() {
-        fetchPrayerCategories { fetchedCategories in
-            DispatchQueue.main.async {
-                categories = fetchedCategories
-            }
+        fetchPrayerCategories { fetched in
+            DispatchQueue.main.async { categories = fetched }
         }
     }
-    
+
     private func filterPrayers(for category: String) {
-        if selectedCategory == "All" {
+        if category == "All" {
             filteredPrayers = viewModel.prayers
         } else {
-            filteredPrayers = viewModel.prayers.filter { $0.prayerCategory == selectedCategory }
+            filteredPrayers = viewModel.prayers.filter { $0.prayerCategory == category }
         }
     }
 }
+
 struct PrayersView_Previews: PreviewProvider {
     static var previews: some View {
         PrayersView()

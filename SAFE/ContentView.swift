@@ -19,17 +19,56 @@ struct ContentView: View {
                     Image("dlogo")
                         .resizable()
                         .scaledToFit()
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .frame(height: 100)
-                        .padding(.bottom, -15)
-                        .padding(.leading, 10)
+                        .frame(maxWidth: .infinity, alignment: .center)
+                        .frame(height: 75)
+                        .padding(.top, -50)
+                        .padding(.leading, 80)
                     
                     Text("Safe Environment Resource App")
                         .font(.subheadline)
-                        .padding(.leading, -10)
+                        .padding(.leading, 150)
+                        .padding(.top, -20)
+ 
+                    Image("La Pentecôte")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(maxWidth: .infinity, alignment: .center)
+                        .frame(height: 350)
+                        .padding(.top, -30)
+                    Text("Welcome to SERA")
+                        .font(.title)
+                        .fontWeight(.bold)
+                        .padding(.leading, -150)
+                        .padding(.top, -40)
+                        .foregroundColor(Color(red: 0.58, green: 0.18, blue: 0.20).opacity(0.9))
+                    
+                    Text("Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo")
+                        .font(.system(size: 20))
+                        .foregroundColor(.brown)
+                        .multilineTextAlignment(.leading)
+                        .padding(30)
+                        .background(
+                            RoundedRectangle(cornerRadius: 25)
+                                .fill(Color(red: 0.98, green: 0.95, blue: 0.85))
+                        )
+                    
+                    Spacer()
+                    
+                    if use_cloud_db {
+                        Text("Using CloudDB")
+                            .font(.body)
+                            .bold()
+                            .foregroundColor(Color(red: 0, green: 0, blue: 50))
+                    } else {
+                        Text("Using LocalDB")
+                            .font(.body)
+                            .bold()
+                            .foregroundColor(.red)
+                    }
+                    Spacer()
                     HStack {
                         Text("Proof of Concept Build")
-                            .font(.title2)
+                            .font(.body)
                             .padding(.top, 10)
                         
                         Button(action: {
@@ -45,27 +84,6 @@ struct ContentView: View {
                             Text("Refresh User Defaults")
                         }
                     }
- 
-                    Image("main screen")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(maxWidth: .infinity, alignment: .center)
-                        .frame(height: 350)
-                    
-                    Spacer()
-                    
-                    if use_cloud_db {
-                        Text("Using CloudDB")
-                            .font(.body)
-                            .bold()
-                            .foregroundColor(Color(red: 0, green: 51, blue: 0))
-                    } else {
-                        Text("Using LocalDB")
-                            .font(.body)
-                            .bold()
-                            .foregroundColor(.blue)
-                    }
-                    Spacer()
                 }
                 //.navigationTitle(isMenuOpen ? "" : "SERA: \(userState.firstName)")  // Updated to use userState directly
                 .navigationBarTitleDisplayMode(.inline)
@@ -78,6 +96,10 @@ struct ContentView: View {
                         }) {
                             Image(systemName: "line.horizontal.3")
                                 .imageScale(.large)
+                                .font(.system(size: 35, weight: .bold))
+                                .foregroundColor(.red)
+                                .padding(.top, 30)
+                                .padding(.leading, 10)
                         }
                     }
                 }
@@ -101,6 +123,11 @@ struct ContentView: View {
                         }
                 }
             }
+            .background(
+                LinearGradient(
+                    gradient: Gradient(colors: [Color.orange, Color("#ffb600")]),
+                    startPoint: .top,
+                    endPoint: .bottom))
             .animation(.easeInOut, value: isMenuOpen)
             .onAppear {
                 UserState.shared.loadFromDefaults()

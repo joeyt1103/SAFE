@@ -1,143 +1,129 @@
+// ProfileView.swift
+
 import SwiftUI
 
-struct ProfileView: View {
-    @ObservedObject var userState = UserState.shared
-   
-    
-    var body: some View {
-        GeometryReader { geometry in
-            let screenWidth = geometry.size.width
-            let screenHeight = geometry.size.height
-            let isLandscape = screenWidth > screenHeight
-            
-            let titleFontSize: CGFloat = isLandscape ? 40 : 28
-            let subTitleFontSize: CGFloat = isLandscape ? 30 : 22
-            let bodyFontSize: CGFloat = isLandscape ? 24 : 16
-            
-            ScrollView {
-                VStack(alignment: .leading, spacing: 10) {
-                    // Header
-                    Text("Profile and Settings")
-                        .font(.system(size: titleFontSize))
-                        .fontWeight(.bold)
-                        .padding(.bottom, 15)
-                        .padding(.top, 20)
-                    
-                    Text(userState.userFullName)
-                        .font(.system(size: subTitleFontSize))
-                        .fontWeight(.bold)
-                        .padding(.bottom, 5)
-                    
-                    
-                    Text("\(userState.city), \(userState.state)")
-                        .font(.system(size: 18))
-                        .bold()
-                        .padding(.bottom, -10)
-                    
-                    Text("Vocation: \(userState.vocation)")
-                        .font(.system(size: 18))
-                        .bold()
-                        .padding(.bottom, 15)
-                    Text("Requirement Category:")
-                        .bold()
-                        .foregroundColor(Color.indigo)
-                        .padding(.bottom, 0)
-                    Text("\(userState.catDesc)")
-                        .padding(.bottom, 15)
-                    
-                    
-                    // Conditionally display Diocesan Information section
-                    if user_dio_emp != 0 {
-                        sectionView(
-                            title: "Diocesan Employment Information",
-                            items: [
-                                ("Diocesan Location:", user_office),
-                                ("Position:", user_dioTitle)
-                            ],
-                            fontSize: bodyFontSize
-                        )
-                    }
-                    
-                    // Always displayed sections
-                    sectionView(
-                        title: "Location Information",
-                        items: [
-                            ("Location:", userState.locName),
-                            ("Primary Ministry:", userState.primeMinsitry)
-                        ],
-                        fontSize: bodyFontSize
-                    )
-                    
-                    sectionView(
-                        title: "Contact Information",
-                        items: [
-                            ("Address:", "\(userState.add1)\(userState.add2.isEmpty == false ? "\n\(userState.add2)" : "")\n\(userState.city), \(user_state_id) \(user_zip)"),
-                            ("Cell:", userState.cell),
-                            ("Email:", userState.email)
-                        ],
-                        fontSize: bodyFontSize
-                    )
-                    
-                    sectionView(
-                        title: "Settings",
-                        items: [
-                            ("Username:", userState.username),
-                            ("Password:", "************"),
-                            ("Placeholder:", "TBD"),
-                            ("Placeholder:","TBD")
-                        ],
-                        fontSize: bodyFontSize
-                    )
-                }
-                .padding()
-                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
-            }
-            .onAppear {
-                print("ProfileView loaded with user: \(userState.firstName)")
-                       
-            }
-        }
-    }
-    
-    // Private sectionView function for displaying each section
-    private func sectionView(title: String, items: [(label: String, value: String)], fontSize: CGFloat) -> some View {
-        VStack(alignment: .leading, spacing: 5) {
-            // Section title
-            Text(title)
-                .font(.system(size: fontSize + 4))
-                .bold()
-                .padding(.bottom, 2)
-            
-            Divider()
-                .background(Color.gray)
-                .padding(.bottom, 2)
-            
-            // Labels and data aligned in pairs
-            VStack(alignment: .leading, spacing: 5) {
-                ForEach(items, id: \.label) { item in
-                    HStack(alignment: .top) {
-                        Text(item.label)
-                            .frame(width: 150, alignment: .leading) // Fixed width for label
-                            .font(.system(size: fontSize + 3))
-                        Text(item.value)
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                            .font(.system(size: fontSize + 3))
-                            .padding(.bottom, 2)
-                    }
-                }
-            }
-            .padding(8)
-            .background(RoundedRectangle(cornerRadius: 8).fill(Color.gray.opacity(0.2)))
-            .padding(.bottom, 10)
-        }
-    }
+// Simple struct to pair labels with values
+struct LabelValue: Hashable {
+    let label: String
+    let value: String
 }
 
+// Main view showing user profile and settings
+struct ProfileView: View {
+    @ObservedObject var userState = UserState.shared
 
+    var body: some View {
+        ScrollView {
+            VStack(alignment: .leading, spacing: 20) {
+                // Header with title and logo
+                HStack {
+                    Text("Profile and Settings")
+                        .font(.custom("Helvetica", size: 32))
+                        .foregroundColor(Color(red: 0.3176, green: 0.3176, blue: 0.3176))
+                        .fontWeight(.bold)
+                    NavigationLink(destination: IDCard()) {
+                        Text("IDCard")
+                            .foregroundColor(.black)
+                            .font(.custom("Helvetica", size: 10))
+                            .padding(.leading, 50)
+                    }
+                    .buttonStyle(PlainButtonStyle())
+                    Image("SERA_Text_w__Shield")
+                        .resizable()
+                        .frame(width: 140, height: 140)
+                }
 
+                // Basic user information
+                profileField(title: userState.userFullName, fontSize: 24)
+                profileField(title: "\(userState.city), \(userState.state)", fontSize: 18)
+                profileField(title: "Vocation: \(userState.vocation)", fontSize: 18)
+                profileField(title: "Requirement Category: \(userState.catDesc)", fontSize: 16, color: .indigo)
 
-struct ProfileView_Previews: PreviewProvider {
-    static var previews: some View {
-        ProfileView()
+                // Conditionally show diocesan employment info
+                if user_dio_emp != 0 {
+                    sectionView(title: "Diocesan Employment Information", items: [
+                        LabelValue(label: "Diocesan Location:", value: user_office),
+                        LabelValue(label: "Position:", value: user_dioTitle)
+                    ])
+                }
+
+                // Location information
+                sectionView(title: "Location Information", items: [
+                    LabelValue(label: "Location:", value: userState.locName),
+                    LabelValue(label: "Primary Ministry:", value: userState.primeMinsitry)
+                ])
+
+                // Contact information
+                sectionView(title: "Contact Information", items: [
+                    LabelValue(label: "Address:", value: "\(userState.add1)\(userState.add2.isEmpty ? "" : "\n\(userState.add2)")\n\(userState.city), \(user_state_id) \(user_zip)"),
+                    LabelValue(label: "Cell:", value: userState.cell),
+                    LabelValue(label: "Email:", value: userState.email)
+                ])
+
+                // Placeholder settings (likely to be updated later)
+                sectionView(title: "Settings", items: [
+                    LabelValue(label: "Username:", value: userState.username),
+                    LabelValue(label: "Password:", value: "************"),
+                    LabelValue(label: "Placeholder:", value: "TBD"),
+                    LabelValue(label: "Placeholder:", value: "TBD")
+                ])
+            }
+            .padding()
+        }
+        .background(
+            LinearGradient(
+                gradient: Gradient(colors: [
+                    Color(red: 0.945, green: 0.651, blue: 0.168),
+                    Color(red: 0.949, green: 0.949, blue: 0.949)
+                ]),
+                startPoint: .top,
+                endPoint: .bottom
+            )
+            .ignoresSafeArea()
+        )
     }
+
+    // Displays a simple single text field
+    private func profileField(title: String, fontSize: CGFloat, color: Color = Color(red: 0.3176, green: 0.3176, blue: 0.3176)) -> some View {
+        Text(title)
+            .font(.custom("Helvetica", size: fontSize))
+            .foregroundColor(color)
+    }
+
+    // Displays a titled section of multiple label-value pairs
+    private func sectionView(title: String, items: [LabelValue]) -> some View {
+        VStack(alignment: .leading, spacing: 8) {
+            Text(title)
+                .font(.custom("Helvetica", size: 22))
+                .foregroundColor(Color(red: 0.3176, green: 0.3176, blue: 0.3176))
+                .bold()
+
+            Divider()
+
+            ForEach(items, id: \.self) { item in
+                VStack(alignment: .leading, spacing: 4) {
+                    HStack {
+                        Text(item.label)
+                            .font(.custom("Helvetica", size: 16))
+                            .foregroundColor(Color(red: 0.3176, green: 0.3176, blue: 0.3176))
+                        Spacer()
+                        Text(item.value)
+                            .font(.custom("Helvetica", size: 16))
+                            .foregroundColor(Color(red: 0.3176, green: 0.3176, blue: 0.3176))
+                    }
+                }
+                .padding()
+                .background(Color.white)
+                .cornerRadius(8)
+                .shadow(color: .black.opacity(0.05), radius: 2, x: 0, y: 2)
+            }
+        }
+        .padding()
+        .background(Color.white.opacity(0.8))
+        .cornerRadius(12)
+        .shadow(radius: 4)
+    }
+}
+#Preview {
+    ProfileView()
 }

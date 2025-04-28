@@ -15,7 +15,7 @@ struct SideMenuView: View {
                 .resizable()
                 .scaledToFit()
                 .frame(width: 100, height: 100)
-                .padding(.top, 20)
+                .padding(.top, 100)
                 .zIndex(1)
             VStack(alignment: .leading, spacing: 20) {
                 // "Select an Option" NavigationLink

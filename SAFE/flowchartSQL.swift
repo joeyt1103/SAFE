@@ -64,6 +64,12 @@ struct FlowChartSQL: View {
                     .padding(.top, 10)
             }
         }
+        .background(
+            LinearGradient(
+                gradient: Gradient(colors: [Color.orange, Color("#ffb600")]),
+                startPoint: .top,
+                endPoint: .bottom))
+        
         .onAppear {
             loadStates() // Load states when the view appears
         }
@@ -74,6 +80,7 @@ struct FlowChartSQL: View {
             checkSelectionsAndLoadSteps()
         }
     }
+    
     
     // Function to display steps 1 through 6
     @ViewBuilder
