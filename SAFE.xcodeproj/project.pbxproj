@@ -7,142 +7,93 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6B31DF612DAD66240019737C /* IDcard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B31DF602DAD661E0019737C /* IDcard.swift */; };
-		6B31DF622DAD66240019737C /* IDcard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B31DF602DAD661E0019737C /* IDcard.swift */; };
-		6B31DF632DAD66240019737C /* IDcard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B31DF602DAD661E0019737C /* IDcard.swift */; };
-		6B54D3E72D8DBD5900151017 /* PostgresClientKit in Frameworks */ = {isa = PBXBuildFile; productRef = 6B54D3E62D8DBD5900151017 /* PostgresClientKit */; };
-		6B54D3E92D8DBE1200151017 /* BlueSocketTestCommonLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 6B54D3E82D8DBE1200151017 /* BlueSocketTestCommonLibrary */; };
-		6B54D3EB2D8DBE1F00151017 /* PostgresClientKit in Frameworks */ = {isa = PBXBuildFile; productRef = 6B54D3EA2D8DBE1F00151017 /* PostgresClientKit */; };
-		6BD847392D6396C10026D784 /* Adding a new requirement group and checkign to ensure no dups in the target.sql in Resources */ = {isa = PBXBuildFile; fileRef = 6BD847112D6396C10026D784 /* Adding a new requirement group and checkign to ensure no dups in the target.sql */; };
-		6BD8473A2D6396C10026D784 /* Check Target for specific requirement level.sql in Resources */ = {isa = PBXBuildFile; fileRef = 6BD847122D6396C10026D784 /* Check Target for specific requirement level.sql */; };
-		6BD8473B2D6396C10026D784 /* Updating the target full field update.sql in Resources */ = {isa = PBXBuildFile; fileRef = 6BD847152D6396C10026D784 /* Updating the target full field update.sql */; };
-		6BD8473C2D6396C10026D784 /* Removing a particular item in the target array.sql in Resources */ = {isa = PBXBuildFile; fileRef = 6BD847132D6396C10026D784 /* Removing a particular item in the target array.sql */; };
-		6BD8473D2D6396C10026D784 /* SAFE Table Schematic Entity-User in Resources */ = {isa = PBXBuildFile; fileRef = 6BD847142D6396C10026D784 /* SAFE Table Schematic Entity-User */; };
-		6BD8473E2D6396C10026D784 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BD8471A2D6396C10026D784 /* Assets.xcassets */; };
-		6BD8473F2D6396C10026D784 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BD847172D6396C10026D784 /* Preview Assets.xcassets */; };
-		6BD847402D6396C10026D784 /* requirements_managers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8472F2D6396C10026D784 /* requirements_managers.swift */; };
-		6BD847412D6396C10026D784 /* Dio_Directory_Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847202D6396C10026D784 /* Dio_Directory_Data.swift */; };
-		6BD847422D6396C10026D784 /* keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847242D6396C10026D784 /* keychain.swift */; };
-		6BD847432D6396C10026D784 /* testpage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847352D6396C10026D784 /* testpage.swift */; };
-		6BD847442D6396C10026D784 /* profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847292D6396C10026D784 /* profile.swift */; };
-		6BD847452D6396C10026D784 /* Prayers_data_sql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847272D6396C10026D784 /* Prayers_data_sql.swift */; };
-		6BD847462D6396C10026D784 /* checklistSQL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8471C2D6396C10026D784 /* checklistSQL.swift */; };
-		6BD847472D6396C10026D784 /* login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847262D6396C10026D784 /* login.swift */; };
-		6BD847482D6396C10026D784 /* flowchart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8470B2D6396C10026D784 /* flowchart.swift */; };
-		6BD847492D6396C10026D784 /* template.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847342D6396C10026D784 /* template.swift */; };
-		6BD8474A2D6396C10026D784 /* SideHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847332D6396C10026D784 /* SideHome.swift */; };
-		6BD8474B2D6396C10026D784 /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8472C2D6396C10026D784 /* Report.swift */; };
-		6BD8474C2D6396C10026D784 /* checklist_data_sql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8471B2D6396C10026D784 /* checklist_data_sql.swift */; };
-		6BD8474D2D6396C10026D784 /* Updates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847372D6396C10026D784 /* Updates.swift */; };
-		6BD8474E2D6396C10026D784 /* report_elder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8472D2D6396C10026D784 /* report_elder.swift */; };
-		6BD8474F2D6396C10026D784 /* Requirements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8472E2D6396C10026D784 /* Requirements.swift */; };
-		6BD847502D6396C10026D784 /* Library old.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8470C2D6396C10026D784 /* Library old.swift */; };
-		6BD847512D6396C10026D784 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8471D2D6396C10026D784 /* ContentView.swift */; };
-		6BD847522D6396C10026D784 /* librarySQL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847252D6396C10026D784 /* librarySQL.swift */; };
-		6BD847532D6396C10026D784 /* SAFEApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847322D6396C10026D784 /* SAFEApp.swift */; };
-		6BD847542D6396C10026D784 /* Requirments_data_sql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847302D6396C10026D784 /* Requirments_data_sql.swift */; };
-		6BD847552D6396C10026D784 /* flowchart_data_sql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847222D6396C10026D784 /* flowchart_data_sql.swift */; };
-		6BD847562D6396C10026D784 /* admin_settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847192D6396C10026D784 /* admin_settings.swift */; };
-		6BD847572D6396C10026D784 /* variables_for_checklist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8470E2D6396C10026D784 /* variables_for_checklist.swift */; };
-		6BD847582D6396C10026D784 /* registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8472A2D6396C10026D784 /* registration.swift */; };
-		6BD847592D6396C10026D784 /* defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8471F2D6396C10026D784 /* defaults.swift */; };
-		6BD8475A2D6396C10026D784 /* flowchartSQL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847232D6396C10026D784 /* flowchartSQL.swift */; };
-		6BD8475B2D6396C10026D784 /* checklist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8470A2D6396C10026D784 /* checklist.swift */; };
-		6BD8475C2D6396C10026D784 /* Dio_DirectorySQL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847212D6396C10026D784 /* Dio_DirectorySQL.swift */; };
-		6BD8475D2D6396C10026D784 /* dbConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8471E2D6396C10026D784 /* dbConnect.swift */; };
-		6BD8475E2D6396C10026D784 /* variables_for_flowchart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8470F2D6396C10026D784 /* variables_for_flowchart.swift */; };
-		6BD8475F2D6396C10026D784 /* prayersSQL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847282D6396C10026D784 /* prayersSQL.swift */; };
-		6BD847602D6396C10026D784 /* registration_data_sql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8472B2D6396C10026D784 /* registration_data_sql.swift */; };
-		6BD847612D6396C10026D784 /* libraryQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8470D2D6396C10026D784 /* libraryQuery.swift */; };
-		6BD847622D6396C10026D784 /* Update_data_sql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847362D6396C10026D784 /* Update_data_sql.swift */; };
-		6BD847632D6396C10026D784 /* Adding a new requirement group and checkign to ensure no dups in the target.sql in Resources */ = {isa = PBXBuildFile; fileRef = 6BD847112D6396C10026D784 /* Adding a new requirement group and checkign to ensure no dups in the target.sql */; };
-		6BD847642D6396C10026D784 /* Check Target for specific requirement level.sql in Resources */ = {isa = PBXBuildFile; fileRef = 6BD847122D6396C10026D784 /* Check Target for specific requirement level.sql */; };
-		6BD847652D6396C10026D784 /* Updating the target full field update.sql in Resources */ = {isa = PBXBuildFile; fileRef = 6BD847152D6396C10026D784 /* Updating the target full field update.sql */; };
-		6BD847662D6396C10026D784 /* Removing a particular item in the target array.sql in Resources */ = {isa = PBXBuildFile; fileRef = 6BD847132D6396C10026D784 /* Removing a particular item in the target array.sql */; };
-		6BD847672D6396C10026D784 /* SAFE Table Schematic Entity-User in Resources */ = {isa = PBXBuildFile; fileRef = 6BD847142D6396C10026D784 /* SAFE Table Schematic Entity-User */; };
-		6BD847682D6396C10026D784 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BD8471A2D6396C10026D784 /* Assets.xcassets */; };
-		6BD847692D6396C10026D784 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BD847172D6396C10026D784 /* Preview Assets.xcassets */; };
-		6BD8476A2D6396C10026D784 /* requirements_managers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8472F2D6396C10026D784 /* requirements_managers.swift */; };
-		6BD8476B2D6396C10026D784 /* Dio_Directory_Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847202D6396C10026D784 /* Dio_Directory_Data.swift */; };
-		6BD8476C2D6396C10026D784 /* keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847242D6396C10026D784 /* keychain.swift */; };
-		6BD8476D2D6396C10026D784 /* testpage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847352D6396C10026D784 /* testpage.swift */; };
-		6BD8476E2D6396C10026D784 /* profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847292D6396C10026D784 /* profile.swift */; };
-		6BD8476F2D6396C10026D784 /* Prayers_data_sql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847272D6396C10026D784 /* Prayers_data_sql.swift */; };
-		6BD847702D6396C10026D784 /* checklistSQL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8471C2D6396C10026D784 /* checklistSQL.swift */; };
-		6BD847712D6396C10026D784 /* login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847262D6396C10026D784 /* login.swift */; };
-		6BD847722D6396C10026D784 /* flowchart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8470B2D6396C10026D784 /* flowchart.swift */; };
-		6BD847732D6396C10026D784 /* template.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847342D6396C10026D784 /* template.swift */; };
-		6BD847742D6396C10026D784 /* SideHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847332D6396C10026D784 /* SideHome.swift */; };
-		6BD847752D6396C10026D784 /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8472C2D6396C10026D784 /* Report.swift */; };
-		6BD847762D6396C10026D784 /* checklist_data_sql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8471B2D6396C10026D784 /* checklist_data_sql.swift */; };
-		6BD847772D6396C10026D784 /* Updates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847372D6396C10026D784 /* Updates.swift */; };
-		6BD847782D6396C10026D784 /* report_elder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8472D2D6396C10026D784 /* report_elder.swift */; };
-		6BD847792D6396C10026D784 /* Requirements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8472E2D6396C10026D784 /* Requirements.swift */; };
-		6BD8477A2D6396C10026D784 /* Library old.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8470C2D6396C10026D784 /* Library old.swift */; };
-		6BD8477B2D6396C10026D784 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8471D2D6396C10026D784 /* ContentView.swift */; };
-		6BD8477C2D6396C10026D784 /* librarySQL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847252D6396C10026D784 /* librarySQL.swift */; };
-		6BD8477D2D6396C10026D784 /* SAFEApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847322D6396C10026D784 /* SAFEApp.swift */; };
-		6BD8477E2D6396C10026D784 /* Requirments_data_sql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847302D6396C10026D784 /* Requirments_data_sql.swift */; };
-		6BD8477F2D6396C10026D784 /* flowchart_data_sql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847222D6396C10026D784 /* flowchart_data_sql.swift */; };
-		6BD847802D6396C10026D784 /* admin_settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847192D6396C10026D784 /* admin_settings.swift */; };
-		6BD847812D6396C10026D784 /* variables_for_checklist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8470E2D6396C10026D784 /* variables_for_checklist.swift */; };
-		6BD847822D6396C10026D784 /* registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8472A2D6396C10026D784 /* registration.swift */; };
-		6BD847832D6396C10026D784 /* defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8471F2D6396C10026D784 /* defaults.swift */; };
-		6BD847842D6396C10026D784 /* flowchartSQL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847232D6396C10026D784 /* flowchartSQL.swift */; };
-		6BD847852D6396C10026D784 /* checklist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8470A2D6396C10026D784 /* checklist.swift */; };
-		6BD847862D6396C10026D784 /* Dio_DirectorySQL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847212D6396C10026D784 /* Dio_DirectorySQL.swift */; };
-		6BD847872D6396C10026D784 /* dbConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8471E2D6396C10026D784 /* dbConnect.swift */; };
-		6BD847882D6396C10026D784 /* variables_for_flowchart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8470F2D6396C10026D784 /* variables_for_flowchart.swift */; };
-		6BD847892D6396C10026D784 /* prayersSQL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847282D6396C10026D784 /* prayersSQL.swift */; };
-		6BD8478A2D6396C10026D784 /* registration_data_sql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8472B2D6396C10026D784 /* registration_data_sql.swift */; };
-		6BD8478B2D6396C10026D784 /* libraryQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8470D2D6396C10026D784 /* libraryQuery.swift */; };
-		6BD8478C2D6396C10026D784 /* Update_data_sql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847362D6396C10026D784 /* Update_data_sql.swift */; };
-		6BD8478D2D6396C10026D784 /* Adding a new requirement group and checkign to ensure no dups in the target.sql in Resources */ = {isa = PBXBuildFile; fileRef = 6BD847112D6396C10026D784 /* Adding a new requirement group and checkign to ensure no dups in the target.sql */; };
-		6BD8478E2D6396C10026D784 /* Check Target for specific requirement level.sql in Resources */ = {isa = PBXBuildFile; fileRef = 6BD847122D6396C10026D784 /* Check Target for specific requirement level.sql */; };
-		6BD8478F2D6396C10026D784 /* Updating the target full field update.sql in Resources */ = {isa = PBXBuildFile; fileRef = 6BD847152D6396C10026D784 /* Updating the target full field update.sql */; };
-		6BD847902D6396C10026D784 /* Removing a particular item in the target array.sql in Resources */ = {isa = PBXBuildFile; fileRef = 6BD847132D6396C10026D784 /* Removing a particular item in the target array.sql */; };
-		6BD847912D6396C10026D784 /* SAFE Table Schematic Entity-User in Resources */ = {isa = PBXBuildFile; fileRef = 6BD847142D6396C10026D784 /* SAFE Table Schematic Entity-User */; };
-		6BD847922D6396C10026D784 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BD8471A2D6396C10026D784 /* Assets.xcassets */; };
-		6BD847932D6396C10026D784 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BD847172D6396C10026D784 /* Preview Assets.xcassets */; };
-		6BD847942D6396C10026D784 /* requirements_managers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8472F2D6396C10026D784 /* requirements_managers.swift */; };
-		6BD847952D6396C10026D784 /* Dio_Directory_Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847202D6396C10026D784 /* Dio_Directory_Data.swift */; };
-		6BD847962D6396C10026D784 /* keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847242D6396C10026D784 /* keychain.swift */; };
-		6BD847972D6396C10026D784 /* testpage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847352D6396C10026D784 /* testpage.swift */; };
-		6BD847982D6396C10026D784 /* profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847292D6396C10026D784 /* profile.swift */; };
-		6BD847992D6396C10026D784 /* Prayers_data_sql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847272D6396C10026D784 /* Prayers_data_sql.swift */; };
-		6BD8479A2D6396C10026D784 /* checklistSQL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8471C2D6396C10026D784 /* checklistSQL.swift */; };
-		6BD8479B2D6396C10026D784 /* login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847262D6396C10026D784 /* login.swift */; };
-		6BD8479C2D6396C10026D784 /* flowchart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8470B2D6396C10026D784 /* flowchart.swift */; };
-		6BD8479D2D6396C10026D784 /* template.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847342D6396C10026D784 /* template.swift */; };
-		6BD8479E2D6396C10026D784 /* SideHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847332D6396C10026D784 /* SideHome.swift */; };
-		6BD8479F2D6396C10026D784 /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8472C2D6396C10026D784 /* Report.swift */; };
-		6BD847A02D6396C10026D784 /* checklist_data_sql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8471B2D6396C10026D784 /* checklist_data_sql.swift */; };
-		6BD847A12D6396C10026D784 /* Updates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847372D6396C10026D784 /* Updates.swift */; };
-		6BD847A22D6396C10026D784 /* report_elder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8472D2D6396C10026D784 /* report_elder.swift */; };
-		6BD847A32D6396C10026D784 /* Requirements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8472E2D6396C10026D784 /* Requirements.swift */; };
-		6BD847A42D6396C10026D784 /* Library old.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8470C2D6396C10026D784 /* Library old.swift */; };
-		6BD847A52D6396C10026D784 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8471D2D6396C10026D784 /* ContentView.swift */; };
-		6BD847A62D6396C10026D784 /* librarySQL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847252D6396C10026D784 /* librarySQL.swift */; };
-		6BD847A72D6396C10026D784 /* SAFEApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847322D6396C10026D784 /* SAFEApp.swift */; };
-		6BD847A82D6396C10026D784 /* Requirments_data_sql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847302D6396C10026D784 /* Requirments_data_sql.swift */; };
-		6BD847A92D6396C10026D784 /* flowchart_data_sql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847222D6396C10026D784 /* flowchart_data_sql.swift */; };
-		6BD847AA2D6396C10026D784 /* admin_settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847192D6396C10026D784 /* admin_settings.swift */; };
-		6BD847AB2D6396C10026D784 /* variables_for_checklist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8470E2D6396C10026D784 /* variables_for_checklist.swift */; };
-		6BD847AC2D6396C10026D784 /* registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8472A2D6396C10026D784 /* registration.swift */; };
-		6BD847AD2D6396C10026D784 /* defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8471F2D6396C10026D784 /* defaults.swift */; };
-		6BD847AE2D6396C10026D784 /* flowchartSQL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847232D6396C10026D784 /* flowchartSQL.swift */; };
-		6BD847AF2D6396C10026D784 /* checklist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8470A2D6396C10026D784 /* checklist.swift */; };
-		6BD847B02D6396C10026D784 /* Dio_DirectorySQL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847212D6396C10026D784 /* Dio_DirectorySQL.swift */; };
-		6BD847B12D6396C10026D784 /* dbConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8471E2D6396C10026D784 /* dbConnect.swift */; };
-		6BD847B22D6396C10026D784 /* variables_for_flowchart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8470F2D6396C10026D784 /* variables_for_flowchart.swift */; };
-		6BD847B32D6396C10026D784 /* prayersSQL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847282D6396C10026D784 /* prayersSQL.swift */; };
-		6BD847B42D6396C10026D784 /* registration_data_sql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8472B2D6396C10026D784 /* registration_data_sql.swift */; };
-		6BD847B52D6396C10026D784 /* libraryQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8470D2D6396C10026D784 /* libraryQuery.swift */; };
-		6BD847B62D6396C10026D784 /* Update_data_sql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD847362D6396C10026D784 /* Update_data_sql.swift */; };
-		6BD847BD2D6399780026D784 /* PostgresClientKit in Frameworks */ = {isa = PBXBuildFile; productRef = 6BD847BC2D6399780026D784 /* PostgresClientKit */; };
-		6BD847C32D639ACC0026D784 /* PostgresClientKit in Frameworks */ = {isa = PBXBuildFile; productRef = 6BD847C22D639ACC0026D784 /* PostgresClientKit */; };
-		6BD847CA2D639D480026D784 /* Socket in Frameworks */ = {isa = PBXBuildFile; productRef = 6BD847C92D639D480026D784 /* Socket */; };
-		6BD847CD2D639D620026D784 /* SSLService in Frameworks */ = {isa = PBXBuildFile; productRef = 6BD847CC2D639D620026D784 /* SSLService */; };
+		690A17C02DCD3C0D00A029A9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690A17A52DCD3C0D00A029A9 /* ContentView.swift */; };
+		690A17C12DCD3C0D00A029A9 /* Update_data_sql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690A17BE2DCD3C0D00A029A9 /* Update_data_sql.swift */; };
+		690A17C22DCD3C0D00A029A9 /* Dio_DirectorySQL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690A17A92DCD3C0D00A029A9 /* Dio_DirectorySQL.swift */; };
+		690A17C32DCD3C0D00A029A9 /* checklistSQL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690A17A42DCD3C0D00A029A9 /* checklistSQL.swift */; };
+		690A17C42DCD3C0D00A029A9 /* prayersSQL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690A17B02DCD3C0D00A029A9 /* prayersSQL.swift */; };
+		690A17C52DCD3C0D00A029A9 /* report_elder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690A17B52DCD3C0D00A029A9 /* report_elder.swift */; };
+		690A17C62DCD3C0D00A029A9 /* admin_settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690A17A12DCD3C0D00A029A9 /* admin_settings.swift */; };
+		690A17C72DCD3C0D00A029A9 /* testpage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690A17BD2DCD3C0D00A029A9 /* testpage.swift */; };
+		690A17C82DCD3C0D00A029A9 /* Prayers_data_sql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690A17AF2DCD3C0D00A029A9 /* Prayers_data_sql.swift */; };
+		690A17C92DCD3C0D00A029A9 /* flowchartSQL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690A17AB2DCD3C0D00A029A9 /* flowchartSQL.swift */; };
+		690A17CA2DCD3C0D00A029A9 /* SideHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690A17BB2DCD3C0D00A029A9 /* SideHome.swift */; };
+		690A17CB2DCD3C0D00A029A9 /* Requirements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690A17B62DCD3C0D00A029A9 /* Requirements.swift */; };
+		690A17CC2DCD3C0D00A029A9 /* flowchart_data_sql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690A17AA2DCD3C0D00A029A9 /* flowchart_data_sql.swift */; };
+		690A17CD2DCD3C0D00A029A9 /* profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690A17B12DCD3C0D00A029A9 /* profile.swift */; };
+		690A17CE2DCD3C0D00A029A9 /* registration_data_sql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690A17B32DCD3C0D00A029A9 /* registration_data_sql.swift */; };
+		690A17CF2DCD3C0D00A029A9 /* login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690A17AE2DCD3C0D00A029A9 /* login.swift */; };
+		690A17D02DCD3C0D00A029A9 /* Dio_Directory_Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690A17A82DCD3C0D00A029A9 /* Dio_Directory_Data.swift */; };
+		690A17D12DCD3C0D00A029A9 /* template.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690A17BC2DCD3C0D00A029A9 /* template.swift */; };
+		690A17D22DCD3C0D00A029A9 /* Updates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690A17BF2DCD3C0D00A029A9 /* Updates.swift */; };
+		690A17D32DCD3C0D00A029A9 /* registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690A17B22DCD3C0D00A029A9 /* registration.swift */; };
+		690A17D42DCD3C0D00A029A9 /* dbConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690A17A62DCD3C0D00A029A9 /* dbConnect.swift */; };
+		690A17D52DCD3C0D00A029A9 /* defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690A17A72DCD3C0D00A029A9 /* defaults.swift */; };
+		690A17D62DCD3C0D00A029A9 /* keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690A17AC2DCD3C0D00A029A9 /* keychain.swift */; };
+		690A17D72DCD3C0D00A029A9 /* SAFEApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690A17BA2DCD3C0D00A029A9 /* SAFEApp.swift */; };
+		690A17D82DCD3C0D00A029A9 /* librarySQL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690A17AD2DCD3C0D00A029A9 /* librarySQL.swift */; };
+		690A17D92DCD3C0D00A029A9 /* requirements_managers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690A17B72DCD3C0D00A029A9 /* requirements_managers.swift */; };
+		690A17DA2DCD3C0D00A029A9 /* checklist_data_sql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690A17A32DCD3C0D00A029A9 /* checklist_data_sql.swift */; };
+		690A17DB2DCD3C0D00A029A9 /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690A17B42DCD3C0D00A029A9 /* Report.swift */; };
+		690A17DC2DCD3C0D00A029A9 /* Requirments_data_sql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690A17B82DCD3C0D00A029A9 /* Requirments_data_sql.swift */; };
+		690A17DD2DCD3C0D00A029A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 690A17A22DCD3C0D00A029A9 /* Assets.xcassets */; };
+		690A17DE2DCD3C0D00A029A9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690A17A52DCD3C0D00A029A9 /* ContentView.swift */; };
+		690A17DF2DCD3C0D00A029A9 /* Update_data_sql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690A17BE2DCD3C0D00A029A9 /* Update_data_sql.swift */; };
+		690A17E02DCD3C0D00A029A9 /* Dio_DirectorySQL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690A17A92DCD3C0D00A029A9 /* Dio_DirectorySQL.swift */; };
+		690A17E12DCD3C0D00A029A9 /* checklistSQL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690A17A42DCD3C0D00A029A9 /* checklistSQL.swift */; };
+		690A17E22DCD3C0D00A029A9 /* prayersSQL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690A17B02DCD3C0D00A029A9 /* prayersSQL.swift */; };
+		690A17E32DCD3C0D00A029A9 /* report_elder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690A17B52DCD3C0D00A029A9 /* report_elder.swift */; };
+		690A17E42DCD3C0D00A029A9 /* admin_settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690A17A12DCD3C0D00A029A9 /* admin_settings.swift */; };
+		690A17E52DCD3C0D00A029A9 /* testpage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690A17BD2DCD3C0D00A029A9 /* testpage.swift */; };
+		690A17E62DCD3C0D00A029A9 /* Prayers_data_sql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690A17AF2DCD3C0D00A029A9 /* Prayers_data_sql.swift */; };
+		690A17E72DCD3C0D00A029A9 /* flowchartSQL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690A17AB2DCD3C0D00A029A9 /* flowchartSQL.swift */; };
+		690A17E82DCD3C0D00A029A9 /* SideHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690A17BB2DCD3C0D00A029A9 /* SideHome.swift */; };
+		690A17E92DCD3C0D00A029A9 /* Requirements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690A17B62DCD3C0D00A029A9 /* Requirements.swift */; };
+		690A17EA2DCD3C0D00A029A9 /* flowchart_data_sql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690A17AA2DCD3C0D00A029A9 /* flowchart_data_sql.swift */; };
+		690A17EB2DCD3C0D00A029A9 /* profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690A17B12DCD3C0D00A029A9 /* profile.swift */; };
+		690A17EC2DCD3C0D00A029A9 /* registration_data_sql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690A17B32DCD3C0D00A029A9 /* registration_data_sql.swift */; };
+		690A17ED2DCD3C0D00A029A9 /* login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690A17AE2DCD3C0D00A029A9 /* login.swift */; };
+		690A17EE2DCD3C0D00A029A9 /* Dio_Directory_Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690A17A82DCD3C0D00A029A9 /* Dio_Directory_Data.swift */; };
+		690A17EF2DCD3C0D00A029A9 /* template.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690A17BC2DCD3C0D00A029A9 /* template.swift */; };
+		690A17F02DCD3C0D00A029A9 /* Updates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690A17BF2DCD3C0D00A029A9 /* Updates.swift */; };
+		690A17F12DCD3C0D00A029A9 /* registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690A17B22DCD3C0D00A029A9 /* registration.swift */; };
+		690A17F22DCD3C0D00A029A9 /* dbConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690A17A62DCD3C0D00A029A9 /* dbConnect.swift */; };
+		690A17F32DCD3C0D00A029A9 /* defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690A17A72DCD3C0D00A029A9 /* defaults.swift */; };
+		690A17F42DCD3C0D00A029A9 /* keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690A17AC2DCD3C0D00A029A9 /* keychain.swift */; };
+		690A17F52DCD3C0D00A029A9 /* SAFEApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690A17BA2DCD3C0D00A029A9 /* SAFEApp.swift */; };
+		690A17F62DCD3C0D00A029A9 /* librarySQL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690A17AD2DCD3C0D00A029A9 /* librarySQL.swift */; };
+		690A17F72DCD3C0D00A029A9 /* requirements_managers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690A17B72DCD3C0D00A029A9 /* requirements_managers.swift */; };
+		690A17F82DCD3C0D00A029A9 /* checklist_data_sql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690A17A32DCD3C0D00A029A9 /* checklist_data_sql.swift */; };
+		690A17F92DCD3C0D00A029A9 /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690A17B42DCD3C0D00A029A9 /* Report.swift */; };
+		690A17FA2DCD3C0D00A029A9 /* Requirments_data_sql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690A17B82DCD3C0D00A029A9 /* Requirments_data_sql.swift */; };
+		690A17FB2DCD3C0D00A029A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 690A17A22DCD3C0D00A029A9 /* Assets.xcassets */; };
+		690A18032DCD407400A029A9 /* IDcard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690A18022DCD407400A029A9 /* IDcard.swift */; };
+		690A18042DCD407400A029A9 /* IDcard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690A18022DCD407400A029A9 /* IDcard.swift */; };
+		69C64A5A2DAAB77300D51CF6 /* Adding a new requirement group and checkign to ensure no dups in the target.sql in Resources */ = {isa = PBXBuildFile; fileRef = 69C64A322DAAB77300D51CF6 /* Adding a new requirement group and checkign to ensure no dups in the target.sql */; };
+		69C64A5B2DAAB77300D51CF6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69C64A382DAAB77300D51CF6 /* Preview Assets.xcassets */; };
+		69C64A5D2DAAB77300D51CF6 /* Updating the target full field update.sql in Resources */ = {isa = PBXBuildFile; fileRef = 69C64A362DAAB77300D51CF6 /* Updating the target full field update.sql */; };
+		69C64A5E2DAAB77300D51CF6 /* SAFE Table Schematic Entity-User in Resources */ = {isa = PBXBuildFile; fileRef = 69C64A352DAAB77300D51CF6 /* SAFE Table Schematic Entity-User */; };
+		69C64A5F2DAAB77300D51CF6 /* Check Target for specific requirement level.sql in Resources */ = {isa = PBXBuildFile; fileRef = 69C64A332DAAB77300D51CF6 /* Check Target for specific requirement level.sql */; };
+		69C64A602DAAB77300D51CF6 /* Removing a particular item in the target array.sql in Resources */ = {isa = PBXBuildFile; fileRef = 69C64A342DAAB77300D51CF6 /* Removing a particular item in the target array.sql */; };
+		69C64A622DAAB77300D51CF6 /* variables_for_checklist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C64A2F2DAAB77300D51CF6 /* variables_for_checklist.swift */; };
+		69C64A6E2DAAB77300D51CF6 /* variables_for_flowchart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C64A302DAAB77300D51CF6 /* variables_for_flowchart.swift */; };
+		69C64A772DAAB77300D51CF6 /* flowchart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C64A2C2DAAB77300D51CF6 /* flowchart.swift */; };
+		69C64A782DAAB77300D51CF6 /* Library old.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C64A2D2DAAB77300D51CF6 /* Library old.swift */; };
+		69C64A792DAAB77300D51CF6 /* libraryQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C64A2E2DAAB77300D51CF6 /* libraryQuery.swift */; };
+		69C64A7C2DAAB77300D51CF6 /* checklist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C64A2B2DAAB77300D51CF6 /* checklist.swift */; };
+		69C64A842DAAB77300D51CF6 /* Adding a new requirement group and checkign to ensure no dups in the target.sql in Resources */ = {isa = PBXBuildFile; fileRef = 69C64A322DAAB77300D51CF6 /* Adding a new requirement group and checkign to ensure no dups in the target.sql */; };
+		69C64A852DAAB77300D51CF6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69C64A382DAAB77300D51CF6 /* Preview Assets.xcassets */; };
+		69C64A872DAAB77300D51CF6 /* Updating the target full field update.sql in Resources */ = {isa = PBXBuildFile; fileRef = 69C64A362DAAB77300D51CF6 /* Updating the target full field update.sql */; };
+		69C64A882DAAB77300D51CF6 /* SAFE Table Schematic Entity-User in Resources */ = {isa = PBXBuildFile; fileRef = 69C64A352DAAB77300D51CF6 /* SAFE Table Schematic Entity-User */; };
+		69C64A892DAAB77300D51CF6 /* Check Target for specific requirement level.sql in Resources */ = {isa = PBXBuildFile; fileRef = 69C64A332DAAB77300D51CF6 /* Check Target for specific requirement level.sql */; };
+		69C64A8A2DAAB77300D51CF6 /* Removing a particular item in the target array.sql in Resources */ = {isa = PBXBuildFile; fileRef = 69C64A342DAAB77300D51CF6 /* Removing a particular item in the target array.sql */; };
+		69C64A8C2DAAB77300D51CF6 /* variables_for_checklist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C64A2F2DAAB77300D51CF6 /* variables_for_checklist.swift */; };
+		69C64A982DAAB77300D51CF6 /* variables_for_flowchart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C64A302DAAB77300D51CF6 /* variables_for_flowchart.swift */; };
+		69C64AA12DAAB77300D51CF6 /* flowchart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C64A2C2DAAB77300D51CF6 /* flowchart.swift */; };
+		69C64AA22DAAB77300D51CF6 /* Library old.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C64A2D2DAAB77300D51CF6 /* Library old.swift */; };
+		69C64AA32DAAB77300D51CF6 /* libraryQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C64A2E2DAAB77300D51CF6 /* libraryQuery.swift */; };
+		69C64AA62DAAB77300D51CF6 /* checklist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C64A2B2DAAB77300D51CF6 /* checklist.swift */; };
+		69C64AB12DAABA7100D51CF6 /* PostgresClientKit in Frameworks */ = {isa = PBXBuildFile; productRef = 69C64AB02DAABA7100D51CF6 /* PostgresClientKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -163,54 +114,54 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		690A17A12DCD3C0D00A029A9 /* admin_settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = admin_settings.swift; sourceTree = "<group>"; };
+		690A17A22DCD3C0D00A029A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		690A17A32DCD3C0D00A029A9 /* checklist_data_sql.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = checklist_data_sql.swift; sourceTree = "<group>"; };
+		690A17A42DCD3C0D00A029A9 /* checklistSQL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = checklistSQL.swift; sourceTree = "<group>"; };
+		690A17A52DCD3C0D00A029A9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		690A17A62DCD3C0D00A029A9 /* dbConnect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dbConnect.swift; sourceTree = "<group>"; };
+		690A17A72DCD3C0D00A029A9 /* defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = defaults.swift; sourceTree = "<group>"; };
+		690A17A82DCD3C0D00A029A9 /* Dio_Directory_Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dio_Directory_Data.swift; sourceTree = "<group>"; };
+		690A17A92DCD3C0D00A029A9 /* Dio_DirectorySQL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dio_DirectorySQL.swift; sourceTree = "<group>"; };
+		690A17AA2DCD3C0D00A029A9 /* flowchart_data_sql.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flowchart_data_sql.swift; sourceTree = "<group>"; };
+		690A17AB2DCD3C0D00A029A9 /* flowchartSQL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flowchartSQL.swift; sourceTree = "<group>"; };
+		690A17AC2DCD3C0D00A029A9 /* keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = keychain.swift; sourceTree = "<group>"; };
+		690A17AD2DCD3C0D00A029A9 /* librarySQL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = librarySQL.swift; sourceTree = "<group>"; };
+		690A17AE2DCD3C0D00A029A9 /* login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = login.swift; sourceTree = "<group>"; };
+		690A17AF2DCD3C0D00A029A9 /* Prayers_data_sql.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prayers_data_sql.swift; sourceTree = "<group>"; };
+		690A17B02DCD3C0D00A029A9 /* prayersSQL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = prayersSQL.swift; sourceTree = "<group>"; };
+		690A17B12DCD3C0D00A029A9 /* profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profile.swift; sourceTree = "<group>"; };
+		690A17B22DCD3C0D00A029A9 /* registration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registration.swift; sourceTree = "<group>"; };
+		690A17B32DCD3C0D00A029A9 /* registration_data_sql.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registration_data_sql.swift; sourceTree = "<group>"; };
+		690A17B42DCD3C0D00A029A9 /* Report.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Report.swift; sourceTree = "<group>"; };
+		690A17B52DCD3C0D00A029A9 /* report_elder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = report_elder.swift; sourceTree = "<group>"; };
+		690A17B62DCD3C0D00A029A9 /* Requirements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requirements.swift; sourceTree = "<group>"; };
+		690A17B72DCD3C0D00A029A9 /* requirements_managers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = requirements_managers.swift; sourceTree = "<group>"; };
+		690A17B82DCD3C0D00A029A9 /* Requirments_data_sql.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requirments_data_sql.swift; sourceTree = "<group>"; };
+		690A17B92DCD3C0D00A029A9 /* SAFE.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SAFE.entitlements; sourceTree = "<group>"; };
+		690A17BA2DCD3C0D00A029A9 /* SAFEApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAFEApp.swift; sourceTree = "<group>"; };
+		690A17BB2DCD3C0D00A029A9 /* SideHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideHome.swift; sourceTree = "<group>"; };
+		690A17BC2DCD3C0D00A029A9 /* template.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = template.swift; sourceTree = "<group>"; };
+		690A17BD2DCD3C0D00A029A9 /* testpage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testpage.swift; sourceTree = "<group>"; };
+		690A17BE2DCD3C0D00A029A9 /* Update_data_sql.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Update_data_sql.swift; sourceTree = "<group>"; };
+		690A17BF2DCD3C0D00A029A9 /* Updates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Updates.swift; sourceTree = "<group>"; };
+		690A18022DCD407400A029A9 /* IDcard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDcard.swift; sourceTree = "<group>"; };
+		69C64A2B2DAAB77300D51CF6 /* checklist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = checklist.swift; sourceTree = "<group>"; };
+		69C64A2C2DAAB77300D51CF6 /* flowchart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flowchart.swift; sourceTree = "<group>"; };
+		69C64A2D2DAAB77300D51CF6 /* Library old.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Library old.swift"; sourceTree = "<group>"; };
+		69C64A2E2DAAB77300D51CF6 /* libraryQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = libraryQuery.swift; sourceTree = "<group>"; };
+		69C64A2F2DAAB77300D51CF6 /* variables_for_checklist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = variables_for_checklist.swift; sourceTree = "<group>"; };
+		69C64A302DAAB77300D51CF6 /* variables_for_flowchart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = variables_for_flowchart.swift; sourceTree = "<group>"; };
+		69C64A322DAAB77300D51CF6 /* Adding a new requirement group and checkign to ensure no dups in the target.sql */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Adding a new requirement group and checkign to ensure no dups in the target.sql"; sourceTree = "<group>"; };
+		69C64A332DAAB77300D51CF6 /* Check Target for specific requirement level.sql */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Check Target for specific requirement level.sql"; sourceTree = "<group>"; };
+		69C64A342DAAB77300D51CF6 /* Removing a particular item in the target array.sql */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Removing a particular item in the target array.sql"; sourceTree = "<group>"; };
+		69C64A352DAAB77300D51CF6 /* SAFE Table Schematic Entity-User */ = {isa = PBXFileReference; lastKnownFileType = text; path = "SAFE Table Schematic Entity-User"; sourceTree = "<group>"; };
+		69C64A362DAAB77300D51CF6 /* Updating the target full field update.sql */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Updating the target full field update.sql"; sourceTree = "<group>"; };
+		69C64A382DAAB77300D51CF6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6B03AD7E2D63965600CD28BB /* SAFE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SAFE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B03AD8E2D63965700CD28BB /* SAFETests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SAFETests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B03AD982D63965700CD28BB /* SAFEUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SAFEUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6B31DF602DAD661E0019737C /* IDcard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDcard.swift; sourceTree = "<group>"; };
 		6B54D3D82D8DB90600151017 /* PostgresClientKit-1.5.0 */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "PostgresClientKit-1.5.0"; path = "../PostgresClientKit-1.5.0"; sourceTree = "<group>"; };
-		6BD8470A2D6396C10026D784 /* checklist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = checklist.swift; sourceTree = "<group>"; };
-		6BD8470B2D6396C10026D784 /* flowchart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flowchart.swift; sourceTree = "<group>"; };
-		6BD8470C2D6396C10026D784 /* Library old.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Library old.swift"; sourceTree = "<group>"; };
-		6BD8470D2D6396C10026D784 /* libraryQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = libraryQuery.swift; sourceTree = "<group>"; };
-		6BD8470E2D6396C10026D784 /* variables_for_checklist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = variables_for_checklist.swift; sourceTree = "<group>"; };
-		6BD8470F2D6396C10026D784 /* variables_for_flowchart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = variables_for_flowchart.swift; sourceTree = "<group>"; };
-		6BD847112D6396C10026D784 /* Adding a new requirement group and checkign to ensure no dups in the target.sql */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Adding a new requirement group and checkign to ensure no dups in the target.sql"; sourceTree = "<group>"; };
-		6BD847122D6396C10026D784 /* Check Target for specific requirement level.sql */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Check Target for specific requirement level.sql"; sourceTree = "<group>"; };
-		6BD847132D6396C10026D784 /* Removing a particular item in the target array.sql */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Removing a particular item in the target array.sql"; sourceTree = "<group>"; };
-		6BD847142D6396C10026D784 /* SAFE Table Schematic Entity-User */ = {isa = PBXFileReference; lastKnownFileType = text; path = "SAFE Table Schematic Entity-User"; sourceTree = "<group>"; };
-		6BD847152D6396C10026D784 /* Updating the target full field update.sql */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Updating the target full field update.sql"; sourceTree = "<group>"; };
-		6BD847172D6396C10026D784 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		6BD847192D6396C10026D784 /* admin_settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = admin_settings.swift; sourceTree = "<group>"; };
-		6BD8471A2D6396C10026D784 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		6BD8471B2D6396C10026D784 /* checklist_data_sql.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = checklist_data_sql.swift; sourceTree = "<group>"; };
-		6BD8471C2D6396C10026D784 /* checklistSQL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = checklistSQL.swift; sourceTree = "<group>"; };
-		6BD8471D2D6396C10026D784 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		6BD8471E2D6396C10026D784 /* dbConnect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dbConnect.swift; sourceTree = "<group>"; };
-		6BD8471F2D6396C10026D784 /* defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = defaults.swift; sourceTree = "<group>"; };
-		6BD847202D6396C10026D784 /* Dio_Directory_Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dio_Directory_Data.swift; sourceTree = "<group>"; };
-		6BD847212D6396C10026D784 /* Dio_DirectorySQL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dio_DirectorySQL.swift; sourceTree = "<group>"; };
-		6BD847222D6396C10026D784 /* flowchart_data_sql.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flowchart_data_sql.swift; sourceTree = "<group>"; };
-		6BD847232D6396C10026D784 /* flowchartSQL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flowchartSQL.swift; sourceTree = "<group>"; };
-		6BD847242D6396C10026D784 /* keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = keychain.swift; sourceTree = "<group>"; };
-		6BD847252D6396C10026D784 /* librarySQL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = librarySQL.swift; sourceTree = "<group>"; };
-		6BD847262D6396C10026D784 /* login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = login.swift; sourceTree = "<group>"; };
-		6BD847272D6396C10026D784 /* Prayers_data_sql.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prayers_data_sql.swift; sourceTree = "<group>"; };
-		6BD847282D6396C10026D784 /* prayersSQL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = prayersSQL.swift; sourceTree = "<group>"; };
-		6BD847292D6396C10026D784 /* profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profile.swift; sourceTree = "<group>"; };
-		6BD8472A2D6396C10026D784 /* registration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registration.swift; sourceTree = "<group>"; };
-		6BD8472B2D6396C10026D784 /* registration_data_sql.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registration_data_sql.swift; sourceTree = "<group>"; };
-		6BD8472C2D6396C10026D784 /* Report.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Report.swift; sourceTree = "<group>"; };
-		6BD8472D2D6396C10026D784 /* report_elder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = report_elder.swift; sourceTree = "<group>"; };
-		6BD8472E2D6396C10026D784 /* Requirements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requirements.swift; sourceTree = "<group>"; };
-		6BD8472F2D6396C10026D784 /* requirements_managers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = requirements_managers.swift; sourceTree = "<group>"; };
-		6BD847302D6396C10026D784 /* Requirments_data_sql.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requirments_data_sql.swift; sourceTree = "<group>"; };
-		6BD847312D6396C10026D784 /* SAFE.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SAFE.entitlements; sourceTree = "<group>"; };
-		6BD847322D6396C10026D784 /* SAFEApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAFEApp.swift; sourceTree = "<group>"; };
-		6BD847332D6396C10026D784 /* SideHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideHome.swift; sourceTree = "<group>"; };
-		6BD847342D6396C10026D784 /* template.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = template.swift; sourceTree = "<group>"; };
-		6BD847352D6396C10026D784 /* testpage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testpage.swift; sourceTree = "<group>"; };
-		6BD847362D6396C10026D784 /* Update_data_sql.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Update_data_sql.swift; sourceTree = "<group>"; };
-		6BD847372D6396C10026D784 /* Updates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Updates.swift; sourceTree = "<group>"; };
 		6BD847BF2D6399AA0026D784 /* PostgresClientKit-1.5.0 */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "PostgresClientKit-1.5.0"; path = "../../../../../../../Downloads/PostgresClientKit-1.5.0"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -232,11 +183,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6BD847CA2D639D480026D784 /* Socket in Frameworks */,
-				6BD847CD2D639D620026D784 /* SSLService in Frameworks */,
-				6B54D3E92D8DBE1200151017 /* BlueSocketTestCommonLibrary in Frameworks */,
-				6B54D3EB2D8DBE1F00151017 /* PostgresClientKit in Frameworks */,
-				6B54D3E72D8DBD5900151017 /* PostgresClientKit in Frameworks */,
+				69C64AB12DAABA7100D51CF6 /* PostgresClientKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,8 +191,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6BD847BD2D6399780026D784 /* PostgresClientKit in Frameworks */,
-				6BD847C32D639ACC0026D784 /* PostgresClientKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,14 +204,89 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		69C64A312DAAB77300D51CF6 /* Archives */ = {
+			isa = PBXGroup;
+			children = (
+				69C64A2B2DAAB77300D51CF6 /* checklist.swift */,
+				69C64A2C2DAAB77300D51CF6 /* flowchart.swift */,
+				69C64A2D2DAAB77300D51CF6 /* Library old.swift */,
+				69C64A2E2DAAB77300D51CF6 /* libraryQuery.swift */,
+				69C64A2F2DAAB77300D51CF6 /* variables_for_checklist.swift */,
+				69C64A302DAAB77300D51CF6 /* variables_for_flowchart.swift */,
+			);
+			path = Archives;
+			sourceTree = "<group>";
+		};
+		69C64A372DAAB77300D51CF6 /* PostgreSQL Saved Native Queries */ = {
+			isa = PBXGroup;
+			children = (
+				69C64A322DAAB77300D51CF6 /* Adding a new requirement group and checkign to ensure no dups in the target.sql */,
+				69C64A332DAAB77300D51CF6 /* Check Target for specific requirement level.sql */,
+				69C64A342DAAB77300D51CF6 /* Removing a particular item in the target array.sql */,
+				69C64A352DAAB77300D51CF6 /* SAFE Table Schematic Entity-User */,
+				69C64A362DAAB77300D51CF6 /* Updating the target full field update.sql */,
+			);
+			path = "PostgreSQL Saved Native Queries";
+			sourceTree = "<group>";
+		};
+		69C64A392DAAB77300D51CF6 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				69C64A382DAAB77300D51CF6 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		69C64A592DAAB77300D51CF6 /* SAFE */ = {
+			isa = PBXGroup;
+			children = (
+				690A17A12DCD3C0D00A029A9 /* admin_settings.swift */,
+				690A17A22DCD3C0D00A029A9 /* Assets.xcassets */,
+				690A17A32DCD3C0D00A029A9 /* checklist_data_sql.swift */,
+				690A17A42DCD3C0D00A029A9 /* checklistSQL.swift */,
+				690A17A52DCD3C0D00A029A9 /* ContentView.swift */,
+				690A17A62DCD3C0D00A029A9 /* dbConnect.swift */,
+				690A17A72DCD3C0D00A029A9 /* defaults.swift */,
+				690A17A82DCD3C0D00A029A9 /* Dio_Directory_Data.swift */,
+				690A17A92DCD3C0D00A029A9 /* Dio_DirectorySQL.swift */,
+				690A17AA2DCD3C0D00A029A9 /* flowchart_data_sql.swift */,
+				690A17AB2DCD3C0D00A029A9 /* flowchartSQL.swift */,
+				690A17AC2DCD3C0D00A029A9 /* keychain.swift */,
+				690A17AD2DCD3C0D00A029A9 /* librarySQL.swift */,
+				690A17AE2DCD3C0D00A029A9 /* login.swift */,
+				690A17AF2DCD3C0D00A029A9 /* Prayers_data_sql.swift */,
+				690A17B02DCD3C0D00A029A9 /* prayersSQL.swift */,
+				690A17B12DCD3C0D00A029A9 /* profile.swift */,
+				690A17B22DCD3C0D00A029A9 /* registration.swift */,
+				690A17B32DCD3C0D00A029A9 /* registration_data_sql.swift */,
+				690A17B42DCD3C0D00A029A9 /* Report.swift */,
+				690A17B52DCD3C0D00A029A9 /* report_elder.swift */,
+				690A17B62DCD3C0D00A029A9 /* Requirements.swift */,
+				690A17B72DCD3C0D00A029A9 /* requirements_managers.swift */,
+				690A17B82DCD3C0D00A029A9 /* Requirments_data_sql.swift */,
+				690A17B92DCD3C0D00A029A9 /* SAFE.entitlements */,
+				690A17BA2DCD3C0D00A029A9 /* SAFEApp.swift */,
+				690A17BB2DCD3C0D00A029A9 /* SideHome.swift */,
+				690A17BC2DCD3C0D00A029A9 /* template.swift */,
+				690A17BD2DCD3C0D00A029A9 /* testpage.swift */,
+				690A17BE2DCD3C0D00A029A9 /* Update_data_sql.swift */,
+				690A17BF2DCD3C0D00A029A9 /* Updates.swift */,
+				690A18022DCD407400A029A9 /* IDcard.swift */,
+				69C64A312DAAB77300D51CF6 /* Archives */,
+				69C64A372DAAB77300D51CF6 /* PostgreSQL Saved Native Queries */,
+				69C64A392DAAB77300D51CF6 /* Preview Content */,
+			);
+			path = SAFE;
+			sourceTree = "<group>";
+		};
 		6B03AD752D63965600CD28BB = {
 			isa = PBXGroup;
 			children = (
 				6B03AD912D63965700CD28BB /* SAFETests */,
 				6B03AD9B2D63965700CD28BB /* SAFEUITests */,
 				6B03AD7F2D63965600CD28BB /* Products */,
-				6BD847382D6396C10026D784 /* SAFE */,
 				6BD847BE2D6399AA0026D784 /* Frameworks */,
+				69C64A592DAAB77300D51CF6 /* SAFE */,
 			);
 			sourceTree = "<group>";
 		};
@@ -278,81 +298,6 @@
 				6B03AD982D63965700CD28BB /* SAFEUITests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		6BD847102D6396C10026D784 /* Archives */ = {
-			isa = PBXGroup;
-			children = (
-				6BD8470A2D6396C10026D784 /* checklist.swift */,
-				6BD8470B2D6396C10026D784 /* flowchart.swift */,
-				6BD8470C2D6396C10026D784 /* Library old.swift */,
-				6BD8470D2D6396C10026D784 /* libraryQuery.swift */,
-				6BD8470E2D6396C10026D784 /* variables_for_checklist.swift */,
-				6BD8470F2D6396C10026D784 /* variables_for_flowchart.swift */,
-			);
-			path = Archives;
-			sourceTree = "<group>";
-		};
-		6BD847162D6396C10026D784 /* PostgreSQL Saved Native Queries */ = {
-			isa = PBXGroup;
-			children = (
-				6BD847112D6396C10026D784 /* Adding a new requirement group and checkign to ensure no dups in the target.sql */,
-				6BD847122D6396C10026D784 /* Check Target for specific requirement level.sql */,
-				6BD847132D6396C10026D784 /* Removing a particular item in the target array.sql */,
-				6BD847142D6396C10026D784 /* SAFE Table Schematic Entity-User */,
-				6BD847152D6396C10026D784 /* Updating the target full field update.sql */,
-			);
-			path = "PostgreSQL Saved Native Queries";
-			sourceTree = "<group>";
-		};
-		6BD847182D6396C10026D784 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				6B31DF602DAD661E0019737C /* IDcard.swift */,
-				6BD847172D6396C10026D784 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		6BD847382D6396C10026D784 /* SAFE */ = {
-			isa = PBXGroup;
-			children = (
-				6BD847102D6396C10026D784 /* Archives */,
-				6BD847162D6396C10026D784 /* PostgreSQL Saved Native Queries */,
-				6BD847182D6396C10026D784 /* Preview Content */,
-				6BD847192D6396C10026D784 /* admin_settings.swift */,
-				6BD8471A2D6396C10026D784 /* Assets.xcassets */,
-				6BD8471B2D6396C10026D784 /* checklist_data_sql.swift */,
-				6BD8471C2D6396C10026D784 /* checklistSQL.swift */,
-				6BD8471D2D6396C10026D784 /* ContentView.swift */,
-				6BD8471E2D6396C10026D784 /* dbConnect.swift */,
-				6BD8471F2D6396C10026D784 /* defaults.swift */,
-				6BD847202D6396C10026D784 /* Dio_Directory_Data.swift */,
-				6BD847212D6396C10026D784 /* Dio_DirectorySQL.swift */,
-				6BD847222D6396C10026D784 /* flowchart_data_sql.swift */,
-				6BD847232D6396C10026D784 /* flowchartSQL.swift */,
-				6BD847242D6396C10026D784 /* keychain.swift */,
-				6BD847252D6396C10026D784 /* librarySQL.swift */,
-				6BD847262D6396C10026D784 /* login.swift */,
-				6BD847272D6396C10026D784 /* Prayers_data_sql.swift */,
-				6BD847282D6396C10026D784 /* prayersSQL.swift */,
-				6BD847292D6396C10026D784 /* profile.swift */,
-				6BD8472A2D6396C10026D784 /* registration.swift */,
-				6BD8472B2D6396C10026D784 /* registration_data_sql.swift */,
-				6BD8472C2D6396C10026D784 /* Report.swift */,
-				6BD8472D2D6396C10026D784 /* report_elder.swift */,
-				6BD8472E2D6396C10026D784 /* Requirements.swift */,
-				6BD8472F2D6396C10026D784 /* requirements_managers.swift */,
-				6BD847302D6396C10026D784 /* Requirments_data_sql.swift */,
-				6BD847312D6396C10026D784 /* SAFE.entitlements */,
-				6BD847322D6396C10026D784 /* SAFEApp.swift */,
-				6BD847332D6396C10026D784 /* SideHome.swift */,
-				6BD847342D6396C10026D784 /* template.swift */,
-				6BD847352D6396C10026D784 /* testpage.swift */,
-				6BD847362D6396C10026D784 /* Update_data_sql.swift */,
-				6BD847372D6396C10026D784 /* Updates.swift */,
-			);
-			path = SAFE;
 			sourceTree = "<group>";
 		};
 		6BD847BE2D6399AA0026D784 /* Frameworks */ = {
@@ -381,11 +326,7 @@
 			);
 			name = SAFE;
 			packageProductDependencies = (
-				6BD847C92D639D480026D784 /* Socket */,
-				6BD847CC2D639D620026D784 /* SSLService */,
-				6B54D3E62D8DBD5900151017 /* PostgresClientKit */,
-				6B54D3E82D8DBE1200151017 /* BlueSocketTestCommonLibrary */,
-				6B54D3EA2D8DBE1F00151017 /* PostgresClientKit */,
+				69C64AB02DAABA7100D51CF6 /* PostgresClientKit */,
 			);
 			productName = SAFE;
 			productReference = 6B03AD7E2D63965600CD28BB /* SAFE.app */;
@@ -409,8 +350,6 @@
 			);
 			name = SAFETests;
 			packageProductDependencies = (
-				6BD847BC2D6399780026D784 /* PostgresClientKit */,
-				6BD847C22D639ACC0026D784 /* PostgresClientKit */,
 			);
 			productName = SAFETests;
 			productReference = 6B03AD8E2D63965700CD28BB /* SAFETests.xctest */;
@@ -472,9 +411,9 @@
 			mainGroup = 6B03AD752D63965600CD28BB;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				6BD847B92D63990F0026D784 /* XCLocalSwiftPackageReference "../../../../../../../Downloads/PostgresClientKit-1.5.0" */,
-				6BD847C62D639D480026D784 /* XCRemoteSwiftPackageReference "BlueSocket" */,
-				6BD847CB2D639D620026D784 /* XCRemoteSwiftPackageReference "BlueSSLService" */,
+				69C64A2A2DAAB5F200D51CF6 /* XCRemoteSwiftPackageReference "PostgresClientKit" */,
+				69C64AAE2DAAB81E00D51CF6 /* XCRemoteSwiftPackageReference "BlueSocket" */,
+				69C64AAF2DAAB82F00D51CF6 /* XCRemoteSwiftPackageReference "BlueSSLService" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 6B03AD7F2D63965600CD28BB /* Products */;
@@ -493,13 +432,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6BD847392D6396C10026D784 /* Adding a new requirement group and checkign to ensure no dups in the target.sql in Resources */,
-				6BD8473A2D6396C10026D784 /* Check Target for specific requirement level.sql in Resources */,
-				6BD8473B2D6396C10026D784 /* Updating the target full field update.sql in Resources */,
-				6BD8473C2D6396C10026D784 /* Removing a particular item in the target array.sql in Resources */,
-				6BD8473D2D6396C10026D784 /* SAFE Table Schematic Entity-User in Resources */,
-				6BD8473E2D6396C10026D784 /* Assets.xcassets in Resources */,
-				6BD8473F2D6396C10026D784 /* Preview Assets.xcassets in Resources */,
+				69C64A842DAAB77300D51CF6 /* Adding a new requirement group and checkign to ensure no dups in the target.sql in Resources */,
+				69C64A852DAAB77300D51CF6 /* Preview Assets.xcassets in Resources */,
+				69C64A872DAAB77300D51CF6 /* Updating the target full field update.sql in Resources */,
+				69C64A882DAAB77300D51CF6 /* SAFE Table Schematic Entity-User in Resources */,
+				690A17FB2DCD3C0D00A029A9 /* Assets.xcassets in Resources */,
+				69C64A892DAAB77300D51CF6 /* Check Target for specific requirement level.sql in Resources */,
+				69C64A8A2DAAB77300D51CF6 /* Removing a particular item in the target array.sql in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,13 +446,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6BD8478D2D6396C10026D784 /* Adding a new requirement group and checkign to ensure no dups in the target.sql in Resources */,
-				6BD8478E2D6396C10026D784 /* Check Target for specific requirement level.sql in Resources */,
-				6BD8478F2D6396C10026D784 /* Updating the target full field update.sql in Resources */,
-				6BD847902D6396C10026D784 /* Removing a particular item in the target array.sql in Resources */,
-				6BD847912D6396C10026D784 /* SAFE Table Schematic Entity-User in Resources */,
-				6BD847922D6396C10026D784 /* Assets.xcassets in Resources */,
-				6BD847932D6396C10026D784 /* Preview Assets.xcassets in Resources */,
+				69C64A5A2DAAB77300D51CF6 /* Adding a new requirement group and checkign to ensure no dups in the target.sql in Resources */,
+				69C64A5B2DAAB77300D51CF6 /* Preview Assets.xcassets in Resources */,
+				69C64A5D2DAAB77300D51CF6 /* Updating the target full field update.sql in Resources */,
+				69C64A5E2DAAB77300D51CF6 /* SAFE Table Schematic Entity-User in Resources */,
+				690A17DD2DCD3C0D00A029A9 /* Assets.xcassets in Resources */,
+				69C64A5F2DAAB77300D51CF6 /* Check Target for specific requirement level.sql in Resources */,
+				69C64A602DAAB77300D51CF6 /* Removing a particular item in the target array.sql in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -521,13 +460,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6BD847632D6396C10026D784 /* Adding a new requirement group and checkign to ensure no dups in the target.sql in Resources */,
-				6BD847642D6396C10026D784 /* Check Target for specific requirement level.sql in Resources */,
-				6BD847652D6396C10026D784 /* Updating the target full field update.sql in Resources */,
-				6BD847662D6396C10026D784 /* Removing a particular item in the target array.sql in Resources */,
-				6BD847672D6396C10026D784 /* SAFE Table Schematic Entity-User in Resources */,
-				6BD847682D6396C10026D784 /* Assets.xcassets in Resources */,
-				6BD847692D6396C10026D784 /* Preview Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -538,42 +470,42 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6BD847402D6396C10026D784 /* requirements_managers.swift in Sources */,
-				6BD847412D6396C10026D784 /* Dio_Directory_Data.swift in Sources */,
-				6BD847422D6396C10026D784 /* keychain.swift in Sources */,
-				6BD847432D6396C10026D784 /* testpage.swift in Sources */,
-				6BD847442D6396C10026D784 /* profile.swift in Sources */,
-				6BD847452D6396C10026D784 /* Prayers_data_sql.swift in Sources */,
-				6BD847462D6396C10026D784 /* checklistSQL.swift in Sources */,
-				6BD847472D6396C10026D784 /* login.swift in Sources */,
-				6BD847482D6396C10026D784 /* flowchart.swift in Sources */,
-				6BD847492D6396C10026D784 /* template.swift in Sources */,
-				6BD8474A2D6396C10026D784 /* SideHome.swift in Sources */,
-				6BD8474B2D6396C10026D784 /* Report.swift in Sources */,
-				6BD8474C2D6396C10026D784 /* checklist_data_sql.swift in Sources */,
-				6BD8474D2D6396C10026D784 /* Updates.swift in Sources */,
-				6BD8474E2D6396C10026D784 /* report_elder.swift in Sources */,
-				6BD8474F2D6396C10026D784 /* Requirements.swift in Sources */,
-				6BD847502D6396C10026D784 /* Library old.swift in Sources */,
-				6BD847512D6396C10026D784 /* ContentView.swift in Sources */,
-				6BD847522D6396C10026D784 /* librarySQL.swift in Sources */,
-				6BD847532D6396C10026D784 /* SAFEApp.swift in Sources */,
-				6BD847542D6396C10026D784 /* Requirments_data_sql.swift in Sources */,
-				6BD847552D6396C10026D784 /* flowchart_data_sql.swift in Sources */,
-				6BD847562D6396C10026D784 /* admin_settings.swift in Sources */,
-				6BD847572D6396C10026D784 /* variables_for_checklist.swift in Sources */,
-				6BD847582D6396C10026D784 /* registration.swift in Sources */,
-				6BD847592D6396C10026D784 /* defaults.swift in Sources */,
-				6BD8475A2D6396C10026D784 /* flowchartSQL.swift in Sources */,
-				6BD8475B2D6396C10026D784 /* checklist.swift in Sources */,
-				6BD8475C2D6396C10026D784 /* Dio_DirectorySQL.swift in Sources */,
-				6BD8475D2D6396C10026D784 /* dbConnect.swift in Sources */,
-				6BD8475E2D6396C10026D784 /* variables_for_flowchart.swift in Sources */,
-				6BD8475F2D6396C10026D784 /* prayersSQL.swift in Sources */,
-				6BD847602D6396C10026D784 /* registration_data_sql.swift in Sources */,
-				6BD847612D6396C10026D784 /* libraryQuery.swift in Sources */,
-				6B31DF632DAD66240019737C /* IDcard.swift in Sources */,
-				6BD847622D6396C10026D784 /* Update_data_sql.swift in Sources */,
+				69C64A8C2DAAB77300D51CF6 /* variables_for_checklist.swift in Sources */,
+				69C64A982DAAB77300D51CF6 /* variables_for_flowchart.swift in Sources */,
+				69C64AA12DAAB77300D51CF6 /* flowchart.swift in Sources */,
+				69C64AA22DAAB77300D51CF6 /* Library old.swift in Sources */,
+				69C64AA32DAAB77300D51CF6 /* libraryQuery.swift in Sources */,
+				69C64AA62DAAB77300D51CF6 /* checklist.swift in Sources */,
+				690A17DE2DCD3C0D00A029A9 /* ContentView.swift in Sources */,
+				690A17DF2DCD3C0D00A029A9 /* Update_data_sql.swift in Sources */,
+				690A17E02DCD3C0D00A029A9 /* Dio_DirectorySQL.swift in Sources */,
+				690A17E12DCD3C0D00A029A9 /* checklistSQL.swift in Sources */,
+				690A17E22DCD3C0D00A029A9 /* prayersSQL.swift in Sources */,
+				690A17E32DCD3C0D00A029A9 /* report_elder.swift in Sources */,
+				690A17E42DCD3C0D00A029A9 /* admin_settings.swift in Sources */,
+				690A17E52DCD3C0D00A029A9 /* testpage.swift in Sources */,
+				690A17E62DCD3C0D00A029A9 /* Prayers_data_sql.swift in Sources */,
+				690A17E72DCD3C0D00A029A9 /* flowchartSQL.swift in Sources */,
+				690A17E82DCD3C0D00A029A9 /* SideHome.swift in Sources */,
+				690A17E92DCD3C0D00A029A9 /* Requirements.swift in Sources */,
+				690A17EA2DCD3C0D00A029A9 /* flowchart_data_sql.swift in Sources */,
+				690A17EB2DCD3C0D00A029A9 /* profile.swift in Sources */,
+				690A17EC2DCD3C0D00A029A9 /* registration_data_sql.swift in Sources */,
+				690A17ED2DCD3C0D00A029A9 /* login.swift in Sources */,
+				690A17EE2DCD3C0D00A029A9 /* Dio_Directory_Data.swift in Sources */,
+				690A17EF2DCD3C0D00A029A9 /* template.swift in Sources */,
+				690A17F02DCD3C0D00A029A9 /* Updates.swift in Sources */,
+				690A17F12DCD3C0D00A029A9 /* registration.swift in Sources */,
+				690A17F22DCD3C0D00A029A9 /* dbConnect.swift in Sources */,
+				690A17F32DCD3C0D00A029A9 /* defaults.swift in Sources */,
+				690A17F42DCD3C0D00A029A9 /* keychain.swift in Sources */,
+				690A17F52DCD3C0D00A029A9 /* SAFEApp.swift in Sources */,
+				690A17F62DCD3C0D00A029A9 /* librarySQL.swift in Sources */,
+				690A17F72DCD3C0D00A029A9 /* requirements_managers.swift in Sources */,
+				690A17F82DCD3C0D00A029A9 /* checklist_data_sql.swift in Sources */,
+				690A17F92DCD3C0D00A029A9 /* Report.swift in Sources */,
+				690A18042DCD407400A029A9 /* IDcard.swift in Sources */,
+				690A17FA2DCD3C0D00A029A9 /* Requirments_data_sql.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -581,42 +513,42 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6BD847942D6396C10026D784 /* requirements_managers.swift in Sources */,
-				6BD847952D6396C10026D784 /* Dio_Directory_Data.swift in Sources */,
-				6BD847962D6396C10026D784 /* keychain.swift in Sources */,
-				6BD847972D6396C10026D784 /* testpage.swift in Sources */,
-				6BD847982D6396C10026D784 /* profile.swift in Sources */,
-				6B31DF622DAD66240019737C /* IDcard.swift in Sources */,
-				6BD847992D6396C10026D784 /* Prayers_data_sql.swift in Sources */,
-				6BD8479A2D6396C10026D784 /* checklistSQL.swift in Sources */,
-				6BD8479B2D6396C10026D784 /* login.swift in Sources */,
-				6BD8479C2D6396C10026D784 /* flowchart.swift in Sources */,
-				6BD8479D2D6396C10026D784 /* template.swift in Sources */,
-				6BD8479E2D6396C10026D784 /* SideHome.swift in Sources */,
-				6BD8479F2D6396C10026D784 /* Report.swift in Sources */,
-				6BD847A02D6396C10026D784 /* checklist_data_sql.swift in Sources */,
-				6BD847A12D6396C10026D784 /* Updates.swift in Sources */,
-				6BD847A22D6396C10026D784 /* report_elder.swift in Sources */,
-				6BD847A32D6396C10026D784 /* Requirements.swift in Sources */,
-				6BD847A42D6396C10026D784 /* Library old.swift in Sources */,
-				6BD847A52D6396C10026D784 /* ContentView.swift in Sources */,
-				6BD847A62D6396C10026D784 /* librarySQL.swift in Sources */,
-				6BD847A72D6396C10026D784 /* SAFEApp.swift in Sources */,
-				6BD847A82D6396C10026D784 /* Requirments_data_sql.swift in Sources */,
-				6BD847A92D6396C10026D784 /* flowchart_data_sql.swift in Sources */,
-				6BD847AA2D6396C10026D784 /* admin_settings.swift in Sources */,
-				6BD847AB2D6396C10026D784 /* variables_for_checklist.swift in Sources */,
-				6BD847AC2D6396C10026D784 /* registration.swift in Sources */,
-				6BD847AD2D6396C10026D784 /* defaults.swift in Sources */,
-				6BD847AE2D6396C10026D784 /* flowchartSQL.swift in Sources */,
-				6BD847AF2D6396C10026D784 /* checklist.swift in Sources */,
-				6BD847B02D6396C10026D784 /* Dio_DirectorySQL.swift in Sources */,
-				6BD847B12D6396C10026D784 /* dbConnect.swift in Sources */,
-				6BD847B22D6396C10026D784 /* variables_for_flowchart.swift in Sources */,
-				6BD847B32D6396C10026D784 /* prayersSQL.swift in Sources */,
-				6BD847B42D6396C10026D784 /* registration_data_sql.swift in Sources */,
-				6BD847B52D6396C10026D784 /* libraryQuery.swift in Sources */,
-				6BD847B62D6396C10026D784 /* Update_data_sql.swift in Sources */,
+				69C64A622DAAB77300D51CF6 /* variables_for_checklist.swift in Sources */,
+				69C64A6E2DAAB77300D51CF6 /* variables_for_flowchart.swift in Sources */,
+				69C64A772DAAB77300D51CF6 /* flowchart.swift in Sources */,
+				69C64A782DAAB77300D51CF6 /* Library old.swift in Sources */,
+				690A18032DCD407400A029A9 /* IDcard.swift in Sources */,
+				69C64A792DAAB77300D51CF6 /* libraryQuery.swift in Sources */,
+				690A17C02DCD3C0D00A029A9 /* ContentView.swift in Sources */,
+				690A17C12DCD3C0D00A029A9 /* Update_data_sql.swift in Sources */,
+				690A17C22DCD3C0D00A029A9 /* Dio_DirectorySQL.swift in Sources */,
+				690A17C32DCD3C0D00A029A9 /* checklistSQL.swift in Sources */,
+				690A17C42DCD3C0D00A029A9 /* prayersSQL.swift in Sources */,
+				690A17C52DCD3C0D00A029A9 /* report_elder.swift in Sources */,
+				690A17C62DCD3C0D00A029A9 /* admin_settings.swift in Sources */,
+				690A17C72DCD3C0D00A029A9 /* testpage.swift in Sources */,
+				690A17C82DCD3C0D00A029A9 /* Prayers_data_sql.swift in Sources */,
+				690A17C92DCD3C0D00A029A9 /* flowchartSQL.swift in Sources */,
+				690A17CA2DCD3C0D00A029A9 /* SideHome.swift in Sources */,
+				690A17CB2DCD3C0D00A029A9 /* Requirements.swift in Sources */,
+				690A17CC2DCD3C0D00A029A9 /* flowchart_data_sql.swift in Sources */,
+				690A17CD2DCD3C0D00A029A9 /* profile.swift in Sources */,
+				690A17CE2DCD3C0D00A029A9 /* registration_data_sql.swift in Sources */,
+				690A17CF2DCD3C0D00A029A9 /* login.swift in Sources */,
+				690A17D02DCD3C0D00A029A9 /* Dio_Directory_Data.swift in Sources */,
+				690A17D12DCD3C0D00A029A9 /* template.swift in Sources */,
+				690A17D22DCD3C0D00A029A9 /* Updates.swift in Sources */,
+				690A17D32DCD3C0D00A029A9 /* registration.swift in Sources */,
+				690A17D42DCD3C0D00A029A9 /* dbConnect.swift in Sources */,
+				690A17D52DCD3C0D00A029A9 /* defaults.swift in Sources */,
+				690A17D62DCD3C0D00A029A9 /* keychain.swift in Sources */,
+				690A17D72DCD3C0D00A029A9 /* SAFEApp.swift in Sources */,
+				690A17D82DCD3C0D00A029A9 /* librarySQL.swift in Sources */,
+				690A17D92DCD3C0D00A029A9 /* requirements_managers.swift in Sources */,
+				690A17DA2DCD3C0D00A029A9 /* checklist_data_sql.swift in Sources */,
+				690A17DB2DCD3C0D00A029A9 /* Report.swift in Sources */,
+				690A17DC2DCD3C0D00A029A9 /* Requirments_data_sql.swift in Sources */,
+				69C64A7C2DAAB77300D51CF6 /* checklist.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -624,42 +556,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6BD8476A2D6396C10026D784 /* requirements_managers.swift in Sources */,
-				6BD8476B2D6396C10026D784 /* Dio_Directory_Data.swift in Sources */,
-				6BD8476C2D6396C10026D784 /* keychain.swift in Sources */,
-				6BD8476D2D6396C10026D784 /* testpage.swift in Sources */,
-				6BD8476E2D6396C10026D784 /* profile.swift in Sources */,
-				6BD8476F2D6396C10026D784 /* Prayers_data_sql.swift in Sources */,
-				6BD847702D6396C10026D784 /* checklistSQL.swift in Sources */,
-				6BD847712D6396C10026D784 /* login.swift in Sources */,
-				6BD847722D6396C10026D784 /* flowchart.swift in Sources */,
-				6BD847732D6396C10026D784 /* template.swift in Sources */,
-				6BD847742D6396C10026D784 /* SideHome.swift in Sources */,
-				6BD847752D6396C10026D784 /* Report.swift in Sources */,
-				6BD847762D6396C10026D784 /* checklist_data_sql.swift in Sources */,
-				6BD847772D6396C10026D784 /* Updates.swift in Sources */,
-				6BD847782D6396C10026D784 /* report_elder.swift in Sources */,
-				6BD847792D6396C10026D784 /* Requirements.swift in Sources */,
-				6BD8477A2D6396C10026D784 /* Library old.swift in Sources */,
-				6BD8477B2D6396C10026D784 /* ContentView.swift in Sources */,
-				6BD8477C2D6396C10026D784 /* librarySQL.swift in Sources */,
-				6BD8477D2D6396C10026D784 /* SAFEApp.swift in Sources */,
-				6B31DF612DAD66240019737C /* IDcard.swift in Sources */,
-				6BD8477E2D6396C10026D784 /* Requirments_data_sql.swift in Sources */,
-				6BD8477F2D6396C10026D784 /* flowchart_data_sql.swift in Sources */,
-				6BD847802D6396C10026D784 /* admin_settings.swift in Sources */,
-				6BD847812D6396C10026D784 /* variables_for_checklist.swift in Sources */,
-				6BD847822D6396C10026D784 /* registration.swift in Sources */,
-				6BD847832D6396C10026D784 /* defaults.swift in Sources */,
-				6BD847842D6396C10026D784 /* flowchartSQL.swift in Sources */,
-				6BD847852D6396C10026D784 /* checklist.swift in Sources */,
-				6BD847862D6396C10026D784 /* Dio_DirectorySQL.swift in Sources */,
-				6BD847872D6396C10026D784 /* dbConnect.swift in Sources */,
-				6BD847882D6396C10026D784 /* variables_for_flowchart.swift in Sources */,
-				6BD847892D6396C10026D784 /* prayersSQL.swift in Sources */,
-				6BD8478A2D6396C10026D784 /* registration_data_sql.swift in Sources */,
-				6BD8478B2D6396C10026D784 /* libraryQuery.swift in Sources */,
-				6BD8478C2D6396C10026D784 /* Update_data_sql.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -806,7 +702,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SAFE/Preview Content\"";
-				DEVELOPMENT_TEAM = HTUMFUKS5X;
+				DEVELOPMENT_TEAM = 582R7KGM3Z;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -819,7 +715,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Joe-Trave.SAFE";
+				PRODUCT_BUNDLE_IDENTIFIER = com.MaxSarko.SAFE;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -835,7 +731,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SAFE/Preview Content\"";
-				DEVELOPMENT_TEAM = HTUMFUKS5X;
+				DEVELOPMENT_TEAM = 582R7KGM3Z;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -848,7 +744,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Joe-Trave.SAFE";
+				PRODUCT_BUNDLE_IDENTIFIER = com.MaxSarko.SAFE;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -969,15 +865,16 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCLocalSwiftPackageReference section */
-		6BD847B92D63990F0026D784 /* XCLocalSwiftPackageReference "../../../../../../../Downloads/PostgresClientKit-1.5.0" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = "../../../../../../../Downloads/PostgresClientKit-1.5.0";
-		};
-/* End XCLocalSwiftPackageReference section */
-
 /* Begin XCRemoteSwiftPackageReference section */
-		6BD847C62D639D480026D784 /* XCRemoteSwiftPackageReference "BlueSocket" */ = {
+		69C64A2A2DAAB5F200D51CF6 /* XCRemoteSwiftPackageReference "PostgresClientKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/codewinsdotcom/PostgresClientKit.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		69C64AAE2DAAB81E00D51CF6 /* XCRemoteSwiftPackageReference "BlueSocket" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Kitura/BlueSocket.git";
 			requirement = {
@@ -985,9 +882,9 @@
 				minimumVersion = 2.0.4;
 			};
 		};
-		6BD847CB2D639D620026D784 /* XCRemoteSwiftPackageReference "BlueSSLService" */ = {
+		69C64AAF2DAAB82F00D51CF6 /* XCRemoteSwiftPackageReference "BlueSSLService" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Kitura/BlueSSLService";
+			repositoryURL = "https://github.com/Kitura/BlueSSLService.git";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 2.0.2;
@@ -996,36 +893,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		6B54D3E62D8DBD5900151017 /* PostgresClientKit */ = {
+		69C64AB02DAABA7100D51CF6 /* PostgresClientKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = PostgresClientKit;
-		};
-		6B54D3E82D8DBE1200151017 /* BlueSocketTestCommonLibrary */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 6BD847C62D639D480026D784 /* XCRemoteSwiftPackageReference "BlueSocket" */;
-			productName = BlueSocketTestCommonLibrary;
-		};
-		6B54D3EA2D8DBE1F00151017 /* PostgresClientKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = PostgresClientKit;
-		};
-		6BD847BC2D6399780026D784 /* PostgresClientKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = PostgresClientKit;
-		};
-		6BD847C22D639ACC0026D784 /* PostgresClientKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = PostgresClientKit;
-		};
-		6BD847C92D639D480026D784 /* Socket */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 6BD847C62D639D480026D784 /* XCRemoteSwiftPackageReference "BlueSocket" */;
-			productName = Socket;
-		};
-		6BD847CC2D639D620026D784 /* SSLService */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 6BD847CB2D639D620026D784 /* XCRemoteSwiftPackageReference "BlueSSLService" */;
-			productName = SSLService;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
