@@ -1,3 +1,11 @@
+//
+//  pCategory 2.swift
+//  SAFE
+//
+//  Created by Maximilian Sarko on 5/8/25.
+//
+
+
 import SwiftUI
 
 // Data structures used within the checklist view for displaying fetched content
@@ -156,7 +164,7 @@ struct CheckListSQL: View {
                 loadPolicies()
                 loadClearances()
                 loadDoaTraining()
-                loadPaTraining()
+                loadPaTraining() 
             }
         }
     }
@@ -180,7 +188,7 @@ struct CheckListSQL: View {
                     PolicyDataReturn(policy_id: $0.policy_id, policy_description: $0.policy_description, policy_completion: $0.policy_completion)
                 }
             }
-        }
+        } 
     }
 
     // Load clearance data

@@ -1,21 +1,16 @@
-//
-//  ContentView.swift
-//  SAFE
-//
-//  Created by Kevin Gualano on 9/18/24.
-//
-
 import SwiftUI
 
+// Main landing screen with welcome visuals and optional sidebar navigation
 struct ContentView: View {
     @ObservedObject var userState = UserState.shared
     @Binding var isAuthenticated: Bool
-    @State private var isMenuOpen = false
+    @State private var isMenuOpen = false  // Controls sidebar menu toggle
 
     var body: some View {
         NavigationStack {
             ZStack {
                 VStack {
+                    // Top logo
                     Image("dlogo")
                         .resizable()
                         .scaledToFit()
@@ -23,25 +18,28 @@ struct ContentView: View {
                         .frame(height: 75)
                         .padding(.top, -50)
                         .padding(.leading, 80)
-                    
+
                     Text("Safe Environment Resource App")
                         .font(.subheadline)
                         .padding(.leading, 150)
                         .padding(.top, -20)
- 
+
+                    // Main image/banner
                     Image("La Pentecôte")
                         .resizable()
                         .scaledToFit()
                         .frame(maxWidth: .infinity, alignment: .center)
                         .frame(height: 350)
                         .padding(.top, -30)
+
                     Text("Welcome to SERA")
                         .font(.title)
                         .fontWeight(.bold)
                         .padding(.leading, -150)
                         .padding(.top, -40)
                         .foregroundColor(Color(red: 0.58, green: 0.18, blue: 0.20).opacity(0.9))
-                    
+
+                    // Intro/description box
                     Text("Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo")
                         .font(.system(size: 20))
                         .foregroundColor(.brown)
@@ -51,9 +49,10 @@ struct ContentView: View {
                             RoundedRectangle(cornerRadius: 25)
                                 .fill(Color(red: 0.98, green: 0.95, blue: 0.85))
                         )
-                    
+
                     Spacer()
-                    
+
+                    // DB Mode Indicator
                     if use_cloud_db {
                         Text("Using CloudDB")
                             .font(.body)
@@ -65,18 +64,20 @@ struct ContentView: View {
                             .bold()
                             .foregroundColor(.red)
                     }
+
                     Spacer()
+
+                    // Build type and refresh action
                     HStack {
                         Text("Proof of Concept Build")
                             .font(.body)
                             .padding(.top, 10)
-                        
+
                         Button(action: {
                             Task {
                                 do {
                                     try await UserDefaultsManager.shared.getUserDefaults(dbID: user_userID)
                                 } catch {
-                                    // Handle error, for example, print it or show an alert
                                     print("Failed to refresh user defaults: \(error)")
                                 }
                             }
@@ -85,9 +86,9 @@ struct ContentView: View {
                         }
                     }
                 }
-                //.navigationTitle(isMenuOpen ? "" : "SERA: \(userState.firstName)")  // Updated to use userState directly
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbar {
+                    // Menu button
                     ToolbarItem(placement: .navigationBarLeading) {
                         Button(action: {
                             withAnimation {
@@ -104,6 +105,7 @@ struct ContentView: View {
                     }
                 }
 
+                // Sidebar menu with overlay when open
                 if isMenuOpen {
                     HStack {
                         SideMenuView(isAuthenticated: $isAuthenticated)
@@ -127,17 +129,20 @@ struct ContentView: View {
                 LinearGradient(
                     gradient: Gradient(colors: [Color.orange, Color("#ffb600")]),
                     startPoint: .top,
-                    endPoint: .bottom))
+                    endPoint: .bottom)
+            )
             .animation(.easeInOut, value: isMenuOpen)
             .onAppear {
+                // Reload shared state from persistent store
                 UserState.shared.loadFromDefaults()
                 print("ContentView refreshed with latest UserState: \(userState.firstName) \(userState.lastName)")
             }
         }
     }
 }
+
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(isAuthenticated: .constant(true))  // Use .constant for preview
+        ContentView(isAuthenticated: .constant(true))  // Preview with static binding
     }
 }
