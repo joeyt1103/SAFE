@@ -10,6 +10,7 @@ import PostgresClientKit
 // MVU, Minor Volunteer under 14
 
 
+// Data models for categorizing requirements in the SAFE Source system
 
 struct ParticipationCategory {
     let cat_id: String
@@ -36,19 +37,20 @@ struct doaTrainings {
     let doa_training_completion: String
 }
 
-struct paStateTrainings{
+struct paStateTrainings {
     let paTraining_id: String
     let paTraining_description: String
     let paTraining_completion: String
 }
 
+// Global arrays for storing fetched data used throughout the app
 var fetchedParticipationCategories: [ParticipationCategory] = []
 var fetchedPolicyData: [PolicyData] = []
 var fetchedClearanceData: [ClearanceData] = []
 var fetchedDoaTrainings: [doaTrainings] = []
 var fetchedPaStateTrainings: [paStateTrainings] = []
 
-// Fetch the categories of participation
+// Loads active participation categories from the database
 func fetchParticipationCategories() {
     do {
         let connection = try dbConnect()
@@ -73,8 +75,9 @@ func fetchParticipationCategories() {
             let includes = try columns[2].string()
             let ageRange = try columns[3].string()
             
-            // Append both cat_id and cat_description to the fetchedSources array as a ParticipationCategory struct
-            fetchedSources.append(ParticipationCategory(cat_id: catid, cat_description: category, cat_includes: includes, cat_age_range: ageRange))
+            fetchedSources.append(
+                ParticipationCategory(cat_id: catid, cat_description: category, cat_includes: includes, cat_age_range: ageRange)
+            )
         }
         
         DispatchQueue.main.async {
@@ -86,28 +89,27 @@ func fetchParticipationCategories() {
     }
 }
 
-// Fetch the policies data
+// Loads active policy requirements for a specific user category and diocese
 func fetchPolicyData(inputData: String) {
     do {
         let connection = try dbConnect()
         defer { connection.close() }
         
         let pquery = """
-                SELECT 
-                "safe_source_policies"."policy_id",
-                "safe_source_policies"."policy_description",
-                "safe_source_person_requirements"."req_completion"
-                
-                FROM "safe_source_policies"
-                INNER JOIN "safe_source_person_requirements"
-                
-                ON "safe_source_policies"."policy_id" = "safe_source_person_requirements"."req_id"
-                WHERE "safe_source_person_requirements"."req_active" = TRUE
-                AND "safe_source_policies"."policy_of" = $2
-                AND "safe_source_person_requirements"."req_type" = 'Policy'
-                AND "safe_source_person_requirements"."person_cat" = $1
-                ORDER BY "policy_description";
-                """
+        SELECT 
+            "safe_source_policies"."policy_id",
+            "safe_source_policies"."policy_description",
+            "safe_source_person_requirements"."req_completion"
+        FROM "safe_source_policies"
+        INNER JOIN "safe_source_person_requirements"
+            ON "safe_source_policies"."policy_id" = "safe_source_person_requirements"."req_id"
+        WHERE "safe_source_person_requirements"."req_active" = TRUE
+            AND "safe_source_policies"."policy_of" = $2
+            AND "safe_source_person_requirements"."req_type" = 'Policy'
+            AND "safe_source_person_requirements"."person_cat" = $1
+        ORDER BY "policy_description";
+        """
+        
         let statement = try connection.prepareStatement(text: pquery)
         defer { statement.close() }
         
@@ -120,8 +122,9 @@ func fetchPolicyData(inputData: String) {
             let pdescription = try columns[1].string()
             let completion = try columns[2].string()
             
-            // Append both policy_id and policy_description to the fetchedSources array as a PolicyData struct
-            pfetchedSources.append(PolicyData(policy_id: policyid, policy_description: pdescription, policy_completion: completion))
+            pfetchedSources.append(
+                PolicyData(policy_id: policyid, policy_description: pdescription, policy_completion: completion)
+            )
         }
         
         DispatchQueue.main.async {
@@ -133,31 +136,30 @@ func fetchPolicyData(inputData: String) {
     }
 }
 
-//Fetch Clearances Data
+// Loads clearance requirements for a user category
 func fetchClearanceData(inputData: String) {
     do {
-        //print("fetching clearances for category: \(inputData)")
         let connection = try dbConnect()
         defer { connection.close() }
         
         let pquery = """
         SELECT 
-                "safe_source_clearances"."clearance_id",
-                "safe_source_clearances"."clearance_description",
-                "safe_source_person_requirements"."req_completion"
+            "safe_source_clearances"."clearance_id",
+            "safe_source_clearances"."clearance_description",
+            "safe_source_person_requirements"."req_completion"
         FROM "safe_source_clearances" 
         INNER JOIN "safe_source_person_requirements"
-        ON "safe_source_clearances"."clearance_id" = "safe_source_person_requirements"."req_id"
+            ON "safe_source_clearances"."clearance_id" = "safe_source_person_requirements"."req_id"
         WHERE "safe_source_person_requirements"."req_active" = TRUE
-        AND "safe_source_person_requirements"."req_type" = 'Clearance'
-        AND "safe_source_person_requirements"."person_cat" = $1
+            AND "safe_source_person_requirements"."req_type" = 'Clearance'
+            AND "safe_source_person_requirements"."person_cat" = $1
         ORDER BY "clearance_description";
         """
+        
         let statement = try connection.prepareStatement(text: pquery)
         defer { statement.close() }
         
         let cursor = try statement.execute(parameterValues: [inputData])
-        //print("Query parameters: inputData = \(inputData)")
         var cfetchedSources = [ClearanceData]()
         
         for row in cursor {
@@ -166,15 +168,14 @@ func fetchClearanceData(inputData: String) {
             let clearanceDesc = try columns[1].string()
             let completion = try columns[2].string()
             
-            
-            // Append both clearance_id and clearance_description to the fetchedSources array as a PolicyData struct
-            cfetchedSources.append(ClearanceData(clearance_id: clearanceId, clearance_description: clearanceDesc, clearance_completion: completion))
+            cfetchedSources.append(
+                ClearanceData(clearance_id: clearanceId, clearance_description: clearanceDesc, clearance_completion: completion)
+            )
         }
         
         DispatchQueue.main.async {
             fetchedClearanceData = cfetchedSources
             print("Fetched clearances: \(cfetchedSources)")
-
         }
         
     } catch {
@@ -182,7 +183,7 @@ func fetchClearanceData(inputData: String) {
     }
 }
 
-// Fetch the DOA Trainings data
+// Loads internal DOA trainings based on user’s diocese and category
 func fetchDoaTrainingData(inputData: String) {
     do {
         let connection = try dbConnect()
@@ -190,18 +191,19 @@ func fetchDoaTrainingData(inputData: String) {
         
         let pquery = """
         SELECT 
-                "safe_source_trainings"."training_id",
-                "safe_source_trainings"."training_description",
-        "safe_source_person_requirements"."req_completion"
+            "safe_source_trainings"."training_id",
+            "safe_source_trainings"."training_description",
+            "safe_source_person_requirements"."req_completion"
         FROM "safe_source_trainings"
         INNER JOIN "safe_source_person_requirements"
-        ON "safe_source_trainings"."training_id" = "safe_source_person_requirements"."req_id"
+            ON "safe_source_trainings"."training_id" = "safe_source_person_requirements"."req_id"
         WHERE "safe_source_person_requirements"."req_active" = TRUE
-        AND "safe_source_person_requirements"."req_source" = $1
-        AND "safe_source_person_requirements"."req_type" = 'Training'
-        AND "safe_source_person_requirements"."person_cat" = $2
+            AND "safe_source_person_requirements"."req_source" = $1
+            AND "safe_source_person_requirements"."req_type" = 'Training'
+            AND "safe_source_person_requirements"."person_cat" = $2
         ORDER BY "training_description";
         """
+        
         let statement = try connection.prepareStatement(text: pquery)
         defer { statement.close() }
         
@@ -214,8 +216,9 @@ func fetchDoaTrainingData(inputData: String) {
             let trainingdescription = try columns[1].string()
             let completion = try columns[2].string()
             
-            // Append both policy_id and policy_description to the fetchedSources array as a PolicyData struct
-            tfetchedSources.append(doaTrainings(doa_training_id: trainingid, doa_training_description: trainingdescription, doa_training_completion: completion))
+            tfetchedSources.append(
+                doaTrainings(doa_training_id: trainingid, doa_training_description: trainingdescription, doa_training_completion: completion)
+            )
         }
         
         DispatchQueue.main.async {
@@ -223,31 +226,31 @@ func fetchDoaTrainingData(inputData: String) {
         }
         
     } catch {
-        print("Error fetching DOA Trainning data: \(error)")
+        print("Error fetching DOA Training data: \(error)")
     }
 }
 
-// Fetch the PA State Trainings data
+// Loads PA state-specific trainings for a given user category
 func fetchPATrainingData(inputData: String) {
     do {
-        //print("Query parameters: user_state = \(user_state_id), inputData = \(inputData)")
         let connection = try dbConnect()
         defer { connection.close() }
         
         let pquery = """
-                SELECT 
-                        "safe_source_trainings"."training_id",
-                        "safe_source_trainings"."training_description",
-                "safe_source_person_requirements"."req_completion"
-                FROM "safe_source_trainings"
-                INNER JOIN "safe_source_person_requirements"
-                ON "safe_source_trainings"."training_id" = "safe_source_person_requirements"."req_id"
-                WHERE "safe_source_person_requirements"."req_active" = TRUE
-                AND "safe_source_person_requirements"."req_source" = $1
-                AND "safe_source_person_requirements"."req_type" = 'Training'
-                AND "safe_source_person_requirements"."person_cat" = $2
-                ORDER BY "training_description";
-                """
+        SELECT 
+            "safe_source_trainings"."training_id",
+            "safe_source_trainings"."training_description",
+            "safe_source_person_requirements"."req_completion"
+        FROM "safe_source_trainings"
+        INNER JOIN "safe_source_person_requirements"
+            ON "safe_source_trainings"."training_id" = "safe_source_person_requirements"."req_id"
+        WHERE "safe_source_person_requirements"."req_active" = TRUE
+            AND "safe_source_person_requirements"."req_source" = $1
+            AND "safe_source_person_requirements"."req_type" = 'Training'
+            AND "safe_source_person_requirements"."person_cat" = $2
+        ORDER BY "training_description";
+        """
+        
         let statement = try connection.prepareStatement(text: pquery)
         defer { statement.close() }
         
@@ -260,16 +263,16 @@ func fetchPATrainingData(inputData: String) {
             let trainingdescription = try columns[1].string()
             let completion = try columns[2].string()
             
-            // Append both policy_id and policy_description to the fetchedSources array as a PolicyData struct
-            tfetchedSources.append(paStateTrainings(paTraining_id: trainingid, paTraining_description: trainingdescription, paTraining_completion: completion))
+            tfetchedSources.append(
+                paStateTrainings(paTraining_id: trainingid, paTraining_description: trainingdescription, paTraining_completion: completion)
+            )
         }
         
         DispatchQueue.main.async {
             fetchedPaStateTrainings = tfetchedSources
-            //print("Fetched State Trainings: \(fetchedPaStateTrainings)")
         }
         
     } catch {
-        print("Error fetching PA State Trainning data: \(error)")
+        print("Error fetching PA State Training data: \(error)")
     }
 }

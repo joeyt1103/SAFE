@@ -1,12 +1,12 @@
 import SwiftUI
 import Combine
-
 class LocationViewModel: ObservableObject {
-    @Published var locationTypes: [String] = ["All"]
-    @Published var locations: [String] = ["All"]
-    @Published var filteredLocationData: [LocationData] = []
-    @Published var locationData: [LocationData] = []
+    @Published var locationTypes: [String] = ["All"]           // Dropdown filter options for type
+    @Published var locations: [String] = ["All"]               // Dropdown filter options for location name
+    @Published var filteredLocationData: [LocationData] = []  // Filtered result based on user selection
+    @Published var locationData: [LocationData] = []          // Full dataset returned from database
 
+    // Fetch available location types from backend
     func loadLocationTypes() {
         fetchLocationTypes { [weak self] fetchedTypes in
             DispatchQueue.main.async {
@@ -15,6 +15,7 @@ class LocationViewModel: ObservableObject {
         }
     }
 
+    // Fetch available location names from backend
     func loadLocations() {
         fetchLocations { [weak self] fetchedLocations in
             DispatchQueue.main.async {
@@ -23,6 +24,7 @@ class LocationViewModel: ObservableObject {
         }
     }
 
+    // Load all location data from backend and set initial filtered view
     func loadLocationData() {
         getLocations { [weak self] fetchedLocationData in
             DispatchQueue.main.async {
@@ -32,6 +34,7 @@ class LocationViewModel: ObservableObject {
         }
     }
 
+    // Apply filtering logic based on selected type and location
     func filterLocations(selectedLocationType: String, selectedLocation: String) {
         filteredLocationData = locationData.filter { location in
             (selectedLocationType == "All" || location.locationType == selectedLocationType) &&
@@ -39,7 +42,6 @@ class LocationViewModel: ObservableObject {
         }
     }
 }
-
 struct LocationView: View {
     @StateObject private var viewModel = LocationViewModel()
     @State private var selectedLocationType: String = "All"
@@ -48,14 +50,18 @@ struct LocationView: View {
 
     var body: some View {
         ZStack {
-            // Background gradient
-            LinearGradient(gradient: Gradient(colors: [
-                Color(red: 242/255, green: 166/255, blue: 41/255),
-                Color(red: 244/255, green: 234/255, blue: 217/255)
-            ]), startPoint: .topLeading, endPoint: .bottomTrailing)
+            // Background
+            LinearGradient(
+                gradient: Gradient(colors: [
+                    Color(red: 242/255, green: 166/255, blue: 41/255),
+                    Color(red: 244/255, green: 234/255, blue: 217/255)
+                ]),
+                startPoint: .topLeading,
+                endPoint: .bottomTrailing
+            )
             .ignoresSafeArea()
 
-            // Main content
+            // Main layout
             GeometryReader { geometry in
                 let screenWidth = geometry.size.width
                 let screenHeight = geometry.size.height
@@ -74,6 +80,7 @@ struct LocationView: View {
                         .multilineTextAlignment(.center)
                         .foregroundColor(Color(red: 38/255, green: 86/255, blue: 134/255))
 
+                    // Filter dropdowns
                     HStack(spacing: 16) {
                         Picker("Type", selection: $selectedLocationType) {
                             ForEach(viewModel.locationTypes, id: \.self) { type in
@@ -106,6 +113,7 @@ struct LocationView: View {
                         }
                     }
 
+                    // Results section
                     if viewModel.filteredLocationData.isEmpty {
                         Text("No locations found.")
                             .font(.subheadline)
@@ -123,17 +131,9 @@ struct LocationView: View {
                                         .font(.headline)
                                         .foregroundColor(Color(red: 160/255, green: 57/255, blue: 61/255))
 
-                                    Text("Manager: \(location.locationPastor)")
-                                        .font(.subheadline)
-                                        .foregroundColor(.gray)
-
-                                    Text("Type: \(location.locationType)")
-                                        .font(.subheadline)
-                                        .foregroundColor(.gray)
-
-                                    Text("Status: \(location.locationActive ? "Active" : "Inactive")")
-                                        .font(.subheadline)
-                                        .foregroundColor(.gray)
+                                    Text("Manager: \(location.locationPastor)").font(.subheadline).foregroundColor(.gray)
+                                    Text("Type: \(location.locationType)").font(.subheadline).foregroundColor(.gray)
+                                    Text("Status: \(location.locationActive ? "Active" : "Inactive")").font(.subheadline).foregroundColor(.gray)
 
                                     Divider()
 
@@ -147,8 +147,7 @@ struct LocationView: View {
                                         if !location.locationAdd2.isEmpty {
                                             Text(location.locationAdd2).font(.footnote)
                                         }
-                                        Text("\(location.locationCity), \(location.locationState) \(location.locationZip)")
-                                            .font(.footnote)
+                                        Text("\(location.locationCity), \(location.locationState) \(location.locationZip)").font(.footnote)
                                     }
 
                                     VStack(alignment: .leading, spacing: 2) {
@@ -176,9 +175,8 @@ struct LocationView: View {
                     viewModel.loadLocationData()
                 }
             }
-            .zIndex(0)
 
-            // Side menu overlay
+            // Sidebar menu overlay
             if showMenu {
                 ZStack {
                     SideMenuView(isAuthenticated: .constant(true))
@@ -208,7 +206,7 @@ struct LocationView: View {
                 .zIndex(1)
             }
 
-            // Top bar pinned to very top
+            // App logo pinned to top right
             HStack {
                 Spacer()
                 Image("SERA_Text_w__Shield")
