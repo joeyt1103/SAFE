@@ -1,20 +1,16 @@
 //=============================================================================
 //
-//  report_elder.swift
+//  Report.swift
 //  SAFE
-//
-//  Created by Kevin Gualano on 11/12/24.
 //
 //  Notes:
 //  This file defines the view where a user can report a child abuse incident.
-//  It looks like it needs to be updated with elder-specific language
-//  (it uses the same strings as Report.swift)
 //
 //=============================================================================
 
 import SwiftUI
 
-struct ReportElderView: View {
+struct ReportView: View {
     @State private var showLeftForm = false
     @State private var showRightForm = false
     @State private var showMessageBox = false
@@ -32,7 +28,7 @@ struct ReportElderView: View {
                 let screenHeight = geometry.size.height
                 let isLandscape = screenWidth > screenHeight // Detect device orientation
                 
-                // Set different font sizes for portrait and landscape modes
+                // Set different sizes for portrait and landscape modes
                 let titleFontSize: CGFloat = isLandscape ? 40 : 28
                 let buttonFontSize: CGFloat = isLandscape ? 24 : 16
                 let bodyFontSize: CGFloat = isLandscape ? 24 : 16
@@ -42,7 +38,7 @@ struct ReportElderView: View {
                         VStack {
                             // Header with title and logo
                             HStack {
-                                Text("Reporting Alleged Abuse of an Eldery Person")
+                                Text("Reporting Alleged Abuse of a Minor")
                                     .font(.custom("Helvetica", size: 32))
                                     .foregroundColor(Color(red: 0.3176, green: 0.3176, blue: 0.3176)) // Grayish color for heading (x/255 where x is the RGB value --> x < 256 and x > 0)
                                     .fontWeight(.bold)
@@ -81,7 +77,7 @@ struct ReportElderView: View {
                                 Button(action: {
                                     showRightForm.toggle()
                                 }) {
-                                    Text("When Not to Make a Report")
+                                    Text("When not to Make a Report")
                                         .font(.system(size: buttonFontSize))
                                         .fontWeight(.medium)
                                         .multilineTextAlignment(.center)
@@ -227,49 +223,49 @@ struct ReportElderView: View {
             .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
         }
     }
+}
+
+//===========================================================================
+// The below form displays when the user selects "When <to | Not to> Report"
+//===========================================================================
+
+// Updated ReferenceTopicForm to accept a custom header string and modify navigation title size
+struct ReferenceTopicForm: View {
+    let topic: String
+    let references: [String]
+    let header: String
+    @Binding var isPresented: Bool // Bind the presentation state
     
-    //===========================================================================
-    // The below form displays when the user selects "When <to | Not to> Report"
-    //===========================================================================
-    
-    // Updated ReferenceTopicForm to accept a custom header string and modify navigation title size
-    struct ReferenceElderTopicForm: View {
-        let topic: String
-        let references: [String]
-        let header: String
-        @Binding var isPresented: Bool // Bind the presentation state
-        
-        var body: some View {
-            NavigationView {
-                Form {
-                    // Custom Header
-                    Section(header: Text(header)) {
-                        // Loop through the reference list and display each item
-                        ForEach(references, id: \.self) { reference in
-                            Text(reference)
+    var body: some View {
+        NavigationView {
+            Form {
+                // Custom Header
+                Section(header: Text(header)) {
+                    // Loop through the reference list and display each item
+                    ForEach(references, id: \.self) { reference in
+                        Text(reference)
+                    }
+                }
+                Section {
+                    Text("Additional information and links.")
+                    HStack(alignment: .top) {
+                        VStack(alignment: .leading) {
+                            Text("PA Childline:")
+                            Text("NJ State Registry:")
+                        }
+                        VStack(alignment: .leading) {
+                            Text("1-800-932-0313")
+                            Text("1-877-652-2873")
                         }
                     }
-                    Section {
-                        Text("Additional information and links.")
-                        HStack(alignment: .top) {
-                            VStack(alignment: .leading) {
-                                Text("PA Childline:")
-                                Text("NJ State Registry:")
-                            }
-                            VStack(alignment: .leading) {
-                                Text("1-800-932-0313")
-                                Text("1-877-652-2873")
-                            }
-                        }
-                        
-                        Link("PA Child Welfare Reporting Website", destination: URL(string: "https://www.compass.state.pa.us/cwis/public/home")!)
-                            .padding(2)
-                        
-                        Link("New Jersey Department of Children and Families", destination: URL(string: "https://www.nj.gov/dcf/reporting/how/")!)
-                            .padding(2)
-                        
-                        Spacer()
-                    }
+                    
+                    Link("PA Child Welfare Reporting Website", destination: URL(string: "https://www.compass.state.pa.us/cwis/public/home")!)
+                        .padding(2)
+                    
+                    Link("New Jersey Department of Children and Families", destination: URL(string: "https://www.nj.gov/dcf/reporting/how/")!)
+                        .padding(2)
+                    
+                    Spacer()
                 }
             }
             .navigationBarTitleDisplayMode(.inline)
@@ -289,8 +285,8 @@ struct ReportElderView: View {
 
 // Allows Xcode UI preview display
 
-struct ReportElderView_Previews: PreviewProvider {
+struct ReportView_Previews: PreviewProvider {
     static var previews: some View {
-        ReportElderView()
+        ReportView()
     }
 }
