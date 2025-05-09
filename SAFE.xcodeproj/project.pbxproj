@@ -93,7 +93,13 @@
 		69C64AA22DAAB77300D51CF6 /* Library old.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C64A2D2DAAB77300D51CF6 /* Library old.swift */; };
 		69C64AA32DAAB77300D51CF6 /* libraryQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C64A2E2DAAB77300D51CF6 /* libraryQuery.swift */; };
 		69C64AA62DAAB77300D51CF6 /* checklist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C64A2B2DAAB77300D51CF6 /* checklist.swift */; };
-		69C64AB12DAABA7100D51CF6 /* PostgresClientKit in Frameworks */ = {isa = PBXBuildFile; productRef = 69C64AB02DAABA7100D51CF6 /* PostgresClientKit */; };
+		6B6733EF2DCD97EA000E4544 /* BlueSocketTestCommonLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 6B6733EE2DCD97EA000E4544 /* BlueSocketTestCommonLibrary */; };
+		6B6733F12DCD97EA000E4544 /* Socket in Frameworks */ = {isa = PBXBuildFile; productRef = 6B6733F02DCD97EA000E4544 /* Socket */; };
+		6B6733F32DCD97FE000E4544 /* SSLService in Frameworks */ = {isa = PBXBuildFile; productRef = 6B6733F22DCD97FE000E4544 /* SSLService */; };
+		6B6733F72DCD9838000E4544 /* PostgresClientKit in Frameworks */ = {isa = PBXBuildFile; productRef = 6B6733F62DCD9838000E4544 /* PostgresClientKit */; };
+		6B6733F92DCD9851000E4544 /* PostgresClientKit in Frameworks */ = {isa = PBXBuildFile; productRef = 6B6733F82DCD9851000E4544 /* PostgresClientKit */; };
+		6B6733FB2DCD9874000E4544 /* PostgresClientKit in Frameworks */ = {isa = PBXBuildFile; productRef = 6B6733FA2DCD9874000E4544 /* PostgresClientKit */; };
+		6B6733FE2DCD988C000E4544 /* PostgresClientKit in Frameworks */ = {isa = PBXBuildFile; productRef = 6B6733FD2DCD988C000E4544 /* PostgresClientKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -183,7 +189,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				69C64AB12DAABA7100D51CF6 /* PostgresClientKit in Frameworks */,
+				6B6733EF2DCD97EA000E4544 /* BlueSocketTestCommonLibrary in Frameworks */,
+				6B6733FB2DCD9874000E4544 /* PostgresClientKit in Frameworks */,
+				6B6733F12DCD97EA000E4544 /* Socket in Frameworks */,
+				6B6733F32DCD97FE000E4544 /* SSLService in Frameworks */,
+				6B6733F92DCD9851000E4544 /* PostgresClientKit in Frameworks */,
+				6B6733F72DCD9838000E4544 /* PostgresClientKit in Frameworks */,
+				6B6733FE2DCD988C000E4544 /* PostgresClientKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,7 +338,13 @@
 			);
 			name = SAFE;
 			packageProductDependencies = (
-				69C64AB02DAABA7100D51CF6 /* PostgresClientKit */,
+				6B6733EE2DCD97EA000E4544 /* BlueSocketTestCommonLibrary */,
+				6B6733F02DCD97EA000E4544 /* Socket */,
+				6B6733F22DCD97FE000E4544 /* SSLService */,
+				6B6733F62DCD9838000E4544 /* PostgresClientKit */,
+				6B6733F82DCD9851000E4544 /* PostgresClientKit */,
+				6B6733FA2DCD9874000E4544 /* PostgresClientKit */,
+				6B6733FD2DCD988C000E4544 /* PostgresClientKit */,
 			);
 			productName = SAFE;
 			productReference = 6B03AD7E2D63965600CD28BB /* SAFE.app */;
@@ -414,6 +432,7 @@
 				69C64A2A2DAAB5F200D51CF6 /* XCRemoteSwiftPackageReference "PostgresClientKit" */,
 				69C64AAE2DAAB81E00D51CF6 /* XCRemoteSwiftPackageReference "BlueSocket" */,
 				69C64AAF2DAAB82F00D51CF6 /* XCRemoteSwiftPackageReference "BlueSSLService" */,
+				6B6733FC2DCD988C000E4544 /* XCLocalSwiftPackageReference "../PostgresClientKit-1.5.0" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 6B03AD7F2D63965600CD28BB /* Products */;
@@ -865,6 +884,13 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCLocalSwiftPackageReference section */
+		6B6733FC2DCD988C000E4544 /* XCLocalSwiftPackageReference "../PostgresClientKit-1.5.0" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = "../PostgresClientKit-1.5.0";
+		};
+/* End XCLocalSwiftPackageReference section */
+
 /* Begin XCRemoteSwiftPackageReference section */
 		69C64A2A2DAAB5F200D51CF6 /* XCRemoteSwiftPackageReference "PostgresClientKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
@@ -893,7 +919,33 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		69C64AB02DAABA7100D51CF6 /* PostgresClientKit */ = {
+		6B6733EE2DCD97EA000E4544 /* BlueSocketTestCommonLibrary */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 69C64AAE2DAAB81E00D51CF6 /* XCRemoteSwiftPackageReference "BlueSocket" */;
+			productName = BlueSocketTestCommonLibrary;
+		};
+		6B6733F02DCD97EA000E4544 /* Socket */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 69C64AAE2DAAB81E00D51CF6 /* XCRemoteSwiftPackageReference "BlueSocket" */;
+			productName = Socket;
+		};
+		6B6733F22DCD97FE000E4544 /* SSLService */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SSLService;
+		};
+		6B6733F62DCD9838000E4544 /* PostgresClientKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PostgresClientKit;
+		};
+		6B6733F82DCD9851000E4544 /* PostgresClientKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PostgresClientKit;
+		};
+		6B6733FA2DCD9874000E4544 /* PostgresClientKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PostgresClientKit;
+		};
+		6B6733FD2DCD988C000E4544 /* PostgresClientKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = PostgresClientKit;
 		};

@@ -1,11 +1,9 @@
 import SwiftUI
 import Combine
 
-// Handles loading and publishing the list of prayers
 class PrayersViewModel: ObservableObject {
     @Published var prayers: [PrayerData] = []
-
-    // Load prayers from database
+    
     func loadPrayers() {
         getPrayer { [weak self] fetchedPrayers in
             DispatchQueue.main.async {
@@ -17,31 +15,28 @@ class PrayersViewModel: ObservableObject {
 
 struct PrayersView: View {
     @StateObject private var viewModel = PrayersViewModel()
-    @State private var categories: [String] = ["All"]     // Dropdown options
-    @State private var selectedCategory: String = "All"   // Currently selected category
-    @State private var filteredPrayers: [PrayerData] = [] // Filtered result list
-    @State private var showMenu: Bool = false             // Controls sidebar menu
-
+    @State private var categories: [String] = ["All"]
+    @State private var selectedCategory: String = "All"
+    @State private var filteredPrayers: [PrayerData] = []
+    @State private var showMenu: Bool = false
+    
     var body: some View {
         ZStack {
             // Background gradient
-            LinearGradient(
-                gradient: Gradient(colors: [
-                    Color(red: 242/255, green: 166/255, blue: 41/255),
-                    Color(red: 244/255, green: 234/255, blue: 217/255)
-                ]),
-                startPoint: .topLeading,
-                endPoint: .bottomTrailing
-            )
+            LinearGradient(gradient: Gradient(colors: [
+                Color(red: 242/255, green: 166/255, blue: 41/255),
+                Color(red: 244/255, green: 234/255, blue: 217/255)
+            ]), startPoint: .topLeading, endPoint: .bottomTrailing)
             .ignoresSafeArea()
 
-            // Main layout
+            // Main content
             GeometryReader { geometry in
                 let screenWidth = geometry.size.width
                 let screenHeight = geometry.size.height
                 let isLandscape = screenWidth > screenHeight
                 let titleFontSize: CGFloat = isLandscape ? 40 : 28
-
+                
+                // Hold pages titles and dropdown menu
                 VStack(alignment: .center, spacing: 20) {
                     Text("Common Catholic Prayers")
                         .font(.system(size: titleFontSize))
@@ -54,7 +49,6 @@ struct PrayersView: View {
                         .frame(width: screenWidth * 0.8)
                         .foregroundColor(Color(red: 38/255, green: 86/255, blue: 134/255))
 
-                    // Category filter
                     Picker("Category", selection: $selectedCategory) {
                         ForEach(categories, id: \.self) { category in
                             Text(category).tag(category)
@@ -69,23 +63,26 @@ struct PrayersView: View {
                     .onChange(of: selectedCategory) { newValue in
                         filterPrayers(for: newValue)
                     }
-
-                    // Results list
+                    
+                    // Default status if no prayer is found
                     if filteredPrayers.isEmpty {
                         Text("No prayers found.")
                             .font(.subheadline)
                             .foregroundColor(.gray)
                             .padding(.top, 20)
                     } else {
+                        // Formatted display of prayers and additional details
                         List(filteredPrayers) { prayer in
                             ZStack {
                                 RoundedRectangle(cornerRadius: 25)
+                                    // Grey color for outer rectangle
                                     .fill(Color(red: 244/255, green: 239/255, blue: 231/255))
                                     .shadow(radius: 3)
 
                                 VStack(spacing: 10) {
                                     Text(prayer.prayerName)
                                         .font(.headline)
+                                        // Red Color for Prayer Name
                                         .foregroundColor(Color(red: 160/255, green: 57/255, blue: 61/255))
 
                                     Text("Used by: \(prayer.prayerApp) | Category: \(prayer.prayerCategory)")
@@ -94,6 +91,7 @@ struct PrayersView: View {
 
                                     Text(prayer.prayerText)
                                         .font(.body)
+                                        // Blue Color for Prayer
                                         .foregroundColor(Color(red: 38/255, green: 86/255, blue: 134/255))
                                         .padding()
                                         .background(
@@ -117,7 +115,7 @@ struct PrayersView: View {
             }
             .zIndex(0)
 
-            // Sidebar menu
+            // Side menu overlay
             if showMenu {
                 ZStack {
                     SideMenuView(isAuthenticated: .constant(true))
@@ -141,19 +139,32 @@ struct PrayersView: View {
                         .onTapGesture { withAnimation { showMenu = false } }
                 )
             }
+
+            // Top bar with hamburger menu and logo
+            HStack {
+                Button(action: { withAnimation { showMenu.toggle() } }) {
+                    Image(systemName: "line.horizontal.3")
+                        .font(.title)
+                        .foregroundColor(.black)
+                }
+                Spacer()
+                Image("SERA_Text_w__Shield")
+                    .resizable()
+                    .frame(width: 140, height: 140)
+            }
+            .padding(.horizontal)
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+            .ignoresSafeArea(edges: .top)
+            .zIndex(2)
         }
     }
 
-    // Load available categories from DB
     private func loadCategories() {
         fetchPrayerCategories { fetched in
-            DispatchQueue.main.async {
-                categories = fetched
-            }
+            DispatchQueue.main.async { categories = fetched }
         }
     }
 
-    // Filter prayers by selected category
     private func filterPrayers(for category: String) {
         if category == "All" {
             filteredPrayers = viewModel.prayers
